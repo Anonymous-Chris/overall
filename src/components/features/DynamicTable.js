@@ -43,7 +43,7 @@ function DynamicTable(props) {
       try {
         return items.map((row, index) => {
           return (
-            <tr id="">
+            <tr id="" key={index}>
               <RenderRow
                 key={index}
                 data={row}
@@ -64,7 +64,7 @@ function DynamicTable(props) {
       <div className="dynamictable text-center h-100 w-100 scrollbar">
         <h1>{props.tableData.metadata?.name}</h1>
         <div
-          className={`table-responsive  ${
+          className={`table-responsive autoscroll1 ${
             props.cssName !== undefined ? props.cssName : ""
           }`}
         >
