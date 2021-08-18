@@ -5,7 +5,7 @@ import Home from "./pages/Home";
 import Responsive2X2 from "./pages/Responsive2X2";
 import Features from "./pages/Features";
 import Functions from "./pages/Functions";
-import Feature1 from "./components/features/feature1";
+import CommonTable from "./components/CommonTable";
 import Feature2 from "./components/features/feature2";
 import Feature3 from "./components/features/feature3";
 import Feature4 from "./components/features/feature4";
@@ -30,7 +30,11 @@ function App() {
               render={() => <Responsive2X2 />}
             />
             <Route exact path="/features" render={() => <Features />} />
-            <Route exact path="/features/one" render={() => <Feature1 />} />
+            <Route
+              exact
+              path="/features/dynamictable"
+              render={() => <CommonTable />}
+            />
             <Route exact path="/features/two" render={() => <Feature2 />} />
             <Route exact path="/features/three" render={() => <Feature3 />} />
             <Route exact path="/features/four" render={() => <Feature4 />} />

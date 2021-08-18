@@ -7,7 +7,7 @@ function Features() {
       <div className="row w-100 m-0 p-1 h-31 " style={{ height: "inherit" }}>
         {/* first 3 */}
         <div className="col-sm-12 col-md-6 col-lg-4 features__item">
-          <Link to="/features/one">
+          <Link to="/features/dynamictable">
             <img
               src="https://fadic.net/wp-content/uploads/2018/12/number-1_1.jpg"
               className="w-100 h-100"
