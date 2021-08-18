@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "../../css/dynamictable.css";
 
 function DynamicTable(props) {
@@ -39,8 +39,6 @@ function DynamicTable(props) {
   var generateTabledata = () => {
     var items = props.tableData.data;
     var keys = getKeys();
-    var cssName = props.class_name !== undefined ? props.class_name : "";
-
     if (items !== null && items !== undefined) {
       try {
         return items.map((row, index) => {
