@@ -6,7 +6,7 @@ import Responsive2X2 from "./pages/Responsive2X2";
 import Features from "./pages/Features";
 import Functions from "./pages/Functions";
 import CommonTable from "./components/CommonTable";
-import Feature3 from "./components/features/feature3";
+import NestedDonuts from "./components/features/NestedDonuts";
 import Feature4 from "./components/features/feature4";
 import Feature5 from "./components/features/feature5";
 import Feature6 from "./components/features/feature6";
@@ -39,7 +39,7 @@ function App() {
               path="/features/autoscroll"
               render={() => <CommonTable />}
             />
-            <Route exact path="/features/three" render={() => <Feature3 />} />
+            <Route exact path="/features/nesteddonut" render={() => <NestedDonuts />} />
             <Route exact path="/features/four" render={() => <Feature4 />} />
             <Route exact path="/features/five" render={() => <Feature5 />} />
             <Route exact path="/features/six" render={() => <Feature6 />} />

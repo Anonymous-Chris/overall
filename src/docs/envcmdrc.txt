@@ -14,7 +14,7 @@ Update package.json scripts
 
 
   Create .env-cmdrc file at the root of the project(outside src)
-  Insert the values to be used as environment variables(in the form of json).
+  Insert the values to be used as environment variables(in the form of json).000000000
 
 
   {

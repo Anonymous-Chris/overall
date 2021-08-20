@@ -25,7 +25,7 @@ function Features() {
           </Link>
         </div>
         <div className="col-sm-12 col-md-6 col-lg-4 features__item ">
-          <Link to="/features/three">
+          <Link to="/features/nesteddonut">
             <img
               src="https://st.depositphotos.com/1561359/3755/v/950/depositphotos_37559665-stock-illustration-3d-shiny-red-number-3.jpg"
               className="w-100 h-100"
