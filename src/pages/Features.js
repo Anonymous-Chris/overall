@@ -36,7 +36,7 @@ function Features() {
         {/* second 3 */}
 
         <div className="col-sm-12 col-md-6 col-lg-4 features__item">
-          <Link to="/features/four">
+          <Link to="/features/loader">
             <img
               src="https://fadic.net/wp-content/uploads/2018/12/number-1_1.jpg"
               className="w-100 h-100"
