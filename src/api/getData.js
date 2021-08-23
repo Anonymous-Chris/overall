@@ -1,13 +1,13 @@
 import axios from "axios";
 
-const tableapi = (url) =>
+const getData = (url) =>
   axios
     .get(url)
     .then((res) => {
       return res.data;
     })
     .catch(() => {
-      console.log("Error in getting api data");
+      console.log(`Error in getting ${url} data`);
     });
 
-export default tableapi;
+export default getData;

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import tableapi from "../api/tableapi";
+import getData from "../api/getData";
 import DynamicTable from "./features/DynamicTable";
 import Pathname from "./functions/Pathname";
 import AutoScroll from "./features/Autoscroll";
@@ -8,7 +8,7 @@ function CommonTable() {
 
   useEffect(() => {
     let url = `${process.env.REACT_APP_BASE_URL}/dynamictable`;
-    tableapi(url).then((res) => {
+    getData(url).then((res) => {
       if (res && res[0].data.length > 0) {
         setTableData(res[0]);
         console.log(res);
