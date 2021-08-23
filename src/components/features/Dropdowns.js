@@ -20,12 +20,15 @@ function Dropdowns() {
         {name !== "" ? name : ""}
       </h1>
       <div className="dropdowns__items row">
-        <div className=" col-lg-3 col-md-3 col-sm-12">a</div>
-        <div className=" col-lg-3 col-md-3 col-sm-12">a</div>
-
-        <div className=" col-lg-3 col-md-3 col-sm-12">a</div>
-
-        <div className=" col-lg-3 col-md-3 col-sm-12">a</div>
+        {data.length > 0
+          ? data.map((item, index) => (
+              <div key={index} className=" col-lg-3 col-md-3 col-sm-12">
+                <b>
+                  <i>{item.name}</i>
+                </b>
+              </div>
+            ))
+          : null}
 
         {data.length > 0 ? console.log(data) : null}
       </div>
