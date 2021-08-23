@@ -3,6 +3,8 @@ import { NavLink } from "react-router-dom";
 import "../css/navbar.css";
 // import overall from "../images/overall.png";
 import output from "../images/output.png";
+import Clock from '../components/features/Clock'
+
 function Navbar() {
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
@@ -22,7 +24,11 @@ function Navbar() {
             </div>
           </NavLink>
 
-          <ul className={click ? "navbar__menu active" : "navbar__menu"}>
+          <div className="navbar__clock">
+            <Clock/>
+          </div>
+
+          <ul className={click ? "navbar__menu active mb-0" : "navbar__menu mb-0"}>
             <li className="navbar__item">
               <NavLink
                 exact

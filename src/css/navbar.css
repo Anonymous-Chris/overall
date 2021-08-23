@@ -26,6 +26,7 @@
 
 .navbar__container {
   display: flex;
+  justify-content: space-between;
   width: 100%;
   height: 54px;
 }
@@ -49,13 +50,20 @@
   width: 132px;
 }
 
+.navbar__clock{
+  margin: auto;
+  color: white;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
 .navbar__menu {
   display: flex;
   list-style: none;
   text-align: center;
-  margin-right: 2rem;
+  /* margin-right: 2rem;
   margin-top: 0.4rem;
-  margin-left: auto;
+  margin-left: auto; */
 }
 
 .navbar__links {
