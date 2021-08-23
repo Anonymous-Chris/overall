@@ -7,7 +7,7 @@ function CommonTable() {
   const [tableData, setTableData] = useState({});
 
   useEffect(() => {
-    let url = `http://127.0.0.1:1880/dynamictable`;
+    let url = `${process.env.REACT_APP_BASE_URL}/dynamictable`;
     tableapi(url).then((res) => {
       if (res && res[0].data.length > 0) {
         setTableData(res[0]);

@@ -4,8 +4,8 @@ import moment from 'moment'
 function LiveClock() {
 
 
-  let clock;
   useEffect(() => {
+    let clock;
 
     try {
       clock = setInterval(function () {
