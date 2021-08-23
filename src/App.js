@@ -8,7 +8,7 @@ import Functions from "./pages/Functions";
 import CommonTable from "./components/CommonTable";
 import NestedDonuts from "./components/features/NestedDonuts";
 import Loader from "./components/features/Loader";
-import Feature5 from "./components/features/feature5";
+import Dropdowns from "./components/features/Dropdowns";
 import Feature6 from "./components/features/feature6";
 import Feature7 from "./components/features/feature7";
 import Feature8 from "./components/features/feature8";
@@ -41,7 +41,7 @@ function App() {
             />
             <Route exact path="/features/nesteddonut" render={() => <NestedDonuts />} />
             <Route exact path="/features/loader" render={() => <Loader loading={true} />} />
-            <Route exact path="/features/five" render={() => <Feature5 />} />
+            <Route exact path="/features/dropdowns" render={() => <Dropdowns />} />
             <Route exact path="/features/six" render={() => <Feature6 />} />
             <Route exact path="/features/seven" render={() => <Feature7 />} />
             <Route exact path="/features/eight" render={() => <Feature8 />} />

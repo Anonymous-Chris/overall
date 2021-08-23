@@ -45,7 +45,7 @@ function Features() {
           </Link>
         </div>
         <div className="col-sm-12 col-md-6 col-lg-4 features__item ">
-          <Link to="/features/five">
+          <Link to="/features/dropdowns">
             <img
               src="https://ecdn.teacherspayteachers.com/thumbitem/FREEBIE-Bubble-Numbers-1-10-in-png-format-in-blue-red-and-white-072647100-1376264640-1397147774/original-822799-2.jpg"
               className="w-100 h-100"
