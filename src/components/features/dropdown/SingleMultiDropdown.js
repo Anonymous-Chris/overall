@@ -2,7 +2,13 @@ import React from "react";
 import { Multiselect } from "multiselect-react-dropdown";
 
 const SingleMultiDropdown = (props) => {
-  console.log(props);
+  var onSelect = (selectedList) => {
+    console.log(selectedList);
+  };
+
+  var onRemove = (selectedList) => {
+    console.log(selectedList);
+  };
   return (
     <div>
       {" "}
@@ -15,8 +21,8 @@ const SingleMultiDropdown = (props) => {
         isObject={false}
         displayValue="name"
         showCheckbox={props.showCheckbox}
-        // onSelect={onSelect}
-        // onRemove={onRemove}
+        onSelect={onSelect}
+        onRemove={onRemove}
         singleSelect={props.singleSelect}
         showArrow={true}
         placeholder={`Select Filters`}
