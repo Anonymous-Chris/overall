@@ -10,7 +10,6 @@ function Dropdowns() {
     let url = `${process.env.REACT_APP_BASE_URL}/dropdowns`;
     getData(url).then((res) => {
       if (res && res[0].data.length > 0) {
-        console.log(res);
         setData(res[0].data);
         setName(res[0].metadata.name);
       }
@@ -35,8 +34,6 @@ function Dropdowns() {
               </div>
             ))
           : null}
-
-        {data.length > 0 ? console.log(data) : null}
       </div>
     </div>
   );

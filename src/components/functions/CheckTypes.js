@@ -4,7 +4,6 @@ import SingleMultiDropdown from "../features/dropdown/SingleMultiDropdown";
 import InputText from "../features/dropdown/InputText";
 const CheckTypes = (props) => {
   var checkProps = (props) => {
-    console.log(props);
     var data, defaultValue;
     if (props.item.values !== undefined) {
       data = props.item.values;
