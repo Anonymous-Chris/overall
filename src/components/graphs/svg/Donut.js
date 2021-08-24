@@ -32,11 +32,12 @@ function Donut(props) {
   useEffect(() => {
     var total = props.total;
     var current = props.current;
-
-    var totalStrokeDashArray = `${total} ${100 - total}`;
-    var currentStrokeDashArray = `${current} ${100 - current}`;
+    console.log(total, current);
+    var totalStrokeDashArray = `${total} ${(100 - total).toFixed(1)}`;
+    var currentStrokeDashArray = `${current} ${(100 - current).toFixed(1)}`;
     setCurrentColor(checkCurrentColor(current));
     setTotalColor(checkTotalColor(total));
+    console.log(totalStrokeDashArray, currentStrokeDashArray);
 
     setTotalStrokeDashArray(totalStrokeDashArray);
     setCurrentStrokeDashArray(currentStrokeDashArray);
@@ -44,18 +45,22 @@ function Donut(props) {
   }, [props]);
 
   return (
-    <div className="wrapper">
-      <svg className="donut__main_viewbox" width="100%" height="100%" viewBox="0 0 42 42">
+    <React.Fragment>
+      <svg
+        className="donut__main_viewbox"
+        width="100%"
+        height="100%"
+        viewBox="0 0 42 42"
+      >
         {/* outer circle */}
 
-        <svg width="100%" height="100%"  viewBox="0 0 42 42" className="donut">
-
+        <svg width="100%" height="100%" viewBox="0 0 42 42" className="donut">
           <circle
             className="donut-segment"
             key={totalStrokeDashArray}
             cx="21"
             cy="21"
-            r="16.91549430918954"
+            r="15.91549430918954"
             fill="#232529"
             stroke={totalColor}
             strokeLinecap="round"
@@ -69,22 +74,20 @@ function Donut(props) {
         </text>
         {/* inner circle */}
 
-        
         <svg
           width="80%"
           height="80%"
           x="4.2"
-         y="4.2"
+          y="4.2"
           viewBox="0 0 42 42"
           className="donut"
         >
-
           <circle
             className="donut-segment"
             key={currentStrokeDashArray}
             cx="21"
             cy="21"
-            r="15"
+            r="14"
             fill="#3A3E47"
             stroke={currentColor}
             strokeLinecap="round"
@@ -97,7 +100,7 @@ function Donut(props) {
           </text>
         </svg>
       </svg>
-    </div>
+    </React.Fragment>
   );
 }
 

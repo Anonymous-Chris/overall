@@ -20,26 +20,36 @@ function NestedDonuts() {
   return (
     <div className="bg-dark" style={{ height: "94vh" }}>
       <h1 className="text-light text-center">Nested Donut</h1>
-      <div className="w-100 d-flex ">
-        <div className="w-25 h-25">
-          <Donut
-            total={total % 1 === 0 ? total : total.toFixed(1)}
-            current={current % 1 === 0 ? current : current.toFixed(1)}
-          />
-        </div>
-        <div className="w-25 h-25">
-          <Donut
-            total={
-              total % 1 === 0 && total > 5
-                ? total - 5
-                : (total > 2 ? total - 2 : 0).toFixed(1)
-            }
-            current={
-              current % 1 === 0 && current > 10
-                ? current - 10
-                : (current - (current > 2 ? current - 2 : 0)).toFixed(1)
-            }
-          />
+      <div>
+        <div className="row">
+          <div className="col col-sm col-md col-lg">
+            {/* if col is not added in the class then the layout doesnt break */}
+            <Donut
+              total={total % 1 === 0 ? total : total.toFixed(1)}
+              current={current % 1 === 0 ? current : current.toFixed(1)}
+            />
+          </div>
+          <div className="col col-sm col-md col-lg">
+            <Donut
+              total={
+                total % 1 === 0 && total > 5
+                  ? total - 5
+                  : (total > 2 ? total - 2 : 0).toFixed(1)
+              }
+              current={
+                current % 1 === 0 && current > 10
+                  ? current - 10
+                  : (current - (current > 2 ? current - 2 : 0)).toFixed(1)
+              }
+            />
+          </div>
+          <div className="col col-sm col-md col-lg">
+            <Donut total={100} current={100} />
+          </div>
+
+          <div className="col col-sm col-md col-lg">
+            <Donut total={100} current={100} />
+          </div>
         </div>
       </div>
       ;
