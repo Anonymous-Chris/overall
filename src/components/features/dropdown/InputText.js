@@ -18,11 +18,11 @@ const InputText = (props) => {
       }}
       className=""
     >
-      <label className="">{"Input"}</label>
+      <label className="">{props.name}</label>
       <input
         type="text"
-        placeholder={"labelName"}
-        id={"eachItem.name"}
+        placeholder={props.name}
+        id={props.name}
         style={{
           background: "inherit",
           border: "1px solid black",

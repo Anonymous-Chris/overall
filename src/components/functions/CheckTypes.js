@@ -37,7 +37,7 @@ const CheckTypes = (props) => {
         />
       );
     } else if (props.item.type === "text") {
-      return <InputText key={props} data={data} />;
+      return <InputText key={props} data={data} name={props.item.name} />;
     }
   };
   return (
