@@ -22,7 +22,7 @@ function Dropdowns() {
       <div className="dropdowns__items row">
         {data.length > 0
           ? data.map((item, index) => (
-              <div key={index} className=" col-lg-3 col-md-3 col-sm-12">
+              <div key={index} className=" col-lg-3 col-md-3 col-sm-6 col-12">
                 <b>
                   <i>{item.name}</i>
                 </b>

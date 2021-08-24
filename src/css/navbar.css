@@ -50,20 +50,21 @@
   width: 132px;
 }
 
-.navbar__clock{
+.navbar__clock {
   margin: auto;
   color: white;
   font-size: 2rem;
   font-weight: 600;
 }
 
-@media screen and (max-width: 960px){
-  .navbar__clock{
+@media screen and (max-width: 960px) {
+  .navbar__clock {
     margin: auto;
     color: white;
     font-size: 2rem;
     font-weight: 600;
-    margin-left: 12vw;
+    padding-right: 75px;
+    text-align: center;
   }
 }
 
