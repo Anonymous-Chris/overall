@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import getData from "../../api/getData";
+import CheckTypes from "../functions/CheckTypes";
+
 function Dropdowns() {
   const [data, setData] = useState([]);
   const [name, setName] = useState("");
@@ -26,6 +28,7 @@ function Dropdowns() {
                 <b>
                   <i>{item.name}</i>
                 </b>
+                <CheckTypes item={item} />
               </div>
             ))
           : null}
