@@ -13,7 +13,9 @@ const CheckTypes = (props) => {
       defaultValue = props.item.defaultValue;
     }
     if (props.item.type === "customDropdown") {
-      return <CustomDropdown key={props} data={data} />;
+      return (
+        <CustomDropdown key={props} data={data} defaultValue={defaultValue} />
+      );
     } else if (props.item.type === "singleSelect") {
       return (
         <SingleMultiDropdown
