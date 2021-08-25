@@ -5,9 +5,8 @@ function NestedDonuts() {
   const [total, setTotal] = useState(10);
   const [current, setCurrent] = useState(5.5);
 
-  let interval;
   useEffect(() => {
-    interval = setInterval(() => {
+    let interval = setInterval(() => {
       setTotal(Math.random() * 100);
       setCurrent(Math.random() * 100);
     }, 15000);
