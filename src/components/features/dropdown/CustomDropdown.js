@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const CustomDropdown = (props) => {
   const [selectedValue, setSelectedValue] = useState("");
 
+  useEffect(() => {
+    setSelectedValue(props.defaultValue);
+  }, [props]);
   var changeSelectedValue = (e) => {
     setSelectedValue(e.target.value);
   };
@@ -11,7 +14,7 @@ const CustomDropdown = (props) => {
       {props.data !== undefined && props.data.length > 0 && (
         <div className="pr-1 w-100 h-100">
           <select
-            value={props.defaultValue}
+            value={selectedValue}
             className="w-100 h-100"
             onChange={changeSelectedValue}
           >
