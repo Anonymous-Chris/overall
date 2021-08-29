@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import getData from "../api/getData";
 import DynamicTable from "./features/DynamicTable";
-import Pathname from "./functions/Pathname";
-import AutoScroll from "./features/Autoscroll";
+import fakedata from "../fakedata";
 function CommonTable() {
   const [tableData, setTableData] = useState({});
 
@@ -11,18 +10,19 @@ function CommonTable() {
     getData(url).then((res) => {
       if (res && res[0].data.length > 0) {
         setTableData(res[0]);
-        console.log(res);
-
-        // only have autoscroll for autoscroll page table
-        if (Pathname().includes("autoscroll")) {
-          AutoScroll(`autoscroll1`, res[0].data.length);
-        }
       }
     });
   }, []);
   return (
     <div className={`commontable`}>
-      <DynamicTable tableData={tableData} />
+      {console.log()}
+      <DynamicTable
+        tableData={
+          Object.keys(tableData).length > 0
+            ? tableData
+            : fakedata[0].dynamictable[0]
+        }
+      />
     </div>
   );
 }

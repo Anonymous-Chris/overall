@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../../css/dynamictable.css";
+import AutoScroll from "./Autoscroll";
+import Pathname from "../functions/Pathname";
 
 function DynamicTable(props) {
   console.log(props);
+
+  useEffect(() => {
+    // only have autoscroll for autoscroll page table
+    if (Pathname().includes("autoscroll")) {
+      AutoScroll(`autoscroll1`, props.tableData.data.length);
+    }
+  }, [props]);
 
   //get table head from data
   var getKeys = function () {
