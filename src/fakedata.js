@@ -1,5 +1,35 @@
 const fakedata = [
   {
+    dropdowns: [
+      {
+        metadata: {
+          name: "Dynamic Drop Down",
+        },
+        data: [
+          {
+            name: "Custom Dropdown",
+            values: [1, 2, 3, 4, 5],
+            type: "customDropdown",
+          },
+          {
+            name: "Single Select Dropdown",
+            values: [1, 2, 3, 4, 5],
+            type: "singleSelect",
+          },
+          {
+            name: "Multi Select Dropdown",
+            values: [1, 2, 3, 4, 5],
+            type: "multiSelect",
+          },
+          {
+            name: "Search",
+            values: [],
+            type: "text",
+          },
+        ],
+      },
+    ],
+
     dynamictable: [
       {
         metadata: {
