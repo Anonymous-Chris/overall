@@ -4,4 +4,11 @@
 
 .features__item {
   height: 33.33%;
+  padding-bottom: 5px;
+  padding-left: 0;
+  padding-right: 5px;
+}
+
+.features__item img {
+  border: 2px solid black;
 }
