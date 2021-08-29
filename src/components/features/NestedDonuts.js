@@ -17,10 +17,10 @@ function NestedDonuts() {
   }, []);
 
   return (
-    <div className="bg-dark" style={{ height: "94vh" }}>
+    <div className="bg-dark" style={{ height: "94.1vh" }}>
       <h1 className="text-light text-center">Nested Donut</h1>
       <div>
-        <div className="row">
+        <div className="row m-0">
           <div className="col col-sm col-md col-lg">
             {/* if col is not added in the class then the layout doesnt break */}
             <Donut
