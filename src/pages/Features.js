@@ -1,6 +1,15 @@
 import React from "react";
 import "../css/features.css";
 import { Link } from "react-router-dom";
+import dynamictable from "../images/dynamictable.jpg";
+import autoscroll from "../images/autoscroll.jpg";
+import donuts from "../images/donuts.jpg";
+import loader from "../images/loader.jpg";
+import dropdowns from "../images/dropdowns.jpg";
+import contextapi from "../images/contextapi.jpg";
+import flickity from "../images/flickity.jpg";
+import live from "../images/live.jpg";
+import skipandfetchpagination from "../images/skipandfetchpagination.jpg";
 function Features() {
   return (
     <div className="features w-100 ">
@@ -8,84 +17,52 @@ function Features() {
         {/* first 3 */}
         <div className="col-sm-12 col-md-6 col-lg-4 features__item">
           <Link to="/features/dynamictable">
-            <img
-              src="https://fadic.net/wp-content/uploads/2018/12/number-1_1.jpg"
-              className="w-100 h-100"
-              alt="first"
-            />
+            <img src={dynamictable} className="w-100 h-100" alt="first" />
           </Link>
         </div>
         <div className="col-sm-12 col-md-6 col-lg-4 features__item ">
           <Link to="/features/autoscroll">
-            <img
-              src="https://ecdn.teacherspayteachers.com/thumbitem/FREEBIE-Bubble-Numbers-1-10-in-png-format-in-blue-red-and-white-072647100-1376264640-1397147774/original-822799-2.jpg"
-              className="w-100 h-100"
-              alt="first"
-            />
+            <img src={autoscroll} className="w-100 h-100" alt="first" />
           </Link>
         </div>
         <div className="col-sm-12 col-md-6 col-lg-4 features__item ">
           <Link to="/features/nesteddonut">
-            <img
-              src="https://st.depositphotos.com/1561359/3755/v/950/depositphotos_37559665-stock-illustration-3d-shiny-red-number-3.jpg"
-              className="w-100 h-100"
-              alt="first"
-            />
+            <img src={donuts} className="w-100 h-100" alt="first" />
           </Link>
         </div>
         {/* second 3 */}
 
         <div className="col-sm-12 col-md-6 col-lg-4 features__item">
           <Link to="/features/loader">
-            <img
-              src="https://fadic.net/wp-content/uploads/2018/12/number-1_1.jpg"
-              className="w-100 h-100"
-              alt="first"
-            />
+            <img src={loader} className="w-100 h-100" alt="first" />
           </Link>
         </div>
         <div className="col-sm-12 col-md-6 col-lg-4 features__item ">
           <Link to="/features/dropdowns">
-            <img
-              src="https://ecdn.teacherspayteachers.com/thumbitem/FREEBIE-Bubble-Numbers-1-10-in-png-format-in-blue-red-and-white-072647100-1376264640-1397147774/original-822799-2.jpg"
-              className="w-100 h-100"
-              alt="first"
-            />
+            <img src={dropdowns} className="w-100 h-100" alt="first" />
           </Link>
         </div>
         <div className="col-sm-12 col-md-6 col-lg-4 features__item ">
           <Link to="/features/six">
-            <img
-              src="https://st.depositphotos.com/1561359/3755/v/950/depositphotos_37559665-stock-illustration-3d-shiny-red-number-3.jpg"
-              className="w-100 h-100"
-              alt="first"
-            />
+            <img src={contextapi} className="w-100 h-100" alt="first" />
           </Link>
         </div>
         {/* third 3 */}
 
         <div className="col-sm-12 col-md-6 col-lg-4 features__item">
           <Link to="/features/seven">
-            <img
-              src="https://fadic.net/wp-content/uploads/2018/12/number-1_1.jpg"
-              className="w-100 h-100"
-              alt="first"
-            />
+            <img src={live} className="w-100 h-100" alt="first" />
           </Link>
         </div>
         <div className="col-sm-12 col-md-6 col-lg-4 features__item ">
           <Link to="/features/eight">
-            <img
-              src="https://ecdn.teacherspayteachers.com/thumbitem/FREEBIE-Bubble-Numbers-1-10-in-png-format-in-blue-red-and-white-072647100-1376264640-1397147774/original-822799-2.jpg"
-              className="w-100 h-100"
-              alt="first"
-            />
+            <img src={flickity} className="w-100 h-100" alt="first" />
           </Link>
         </div>
         <div className="col-sm-12 col-md-6 col-lg-4 features__item ">
           <Link to="/features/nine">
             <img
-              src="https://st.depositphotos.com/1561359/3755/v/950/depositphotos_37559665-stock-illustration-3d-shiny-red-number-3.jpg"
+              src={skipandfetchpagination}
               className="w-100 h-100"
               alt="first"
             />
