@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import "../css/navbar.css";
 // import overall from "../images/overall.png";
 import output from "../images/output.png";
-import Clock from '../components/features/Clock'
+import Clock from "../components/features/Clock";
 
 function Navbar() {
   const [click, setClick] = useState(false);
@@ -25,10 +25,12 @@ function Navbar() {
           </NavLink>
 
           <div className="navbar__clock">
-            <Clock/>
+            <Clock />
           </div>
 
-          <ul className={click ? "navbar__menu active mb-0" : "navbar__menu mb-0"}>
+          <ul
+            className={click ? "navbar__menu active mb-0" : "navbar__menu mb-0"}
+          >
             <li className="navbar__item">
               <NavLink
                 exact
@@ -61,6 +63,19 @@ function Navbar() {
               >
                 Functions
               </NavLink>
+
+              {/* keep nesting outside as to avoid <a> <a> descendent error */}
+              <div className="function-content">
+                <NavLink exact to="/functions/link1">
+                  Link1
+                </NavLink>
+                <NavLink exact to="/functions/link2">
+                  Link2
+                </NavLink>
+                <NavLink exact to="/functions/link3">
+                  Link3
+                </NavLink>
+              </div>
             </li>
             <li className="navbar__item">
               <NavLink
