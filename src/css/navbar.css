@@ -164,7 +164,7 @@
 }
 
 /* dropdown content */
-.function-content {
+.navbar__function__content {
   display: none;
   position: absolute;
   background-color: #f1f1f1;
@@ -173,7 +173,7 @@
   z-index: 1;
 }
 
-.function-content a {
+.navbar__function__content a {
   color: white;
   padding: 12px 16px;
   text-decoration: none;
@@ -181,11 +181,11 @@
   background: #1f5156;
 }
 
-.function-content a:hover {
+.navbar__function__content a:hover {
   background-color: #ddd;
 }
 
-.navbar__item:hover .function-content {
+.navbar__item:hover .navbar__function__content {
   display: block;
 }
 

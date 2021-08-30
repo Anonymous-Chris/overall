@@ -65,7 +65,7 @@ function Navbar() {
               </NavLink>
 
               {/* keep nesting outside as to avoid <a> <a> descendent error */}
-              <div className="function-content">
+              <div className="navbar__function__content">
                 <NavLink exact to="/functions/link1">
                   Link1
                 </NavLink>
