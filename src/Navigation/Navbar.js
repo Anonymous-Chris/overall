@@ -12,18 +12,13 @@ function Navbar() {
   const Close = () => setClick(false);
   const location = useLocation();
 
+  // update the selected boxing of the functions tab in the parent element too
   useEffect(() => {
-    const activeElements = document.querySelectorAll(".active");
-    // console.log(typeof activeElements);
-    // console.log(activeElements);
-    if (activeElements[0].pathname.includes("functions")) {
+    if (location.pathname.includes("functions")) {
       document.getElementById("functions").classList.add("active");
     } else {
-      // if (document.getElementById("functions").classList.contains("active")) {
       document.getElementById("functions").classList.remove("active");
-      // }
     }
-    console.log(location);
     return () => {};
   }, [location]);
 
