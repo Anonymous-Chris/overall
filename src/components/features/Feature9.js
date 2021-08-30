@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import "../../css/pagination.css";
 
-const Feature9 = (props) => {
+const Feature9 = () => {
   const [pageNumber, setpageNumber] = useState(1);
   const totalPage = 10;
   var decreasePage = () => {
@@ -40,6 +40,11 @@ const Feature9 = (props) => {
 
   return (
     <React.Fragment>
+      <span>
+        If the default is 10, and page=1 it gets data from
+        (default*page-10+1=>default*n) Similarly, if nth page, it gets data from
+        (default*n-10+1)=>default*n
+      </span>
       <div className="pagination">
         <i
           className="fa fa-angle-double-left"
