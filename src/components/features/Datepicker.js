@@ -24,27 +24,44 @@ const DatePicker = () => {
     }
   };
 
+  var resetDate = () => {
+    dispatch({
+      type: "UPDATE_DATE",
+      startDate: moment().startOf("day").local(),
+      endDate: moment().endOf("day").local(),
+    });
+  };
+
   return (
     <div className="d-flex flex-column">
       <span>Passing date ranges using context API</span>
       <NavLink exact to="/features/seven">
         Check dates
       </NavLink>
-      <DateRangePicker
-        minimumNights={0}
-        startDate={startDate}
-        startDateId="start_date_id"
-        endDate={endDate}
-        endDateId="end_date_id"
-        onDatesChange={({ startDate, endDate }) => {
-          updateDate({ startDate, endDate });
-        }}
-        focusedInput={focusedInput}
-        onFocusChange={(focusedInput) => setfocusedInput(focusedInput)}
-        isOutsideRange={(day) =>
-          isInclusivelyAfterDay(day, moment().add(1, "days"))
-        }
-      />
+
+      <div>
+        <DateRangePicker
+          minimumNights={0}
+          startDate={startDate}
+          startDateId="start_date_id"
+          endDate={endDate}
+          endDateId="end_date_id"
+          onDatesChange={({ startDate, endDate }) => {
+            updateDate({ startDate, endDate });
+          }}
+          focusedInput={focusedInput}
+          onFocusChange={(focusedInput) => setfocusedInput(focusedInput)}
+          isOutsideRange={(day) =>
+            isInclusivelyAfterDay(day, moment().add(1, "days"))
+          }
+        />
+
+        <img
+          src="https://cdn4.iconfinder.com/data/icons/game-general-icon-set-1/512/reset-512.png"
+          style={{ width: "50px", height: "50px" }}
+          onClick={resetDate}
+        />
+      </div>
     </div>
   );
 };
