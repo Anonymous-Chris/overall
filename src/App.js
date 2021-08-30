@@ -12,7 +12,7 @@ import Dropdowns from "./components/features/Dropdowns";
 import Datepicker from "./components/features/Datepicker";
 import Feature7 from "./components/features/feature7";
 import Feature8 from "./components/features/feature8";
-import Feature9 from "./components/features/feature9";
+import Feature9 from "./components/features/Feature9";
 
 function App() {
   return (
