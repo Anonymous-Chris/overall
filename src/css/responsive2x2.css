@@ -19,10 +19,21 @@
 }
 
 .camera {
-  float: right;
+  margin-left: auto;
   background-color: rgba(230, 238, 248, 80%);
 }
 
 .background-color-box {
   background: #647087;
+}
+
+.responsive__expand {
+  height: 26px;
+  width: 26px;
+}
+/* mobile devices */
+@media screen and (max-width: 540px) {
+  .responsive__bar {
+    line-height: normal !important;
+  }
 }

@@ -1,5 +1,7 @@
 import React from "react";
 import "../css/responsive2x2.css";
+import expand from "../images/expand.png";
+
 function Responsive2X2() {
   return (
     <React.Fragment>
@@ -26,9 +28,14 @@ function Responsive2X2() {
               alt="Responsive_Picture"
               onError={(e) => (e.target.style.display = "none")}
             ></img>
-            <div className="w-100 d-inline-block position-absolute p-1 bottom-0 start-0">
+            <div className="w-100 d-flex position-absolute p-1 bottom-0 start-0 responsive__bar">
               <div className="livebtn  bottom-0 start-0 p-1">live</div>
               <div className="camera p-1">camera 1</div>
+              <img
+                className="responsive__expand"
+                alt="expand_button"
+                src={expand}
+              />
             </div>
           </div>
           <div className="col-sm-12 col-md-6 col-lg-6 h-100 p-1 position-relative ">
@@ -38,9 +45,14 @@ function Responsive2X2() {
               alt="Responsive_Picture"
               onError={(e) => (e.target.style.display = "none")}
             ></img>
-            <div className="w-100 d-inline-block position-absolute p-1 bottom-0 start-0">
+            <div className="w-100 d-flex position-absolute p-1 bottom-0 start-0 responsive__bar">
               <div className="livebtn  bottom-0 start-0 p-1">live</div>
               <div className="camera p-1">camera 2</div>
+              <img
+                className="responsive__expand"
+                alt="expand_button"
+                src={expand}
+              />
             </div>
           </div>
         </div>
@@ -53,9 +65,14 @@ function Responsive2X2() {
               alt="Responsive_Picture"
               onError={(e) => (e.target.style.display = "none")}
             ></img>
-            <div className="w-100 d-inline-block position-absolute p-1 bottom-0 start-0">
+            <div className="w-100 d-flex position-absolute p-1 bottom-0 start-0 responsive__bar">
               <div className="livebtn  bottom-0 start-0 p-1">live</div>
               <div className="camera p-1">camera 3</div>
+              <img
+                className="responsive__expand"
+                alt="expand_button"
+                src={expand}
+              />
             </div>
           </div>
           <div className="col-sm-12 col-md-6 col-lg-6 h-100 p-1 position-relative ">
@@ -65,9 +82,14 @@ function Responsive2X2() {
               alt="Responsive_Picture"
               onError={(e) => (e.target.style.display = "none")}
             ></img>
-            <div className="w-100 d-inline-block position-absolute p-1 bottom-0 start-0">
+            <div className="w-100 d-flex position-absolute p-1 bottom-0 start-0 responsive__bar">
               <div className="livebtn  bottom-0 start-0 p-1">live</div>
               <div className="camera p-1">camera 4</div>
+              <img
+                className="responsive__expand"
+                alt="expand_button"
+                src={expand}
+              />
             </div>
           </div>
         </div>
