@@ -14,13 +14,27 @@ function Navbar() {
 
   // update the selected boxing of the functions tab in the parent element too
   useEffect(() => {
-    if (location.pathname.includes("functions")) {
-      document.getElementById("functions").classList.add("active");
+    if (location.pathname.includes("features")) {
+      document.getElementById(`functions`).classList.remove("active");
+      checkActiveTab("features");
+    } else if (location.pathname.includes("functions")) {
+      document.getElementById(`features`).classList.remove("active");
+      checkActiveTab("functions");
     } else {
-      document.getElementById("functions").classList.remove("active");
+      document.getElementById(`functions`).classList.remove("active");
+      document.getElementById(`features`).classList.remove("active");
     }
     return () => {};
   }, [location]);
+
+  // check active tab
+  var checkActiveTab = (_location) => {
+    if (location.pathname.includes(`${_location}`)) {
+      document.getElementById(`${_location}`).classList.add("active");
+    } else {
+      document.getElementById(`${_location}`).classList.remove("active");
+    }
+  };
 
   return (
     <div className="navbar__tabs">
@@ -49,6 +63,7 @@ function Navbar() {
                 to="/"
                 activeClassName="active"
                 className="navbar__links"
+                id="home"
                 onClick={click ? handleClick : null}
               >
                 Home
@@ -60,6 +75,7 @@ function Navbar() {
                 to="/features"
                 activeClassName="active"
                 className="navbar__links"
+                id="features"
                 onClick={click ? handleClick : null}
               >
                 Features
@@ -96,6 +112,7 @@ function Navbar() {
                 to="/responsive2x2"
                 activeClassName="active"
                 className="navbar__links"
+                id="responsive2x2"
                 onClick={click ? handleClick : null}
               >
                 Responsive

@@ -82,7 +82,7 @@
 }
 
 .navbar__item {
-  line-height: 40px;
+  line-height: 50px;
   margin-right: 1rem;
 }
 
@@ -172,14 +172,13 @@
 
 .navbar__function__content a {
   color: white;
-  padding: 12px 16px;
   text-decoration: none;
   display: block;
   background: #1f5156;
 }
 
 .navbar__function__content a:hover {
-  background-color: #ddd;
+  background-color: blue;
 }
 
 .navbar__item:hover .navbar__function__content {
