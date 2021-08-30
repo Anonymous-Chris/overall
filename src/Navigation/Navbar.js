@@ -1,14 +1,31 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import "../css/navbar.css";
 // import overall from "../images/overall.png";
 import output from "../images/output.png";
 import Clock from "../components/features/Clock";
+import { useLocation } from "react-router-dom";
 
 function Navbar() {
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
   const Close = () => setClick(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    const activeElements = document.querySelectorAll(".active");
+    // console.log(typeof activeElements);
+    // console.log(activeElements);
+    if (activeElements[0].pathname.includes("functions")) {
+      document.getElementById("functions").classList.add("active");
+    } else {
+      // if (document.getElementById("functions").classList.contains("active")) {
+      document.getElementById("functions").classList.remove("active");
+      // }
+    }
+    console.log(location);
+    return () => {};
+  }, [location]);
 
   return (
     <div className="navbar__tabs">
@@ -58,7 +75,8 @@ function Navbar() {
                 exact
                 to="/functions"
                 activeClassName="active"
-                className="navbar__links"
+                className="navbar__links "
+                id="functions"
                 onClick={click ? handleClick : null}
               >
                 Functions
