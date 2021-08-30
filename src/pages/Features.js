@@ -43,7 +43,7 @@ function Features() {
           </Link>
         </div>
         <div className="col-sm-12 col-md-6 col-lg-4 features__item ">
-          <Link to="/features/six">
+          <Link to="/features/datepicker">
             <img src={contextapi} className="w-100 h-100" alt="first" />
           </Link>
         </div>
