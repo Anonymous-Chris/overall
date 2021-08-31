@@ -34,8 +34,11 @@ const DatePicker = () => {
 
   return (
     <div className="d-flex flex-column">
-      <span>Passing date ranges using context API</span>
-      <NavLink exact to="/features/seven">
+      <span>
+        Passing date ranges using context API(Storing value in reducer as a
+        Higher Order Component).
+      </span>
+      <NavLink exact to="/features/live">
         Check dates
       </NavLink>
 

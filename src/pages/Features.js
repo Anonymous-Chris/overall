@@ -50,12 +50,12 @@ function Features() {
         {/* third 3 */}
 
         <div className="col-sm-12 col-md-6 col-lg-4 features__item">
-          <Link to="/features/seven">
+          <Link to="/features/live">
             <img src={live} className="w-100 h-100" alt="first" />
           </Link>
         </div>
         <div className="col-sm-12 col-md-6 col-lg-4 features__item ">
-          <Link to="/features/eight">
+          <Link to="/features/flickity">
             <img src={flickity} className="w-100 h-100" alt="first" />
           </Link>
         </div>

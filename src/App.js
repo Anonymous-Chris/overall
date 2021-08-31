@@ -10,8 +10,8 @@ import NestedDonuts from "./components/features/NestedDonuts";
 import Loader from "./components/features/Loader";
 import Dropdowns from "./components/features/Dropdowns";
 import Datepicker from "./components/features/Datepicker";
-import Feature7 from "./components/features/feature7";
-import Feature8 from "./components/features/feature8";
+import Live from "./components/features/Live";
+import Flickity from "./components/features/Flickity";
 import Feature9 from "./components/features/Feature9";
 
 function App() {
@@ -59,8 +59,12 @@ function App() {
               path="/features/datepicker"
               render={() => <Datepicker />}
             />
-            <Route exact path="/features/seven" render={() => <Feature7 />} />
-            <Route exact path="/features/eight" render={() => <Feature8 />} />
+            <Route exact path="/features/live" render={() => <Live />} />
+            <Route
+              exact
+              path="/features/flickity"
+              render={() => <Flickity />}
+            />
             <Route exact path="/features/nine" render={() => <Feature9 />} />
 
             <Route exact path="/functions" render={() => <Functions />} />

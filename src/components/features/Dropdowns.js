@@ -46,6 +46,10 @@ function Dropdowns() {
               </div>
             ))}
       </div>
+      <span>
+        Dynamic dropdowns getting values directly from an api(Uses fake json
+        format if api is not hit).
+      </span>
     </div>
   );
 }

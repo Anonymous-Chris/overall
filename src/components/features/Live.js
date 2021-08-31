@@ -1,14 +1,12 @@
 import React from "react";
-import "../../css/live.css";
-const Live = () => {
+import DatePicker from "./Datepicker";
+function Live() {
   return (
-    <div className="liveStatus">
-      <div className="circle_outer">
-        <div className="circle_inner"></div>
-      </div>
-      <div> Live Data</div>
+    <div>
+      Live
+      <DatePicker />
     </div>
   );
-};
+}
 
 export default Live;
