@@ -14,6 +14,15 @@ function Navbar() {
 
   // update the selected boxing of the functions tab in the parent element too
   useEffect(() => {
+    // check active tab
+    var checkActiveTab = (_location) => {
+      if (location.pathname.includes(`${_location}`)) {
+        document.getElementById(`${_location}`).classList.add("active");
+      } else {
+        document.getElementById(`${_location}`).classList.remove("active");
+      }
+    };
+
     if (location.pathname.includes("features")) {
       document.getElementById(`functions`).classList.remove("active");
       checkActiveTab("features");
@@ -25,16 +34,7 @@ function Navbar() {
       document.getElementById(`features`).classList.remove("active");
     }
     return () => {};
-  }, [location, checkActiveTab]);
-
-  // check active tab
-  var checkActiveTab = (_location) => {
-    if (location.pathname.includes(`${_location}`)) {
-      document.getElementById(`${_location}`).classList.add("active");
-    } else {
-      document.getElementById(`${_location}`).classList.remove("active");
-    }
-  };
+  }, [location]);
 
   return (
     <div className="navbar__tabs">
