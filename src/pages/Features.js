@@ -60,7 +60,7 @@ function Features() {
           </Link>
         </div>
         <div className="col-sm-12 col-md-6 col-lg-4 features__item ">
-          <Link to="/features/nine">
+          <Link to="/features/pagination">
             <img
               src={skipandfetchpagination}
               className="w-100 h-100"

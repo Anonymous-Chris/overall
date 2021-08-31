@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import "../../css/pagination.css";
 
-const Feature9 = () => {
+const Pagination = () => {
   const [pageNumber, setpageNumber] = useState(1);
   const totalPage = 10;
   var decreasePage = () => {
@@ -83,4 +83,4 @@ const Feature9 = () => {
   );
 };
 
-export default Feature9;
+export default Pagination;

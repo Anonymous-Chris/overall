@@ -12,7 +12,7 @@ import Dropdowns from "./components/features/Dropdowns";
 import Datepicker from "./components/features/Datepicker";
 import Live from "./components/features/Live";
 import Flickity from "./components/features/Flickity";
-import Feature9 from "./components/features/Feature9";
+import Pagination from "./components/features/Pagination";
 
 function App() {
   return (
@@ -65,7 +65,11 @@ function App() {
               path="/features/flickity"
               render={() => <Flickity />}
             />
-            <Route exact path="/features/nine" render={() => <Feature9 />} />
+            <Route
+              exact
+              path="/features/pagination"
+              render={() => <Pagination />}
+            />
 
             <Route exact path="/functions" render={() => <Functions />} />
           </Switch>
