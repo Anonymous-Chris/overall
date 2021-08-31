@@ -60,6 +60,7 @@ const DatePicker = () => {
           src="https://cdn4.iconfinder.com/data/icons/game-general-icon-set-1/512/reset-512.png"
           style={{ width: "50px", height: "50px" }}
           onClick={resetDate}
+          alt="reset"
         />
       </div>
     </div>

@@ -25,7 +25,7 @@ function Navbar() {
       document.getElementById(`features`).classList.remove("active");
     }
     return () => {};
-  }, [location]);
+  }, [location, checkActiveTab]);
 
   // check active tab
   var checkActiveTab = (_location) => {

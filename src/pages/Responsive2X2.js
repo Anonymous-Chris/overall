@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "../css/responsive2x2.css";
 import expand from "../images/expand.png";
 import { FullScreen, useFullScreenHandle } from "react-full-screen";
