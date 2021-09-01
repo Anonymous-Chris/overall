@@ -1,7 +1,13 @@
 {
   "translations": {
     "navbar": {
-      "home": "home"
+      "home": "Home",
+      "features": "Features",
+      "functions": "Functions",
+      "responsive": "Responsive",
+      "functions1": "Link1",
+      "functions2": "Link2",
+      "functions3": "Link3"
     }
   }
 }

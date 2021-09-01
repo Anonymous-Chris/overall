@@ -1,7 +1,13 @@
 {
   "translations": {
     "navbar": {
-      "home": "home"
+      "home": " घर",
+      "features": "विशेषताहरु",
+      "functions": "प्रकार्यहरु",
+      "responsive": "उत्तरदायी",
+      "functions1": "लिंक १",
+      "functions2": "लिंक २",
+      "functions3": "लिंक ३"
     }
   }
 }

@@ -1,7 +1,13 @@
 {
   "translations": {
     "navbar": {
-      "home": "home"
+      "home": "Дом",
+      "features": "Особенности",
+      "functions": "функции",
+      "responsive": "отзывчивый",
+      "functions1": "ссылка1",
+      "functions2": "ссылка2",
+      "functions3": "ссылка3"
     }
   }
 }
