@@ -4,12 +4,15 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { StateProvider } from "../src/context-api/StateProvider";
 import reducer, { initialState } from "../src/context-api/Reducer";
-
+import { I18nextProvider } from "react-i18next";
+import i18n from "./i18n";
 ReactDOM.render(
   <React.StrictMode>
-    <StateProvider initialState={initialState} reducer={reducer}>
-      <App />
-    </StateProvider>
+    <I18nextProvider i18n={i18n}>
+      <StateProvider initialState={initialState} reducer={reducer}>
+        <App />
+      </StateProvider>
+    </I18nextProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );
