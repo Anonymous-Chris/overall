@@ -5,13 +5,14 @@ import "../css/navbar.css";
 import output from "../images/output.png";
 import Clock from "../components/features/Clock";
 import { useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 function Navbar() {
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
   const Close = () => setClick(false);
   const location = useLocation();
-
+  const { t } = useTranslation();
   // update the selected boxing of the functions tab in the parent element too
   useEffect(() => {
     // check active tab
@@ -66,7 +67,7 @@ function Navbar() {
                 id="home"
                 onClick={click ? handleClick : null}
               >
-                Home
+                {t("navbar.home")}
               </NavLink>
             </li>
             <li className="navbar__item">
@@ -78,7 +79,7 @@ function Navbar() {
                 id="features"
                 onClick={click ? handleClick : null}
               >
-                Features
+                {t("navbar.features")}
               </NavLink>
             </li>
             <li className="navbar__item">
@@ -90,19 +91,19 @@ function Navbar() {
                 id="functions"
                 onClick={click ? handleClick : null}
               >
-                Functions
+                {t("navbar.functions")}
               </NavLink>
 
               {/* keep nesting outside as to avoid <a> <a> descendent error */}
               <div className="navbar__function__content">
                 <NavLink exact to="/functions/link1">
-                  Link1
+                  {t("navbar.functions1")}
                 </NavLink>
                 <NavLink exact to="/functions/link2">
-                  Link2
+                  {t("navbar.functions2")}
                 </NavLink>
                 <NavLink exact to="/functions/link3">
-                  Link3
+                  {t("navbar.functions3")}
                 </NavLink>
               </div>
             </li>
@@ -115,7 +116,7 @@ function Navbar() {
                 id="responsive2x2"
                 onClick={click ? handleClick : null}
               >
-                Responsive
+                {t("navbar.responsive")}
               </NavLink>
             </li>
           </ul>

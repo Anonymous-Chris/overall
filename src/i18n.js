@@ -16,7 +16,7 @@ i18n
       ru: russian,
     },
     /* default language when load the website in browser */
-    lng: "ru",
+    lng: "en",
     /* When react i18next not finding any language to as default in browser */
     fallbackLng: "np",
     /* debugger For Development environment */
