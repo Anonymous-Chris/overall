@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/overall/static/css/main.fec653d0.chunk.css",
-    "main.js": "/overall/static/js/main.5f274722.chunk.js",
-    "main.js.map": "/overall/static/js/main.5f274722.chunk.js.map",
-    "runtime-main.js": "/overall/static/js/runtime-main.9ca6bf9a.js",
-    "runtime-main.js.map": "/overall/static/js/runtime-main.9ca6bf9a.js.map",
+    "main.css": "/overall/static/css/main.9cf42f76.chunk.css",
+    "main.js": "/overall/static/js/main.5db09cbf.chunk.js",
+    "main.js.map": "/overall/static/js/main.5db09cbf.chunk.js.map",
+    "runtime-main.js": "/overall/static/js/runtime-main.7378adeb.js",
+    "runtime-main.js.map": "/overall/static/js/runtime-main.7378adeb.js.map",
     "static/css/2.8708f073.chunk.css": "/overall/static/css/2.8708f073.chunk.css",
-    "static/js/2.1b24e6ba.chunk.js": "/overall/static/js/2.1b24e6ba.chunk.js",
-    "static/js/2.1b24e6ba.chunk.js.map": "/overall/static/js/2.1b24e6ba.chunk.js.map",
-    "static/js/3.0364350c.chunk.js": "/overall/static/js/3.0364350c.chunk.js",
-    "static/js/3.0364350c.chunk.js.map": "/overall/static/js/3.0364350c.chunk.js.map",
+    "static/js/2.f606bade.chunk.js": "/overall/static/js/2.f606bade.chunk.js",
+    "static/js/2.f606bade.chunk.js.map": "/overall/static/js/2.f606bade.chunk.js.map",
+    "static/js/3.1d428287.chunk.js": "/overall/static/js/3.1d428287.chunk.js",
+    "static/js/3.1d428287.chunk.js.map": "/overall/static/js/3.1d428287.chunk.js.map",
     "index.html": "/overall/index.html",
     "static/css/2.8708f073.chunk.css.map": "/overall/static/css/2.8708f073.chunk.css.map",
-    "static/css/main.fec653d0.chunk.css.map": "/overall/static/css/main.fec653d0.chunk.css.map",
-    "static/js/2.1b24e6ba.chunk.js.LICENSE.txt": "/overall/static/js/2.1b24e6ba.chunk.js.LICENSE.txt",
+    "static/css/main.9cf42f76.chunk.css.map": "/overall/static/css/main.9cf42f76.chunk.css.map",
+    "static/js/2.f606bade.chunk.js.LICENSE.txt": "/overall/static/js/2.f606bade.chunk.js.LICENSE.txt",
     "static/media/autoscroll.ff2ca491.jpg": "/overall/static/media/autoscroll.ff2ca491.jpg",
     "static/media/contextapi.61dba2ad.jpg": "/overall/static/media/contextapi.61dba2ad.jpg",
     "static/media/donuts.f790be42.jpg": "/overall/static/media/donuts.f790be42.jpg",
@@ -26,10 +26,10 @@
     "static/media/skipandfetchpagination.41ffafec.jpg": "/overall/static/media/skipandfetchpagination.41ffafec.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.9ca6bf9a.js",
+    "static/js/runtime-main.7378adeb.js",
     "static/css/2.8708f073.chunk.css",
-    "static/js/2.1b24e6ba.chunk.js",
-    "static/css/main.fec653d0.chunk.css",
-    "static/js/main.5f274722.chunk.js"
+    "static/js/2.f606bade.chunk.js",
+    "static/css/main.9cf42f76.chunk.css",
+    "static/js/main.5db09cbf.chunk.js"
   ]
 }
