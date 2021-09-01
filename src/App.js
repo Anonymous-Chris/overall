@@ -23,6 +23,8 @@ function App() {
           <Navbar />
           <Switch>
             <Route exact path="/" render={() => <Home />} />
+            <Route exact path="/overall" render={() => <Home />} />
+
             <Route
               exact
               path="/responsive2x2"
