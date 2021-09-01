@@ -8,6 +8,11 @@
       "functions1": "Link1",
       "functions2": "Link2",
       "functions3": "Link3"
+    },
+    "home": {
+      "introduction__title": "Introduction",
+      "introduction__text": "This project has few of the features I wanted to learn on the process and which might be essential in future. It also uses different environment variables for test, dev and prod.<p> Below is an implementation of<b> <i> Localization/Internalization</i>  </b>feature.</p>",
+      "localization__title": "Localization (Change language from the following)"
     }
   }
 }

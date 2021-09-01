@@ -1,47 +1,33 @@
-import React, { useState } from "react";
+import React from "react";
 import "../css/home.css";
 import { useTranslation } from "react-i18next";
 function Home() {
-  const [active, setActive] = useState(1);
-  const { i18n } = useTranslation();
-
-  const changeLanguage = (e, lng) => {
+  const { t, i18n } = useTranslation();
+  console.log(i18n.language);
+  const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
-    setActive(e);
   };
   return (
     <div className="home">
       <h1>Introduction</h1>
-      <h5>
-        This project has few of the features I wanted to learn on the process
-        and which might be essential in future. It also uses different
-        environment variables for test, dev and prod.
-        <p>
-          {" "}
-          Below is an implementation of
-          <b>
-            <i> Localization/Internalization</i>
-          </b>{" "}
-          feature.
-        </p>
-      </h5>
-      <h3>Localization (Change language from the following)</h3>
+      <h5>{t("home.introduction__text")}</h5>
+      <h3 data-i18n="[html]">{t("home.localization__title")}</h3>
       <div className="navbar_language">
         <button
-          className={active === 1 ? "active" : ""}
-          onClick={(e) => changeLanguage(1, "en")}
+          className={i18n.language === "en" ? "active" : ""}
+          onClick={() => changeLanguage("en")}
         >
           en
         </button>
         <button
-          className={active === 2 ? "active" : ""}
-          onClick={(e) => changeLanguage(2, "np")}
+          className={i18n.language === "np" ? "active" : ""}
+          onClick={() => changeLanguage("np")}
         >
           np
         </button>
         <button
-          className={active === 3 ? "active" : ""}
-          onClick={(e) => changeLanguage(3, "ru")}
+          className={i18n.language === "ru" ? "active" : ""}
+          onClick={() => changeLanguage("ru")}
         >
           ru
         </button>
