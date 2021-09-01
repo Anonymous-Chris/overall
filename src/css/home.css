@@ -1,3 +1,17 @@
 /* * {
   background-color: grey;
 } */
+.navbar_language {
+  display: flex;
+  position: absolute;
+}
+
+.navbar_language button {
+  width: 80px;
+  background: yellow;
+}
+
+.navbar_language button:hover,
+.navbar_language button.active {
+  background: orange;
+}
