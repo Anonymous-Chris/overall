@@ -3,11 +3,11 @@
     "navbar": {
       "home": " घर",
       "features": "विशेषताहरु",
-      "functions": "प्रकार्यहरु",
+      "animations": "एनिमेसन",
       "responsive": "उत्तरदायी",
-      "functions1": "लिंक १",
-      "functions2": "लिंक २",
-      "functions3": "लिंक ३"
+      "animations1": "तातो नक्शा",
+      "animations2": "चार्ट ",
+      "animations3": "३ डी "
     },
     "home": {
       "introduction__title": "परिचय",

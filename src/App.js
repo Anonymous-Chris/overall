@@ -4,7 +4,7 @@ import Navbar from "./Navigation/Navbar";
 import Home from "./pages/Home";
 import Responsive2X2 from "./pages/Responsive2X2";
 import Features from "./pages/Features";
-import Functions from "./pages/Functions";
+import Animations from "./pages/Animations";
 import CommonTable from "./components/CommonTable";
 import NestedDonuts from "./components/features/NestedDonuts";
 import Loader from "./components/features/Loader";
@@ -13,6 +13,9 @@ import Datepicker from "./components/features/Datepicker";
 import Live from "./components/features/Live";
 import Flickity from "./components/features/Flickity";
 import Pagination from "./components/features/Pagination";
+import Heatmaps from "./components/features/Heatmaps";
+import Charts from "./components/features/Charts";
+import ThreeD from "./components/ThreeD";
 
 function App() {
   return (
@@ -73,7 +76,14 @@ function App() {
               render={() => <Pagination />}
             />
 
-            <Route exact path="/functions" render={() => <Functions />} />
+            <Route exact path="/animations" render={() => <Animations />} />
+            <Route
+              exact
+              path="/animations/heatmap"
+              render={() => <Heatmaps />}
+            />
+            <Route exact path="/animations/charts" render={() => <Charts />} />
+            <Route exact path="/animations/3d" render={() => <ThreeD />} />
           </Switch>
         </Router>
       </div>

@@ -13,7 +13,7 @@ function Navbar() {
   const Close = () => setClick(false);
   const location = useLocation();
   const { t } = useTranslation();
-  // update the selected boxing of the functions tab in the parent element too
+  // update the selected boxing of the animations tab in the parent element too
   useEffect(() => {
     // check active tab
     var checkActiveTab = (_location) => {
@@ -25,13 +25,13 @@ function Navbar() {
     };
 
     if (location.pathname.includes("features")) {
-      document.getElementById(`functions`).classList.remove("active");
+      document.getElementById(`animations`).classList.remove("active");
       checkActiveTab("features");
-    } else if (location.pathname.includes("functions")) {
+    } else if (location.pathname.includes("animations")) {
       document.getElementById(`features`).classList.remove("active");
-      checkActiveTab("functions");
+      checkActiveTab("animations");
     } else {
-      document.getElementById(`functions`).classList.remove("active");
+      document.getElementById(`animations`).classList.remove("active");
       document.getElementById(`features`).classList.remove("active");
     }
     return () => {};
@@ -85,25 +85,25 @@ function Navbar() {
             <li className="navbar__item">
               <NavLink
                 exact
-                to="/functions"
+                to="/animations"
                 activeClassName="active"
                 className="navbar__links "
-                id="functions"
+                id="animations"
                 onClick={click ? handleClick : null}
               >
-                {t("navbar.functions")}
+                {t("navbar.animations")}
               </NavLink>
 
               {/* keep nesting outside as to avoid <a> <a> descendent error */}
               <div className="navbar__function__content">
-                <NavLink exact to="/functions/link1">
-                  {t("navbar.functions1")}
+                <NavLink exact to="/animations/heatmap">
+                  {t("navbar.animations1")}
                 </NavLink>
-                <NavLink exact to="/functions/link2">
-                  {t("navbar.functions2")}
+                <NavLink exact to="/animations/charts">
+                  {t("navbar.animations2")}
                 </NavLink>
-                <NavLink exact to="/functions/link3">
-                  {t("navbar.functions3")}
+                <NavLink exact to="/animations/3d">
+                  {t("navbar.animations3")}
                 </NavLink>
               </div>
             </li>

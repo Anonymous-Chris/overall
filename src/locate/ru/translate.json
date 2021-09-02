@@ -3,11 +3,11 @@
     "navbar": {
       "home": "Дом",
       "features": "Особенности",
-      "functions": "функции",
+      "animations": "анимации",
       "responsive": "отзывчивый",
-      "functions1": "ссылка1",
-      "functions2": "ссылка2",
-      "functions3": "ссылка3"
+      "animations1": "тепловые карты",
+      "animations2": "диаграммы",
+      "animations3": "3 Д"
     },
     "home": {
       "introduction__title": "Вступление",

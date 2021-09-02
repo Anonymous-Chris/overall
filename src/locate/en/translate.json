@@ -3,11 +3,11 @@
     "navbar": {
       "home": "Home",
       "features": "Features",
-      "functions": "Functions",
+      "animations": "Animations",
       "responsive": "Responsive",
-      "functions1": "Link1",
-      "functions2": "Link2",
-      "functions3": "Link3"
+      "animations1": "Heatmaps",
+      "animations2": "Charts",
+      "animations3": "3 D"
     },
     "home": {
       "introduction__title": "Introduction",
