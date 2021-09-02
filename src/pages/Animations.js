@@ -1,18 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import "react-grid-layout/css/styles.css";
 import "react-resizable/css/styles.css";
 import { Responsive, WidthProvider } from "react-grid-layout";
+const originalLayout = getFromLS("layout") || [];
 
 function Animations() {
   const ResponsiveGridLayout = WidthProvider(Responsive);
-  // const [columns, setColumns] = React.useState(3);
-  const columns = 3;
-  const layout = [
-    { i: "0", h: 1, w: 2, x: 0, y: 0, moved: false, static: false },
-    { i: "1", h: 1, w: 1, x: 2, y: 0, moved: false, static: false },
-    { i: "2", h: 2, w: 1, x: 2, y: 1, moved: false, static: false },
-    { i: "3", h: 2, w: 1, x: 0, y: 1, moved: false, static: false },
-  ];
+  const [layout] = useState(JSON.parse(JSON.stringify(originalLayout)));
+
+  const onLayoutChange = (layout) => {
+    saveToLS("layout", layout);
+  };
   return (
     <div className="text-center m-auto">
       {/* <input
@@ -36,22 +34,62 @@ function Animations() {
         compactType={null}
         useCSSTransforms={true}
         preventCollision={true}
+        onLayoutChange={onLayoutChange}
       >
-        <div key={"0"} style={{ border: "2px solid black" }}>
+        <div
+          key="0"
+          data-grid={{ h: 1, w: 2, x: 0, y: 0, moved: false, static: false }}
+          style={{ border: "2px solid black" }}
+        >
           Expand Me!
         </div>
-        <div key={"1"} style={{ border: "2px solid black" }}>
+        <div
+          key="1"
+          data-grid={{ h: 1, w: 1, x: 2, y: 0, moved: false, static: false }}
+          style={{ border: "2px solid black" }}
+        >
           Do whatever!
         </div>
-        <div key={"2"} style={{ border: "2px solid black" }}>
+        <div
+          key="2"
+          data-grid={{ h: 2, w: 1, x: 2, y: 1, moved: false, static: false }}
+          style={{ border: "2px solid black" }}
+        >
           Resize me!
         </div>
-        <div key={"3"} style={{ border: "2px solid black" }}>
+        <div
+          key="3"
+          data-grid={{ h: 2, w: 1, x: 0, y: 1, moved: false, static: false }}
+          style={{ border: "2px solid black" }}
+        >
           Drag me!
         </div>
       </ResponsiveGridLayout>
     </div>
   );
+}
+
+function getFromLS(key) {
+  let ls = {};
+  if (global.localStorage) {
+    try {
+      ls = JSON.parse(global.localStorage.getItem("rgl-7")) || {};
+    } catch (e) {
+      /*Ignore*/
+    }
+  }
+  return ls[key];
+}
+
+function saveToLS(key, value) {
+  if (global.localStorage) {
+    global.localStorage.setItem(
+      "rgl-7",
+      JSON.stringify({
+        [key]: value,
+      })
+    );
+  }
 }
 
 export default Animations;
