@@ -1,0 +1,6 @@
+/* mobile devices */
+@media screen and (max-width: 540px) {
+  svg {
+    height: auto !important;
+  }
+}
