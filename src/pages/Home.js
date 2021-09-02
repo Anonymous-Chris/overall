@@ -39,6 +39,19 @@ function Home() {
           ru
         </button>
       </div>
+      <div className="home__homeimage row m-0">
+        {" "}
+        <img
+          className="col-12 col-sm-12 col-md-12 col-lg-6 p-1"
+          src={t("home.homeimg1")}
+          alt="home_image1"
+        />
+        <img
+          className="col-12 col-sm-12 col-md-12 col-lg-6 p-1"
+          src={t("home.homeimg2")}
+          alt="home_image2"
+        />
+      </div>
     </div>
   );
 }

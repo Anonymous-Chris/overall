@@ -12,7 +12,9 @@
     "home": {
       "introduction__title": "Вступление",
       "introduction__text": "В этом проекте есть несколько функций, которые я хотел изучить в процессе и которые могут оказаться важными в будущем. В нем также используются различные переменные среды для test, dev и prod. <p> Ниже представлена ​​реализация <b> <i> Функция локализации / интернализации </i> </b>. </p> ",
-      "localization__title": "Локализация (изменить язык со следующего)"
+      "localization__title": "Локализация (изменить язык со следующего)",
+      "homeimg1": "https://admin.freetour.com/images/tours/23760/red-square-online-tour-02.jpg",
+      "homeimg2": "https://img.traveltriangle.com/blog/wp-content/uploads/2018/12/Cover1.jpg"
     }
   }
 }
