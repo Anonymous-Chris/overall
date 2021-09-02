@@ -27,13 +27,7 @@ function Animations() {
         breakpoints={{ lg: 1200, md: 996, sm: 768, xs: 480, xxs: 0 }}
         autoSize={false}
         rowHeight={70}
-        cols={{
-          lg: columns,
-          md: columns,
-          sm: columns,
-          xs: 1,
-          xxs: 1,
-        }}
+        cols={{ lg: 12, md: 10, sm: 6, xs: 4, xxs: 2 }}
         layouts={{ lg: layout, md: layout, sm: layout, xs: layout }}
         containerPadding={[15, 15]}
         margin={[5, 5]}
