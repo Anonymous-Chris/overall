@@ -1,10 +1,15 @@
 import React, { useState } from "react";
 import "../../css/heatmaps.css";
 const Heatmaps = () => {
-  const [chosenValue] = useState(0);
+  let [counter, setCounter] = useState(0);
+
+  setInterval(function () {
+    setCounter(counter + 1);
+  }, 10000);
+
   return (
     <div className="heatmaps text-center w-100" style={{ height: "88vh" }}>
-      <h1>Heatmaps (Chosen : {chosenValue})</h1>
+      <h1>Heatmaps (Chosen : {counter})</h1>
       <div
         className="col-12 col-sm-12 col-md-12 col-lg-8 m-auto"
         style={{ height: "inherit" }}
