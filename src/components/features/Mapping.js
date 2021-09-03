@@ -5,4 +5,3 @@ const Mapping = () => {
 };
 
 export default Mapping;
-Mapping;
