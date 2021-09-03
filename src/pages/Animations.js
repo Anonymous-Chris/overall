@@ -70,7 +70,17 @@ function Animations() {
         <div
           key="3"
           data-grid={{ h: 2, w: 1, x: 0, y: 1, moved: false, static: false }}
-          style={{ border: "2px solid black" }}
+          style={{
+            border: "2px solid black",
+            backgroundImage:
+              "url(" +
+              "          https://ih1.redbubble.net/image.321520756.6358/flat,750x,075,f-pad,750x1000,f8f8f8.u3.jpg" +
+              ")",
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+            color: "black",
+          }}
         >
           Drag me!
         </div>
