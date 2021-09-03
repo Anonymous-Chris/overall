@@ -46,7 +46,17 @@ function Animations() {
         <div
           key="1"
           data-grid={{ h: 1, w: 1, x: 2, y: 0, moved: false, static: false }}
-          style={{ border: "2px solid black" }}
+          style={{
+            border: "2px solid black",
+            backgroundImage:
+              "url(" +
+              "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" +
+              ")",
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+            color: "white",
+          }}
         >
           Do whatever!
         </div>
