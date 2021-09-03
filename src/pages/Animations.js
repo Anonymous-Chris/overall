@@ -3,20 +3,15 @@ import "react-grid-layout/css/styles.css";
 import "react-resizable/css/styles.css";
 import RGL, { Responsive, WidthProvider } from "react-grid-layout";
 const originalLayout = getFromLS("layout") || [];
-console.log(originalLayout);
+
 function Animations() {
   const ResponsiveGridLayout = WidthProvider(Responsive);
-  // const [columns, setColumns] = React.useState(3);
   const [layout, setLayout] = useState(
     JSON.parse(JSON.stringify(originalLayout))
   );
 
   const onLayoutChange = (layout) => {
-    console.log(layout);
-    setLayout(layout);
     saveToLS("layout", layout);
-
-    console.log("changed");
   };
   return (
     <div className="text-center m-auto">
