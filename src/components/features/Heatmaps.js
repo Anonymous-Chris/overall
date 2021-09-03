@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import "../../css/heatmaps.css";
 const Heatmaps = () => {
-  const [chosenValue, setChosenValue] = useState(0);
-  setChosenValue(0);
+  const [chosenValue] = useState(0);
   return (
     <div className="heatmaps text-center w-100" style={{ height: "88vh" }}>
       <h1>Heatmaps (Chosen : {chosenValue})</h1>
