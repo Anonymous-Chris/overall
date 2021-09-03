@@ -69,7 +69,7 @@ function Animations() {
         </div>
         <div
           key="3"
-          data-grid={{ h: 2, w: 1, x: 0, y: 1, moved: false, static: false }}
+          data-grid={{ h: 2, w: 1, x: 0, y: 1, moved: false, static: true }}
           style={{
             border: "2px solid black",
             backgroundImage:
