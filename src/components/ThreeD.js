@@ -1,7 +1,11 @@
 import React from "react";
-
+import Cube from "./animations/Cube";
 const ThreeD = () => {
-  return <div>3D</div>;
+  return (
+    <div className="d-flex">
+      <Cube />
+    </div>
+  );
 };
 
 export default ThreeD;
