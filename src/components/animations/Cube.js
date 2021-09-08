@@ -2,7 +2,10 @@ import React from "react";
 import "../../css/cube.css";
 const Cube = () => {
   return (
-    <div className="stage" style={{ width: "120px", height: "120px" }}>
+    <div
+      className="stage"
+      style={{ width: "120px", height: "120px", marginRight: "50px" }}
+    >
       <div className="cubespinner">
         <div className="face1">1</div>
         <div className="face2">2</div>
