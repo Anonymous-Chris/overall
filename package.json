@@ -12,6 +12,7 @@
     "env-cmd": "^10.1.0",
     "flickity-as-nav-for": "^2.0.1",
     "gh-pages": "^3.2.3",
+    "gsap": "^3.7.1",
     "i18next": "^20.5.0",
     "i18next-browser-languagedetector": "^6.1.2",
     "i18next-xhr-backend": "^3.2.2",
