@@ -60,16 +60,19 @@
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-duration: 12s;
 
+  /* spincube  */
   animation-name: spincube;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
   animation-duration: 12s;
 
+  /* 3D  */
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
   -ms-transform-style: preserve-3d;
   transform-style: preserve-3d;
 
+  /* transform  */
   -webkit-transform-origin: 60px 60px 0;
   -moz-transform-origin: 60px 60px 0;
   -ms-transform-origin: 60px 60px 0;
@@ -94,30 +97,35 @@
   -ms-transform: translateZ(60px);
   transform: translateZ(60px);
 }
+
 .cubespinner .face2 {
   -webkit-transform: rotateY(90deg) translateZ(60px);
   -moz-transform: rotateY(90deg) translateZ(60px);
   -ms-transform: rotateY(90deg) translateZ(60px);
   transform: rotateY(90deg) translateZ(60px);
 }
+
 .cubespinner .face3 {
   -webkit-transform: rotateY(90deg) rotateX(90deg) translateZ(60px);
   -moz-transform: rotateY(90deg) rotateX(90deg) translateZ(60px);
   -ms-transform: rotateY(90deg) rotateX(90deg) translateZ(60px);
   transform: rotateY(90deg) rotateX(90deg) translateZ(60px);
 }
+
 .cubespinner .face4 {
   -webkit-transform: rotateY(180deg) rotateZ(90deg) translateZ(60px);
   -moz-transform: rotateY(180deg) rotateZ(90deg) translateZ(60px);
   -ms-transform: rotateY(180deg) rotateZ(90deg) translateZ(60px);
   transform: rotateY(180deg) rotateZ(90deg) translateZ(60px);
 }
+
 .cubespinner .face5 {
   -webkit-transform: rotateY(-90deg) rotateZ(90deg) translateZ(60px);
   -moz-transform: rotateY(-90deg) rotateZ(90deg) translateZ(60px);
   -ms-transform: rotateY(-90deg) rotateZ(90deg) translateZ(60px);
   transform: rotateY(-90deg) rotateZ(90deg) translateZ(60px);
 }
+
 .cubespinner .face6 {
   -webkit-transform: rotateX(-90deg) translateZ(60px);
   -moz-transform: rotateX(-90deg) translateZ(60px);

@@ -26,6 +26,7 @@
   background-color: #01cc99;
   border: 0;
 }
+
 .scrollbar::-webkit-scrollbar-corner {
   background: rgba(0, 0, 0, 0);
 }

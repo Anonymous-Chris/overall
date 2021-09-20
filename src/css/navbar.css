@@ -3,6 +3,7 @@
   height: 54px;
   vertical-align: baseline;
 }
+
 .pages {
   color: black;
   text-align: center;
@@ -13,6 +14,7 @@
 .navbar__tabs {
   background-color: #1f5156;
 }
+
 .navbar {
   height: 54px;
   display: flex;
@@ -61,6 +63,7 @@
   display: flex;
   list-style: none;
   text-align: center;
+
   /* margin-right: 2rem;
   margin-top: 0.4rem;
   margin-left: auto; */
@@ -77,6 +80,7 @@
 .navbar__links:hover {
   color: black;
 }
+
 .fa-code {
   margin-left: 1rem;
 }
@@ -86,7 +90,7 @@
   margin-right: 1rem;
 }
 
-.navbar__item:after {
+.navbar__item::after {
   content: "";
   display: block;
   height: 3px;
@@ -95,7 +99,7 @@
   transition: width 0.7s ease, background-color 0.5s ease;
 }
 
-.navbar__item:hover:after {
+.navbar__item:hover::after {
   width: 100%;
   background: #ffdd40;
 }
@@ -122,7 +126,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    border-top: 1pxsolid #fff;
+    border-top: 1px solid #fff;
     position: absolute;
     top: 80px;
     left: -110%;
@@ -132,7 +136,7 @@
 
   .navbar__menu.active {
     background: grey;
-    left: 0px;
+    left: 0;
     opacity: 1;
     transition: all 0.5s ease;
     z-index: 1;
@@ -166,7 +170,7 @@
   position: absolute;
   background-color: #f1f1f1;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
