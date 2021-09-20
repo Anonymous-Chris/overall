@@ -119,6 +119,19 @@ function Navbar() {
                 {t("navbar.responsive")}
               </NavLink>
             </li>
+
+            <li className="navbar__item">
+              <NavLink
+                exact
+                to="/surveillance"
+                activeClassName="active"
+                className="navbar__links"
+                id="surveillance"
+                onClick={click ? handleClick : null}
+              >
+                {t("navbar.surveillance")}
+              </NavLink>
+            </li>
           </ul>
           <div className="navbar__icon" onClick={handleClick}>
             <i className={click ? "fa fa-times" : "fa fa-bars"}></i>

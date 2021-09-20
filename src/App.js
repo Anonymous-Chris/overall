@@ -6,6 +6,8 @@ import Home from "./pages/Home";
 import Responsive2X2 from "./pages/Responsive2X2";
 import Features from "./pages/Features";
 import Animations from "./pages/Animations";
+import Surveillance from "./pages/Surveillance";
+
 import CommonTable from "./components/CommonTable";
 import NestedDonuts from "./components/features/NestedDonuts";
 import Loader from "./components/features/Loader";
@@ -17,7 +19,6 @@ import Pagination from "./components/features/Pagination";
 import Heatmaps from "./components/features/Heatmaps";
 import Charts from "./components/features/Charts";
 import ThreeD from "./components/ThreeD";
-
 function App() {
   return (
     <div className="App">
@@ -33,6 +34,12 @@ function App() {
               exact
               path="/responsive2x2"
               render={() => <Responsive2X2 />}
+            />
+
+            <Route
+              exact
+              path="/surveillance"
+              render={() => <Surveillance />}
             />
             <Route exact path="/features" render={() => <Features />} />
             <Route
