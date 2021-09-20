@@ -16,6 +16,7 @@ module.exports = {
   rules: {
     "no-extra-semi": "error",
     "react/prop-types": "off",
+    "comment-empty-line-before":["always",{ignore: ["after-comment", "stylelint-commands"]}]
   },
   globals: {
     module: false,
