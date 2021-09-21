@@ -8,7 +8,7 @@ const Logs = () => {
     setCameralogs(data);
   }, []);
   return (
-    <div className="logs scrollbar w-100 " style={{ background: "dimgrey" }}>
+    <div className="logs scrollbar w-100 " style={{ background: "#161619"   }}>
       {console.log(cameralogs)}
       <span className="logs__title">
         <h4>{cameralogs[0]?.metadata.name}</h4>
@@ -16,7 +16,7 @@ const Logs = () => {
       {cameralogs && (
         <ul className="list-group ">
           {cameralogs[0]?.data.map((singleLog, index) => (
-            <div className="card" key={index} style={{ background: "gray" }}>
+            <div className="card mb-2" key={index} style={{ background: "#212224" }}>
               <div className="card-body">
                 {Object.entries(singleLog).map(([key, val]) => (
                   <footer key={key}>
