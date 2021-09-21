@@ -73,11 +73,18 @@ const Bar = () => {
 
           legend: {
             display: true,
-            position: "bottom",
+            position: "top",
             labels: {
               usePointStyle: true,
               fontColor: "white",
             },
+          },
+          title: {
+            display: true,
+            text: "Custom title to be here",
+            position:'bottom',
+            fontColor: "white",
+            fontFamily: "'Roboto Condensed', sans-serif",
           },
           scales: {
             yAxes: [

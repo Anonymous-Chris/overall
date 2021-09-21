@@ -21,10 +21,10 @@ const Surveillance = () => {
         </div>
       </div>
       <div className="col-12 col-sm-12 col-md-9 col-lg-9 m-0 p-2 surveillance__column__right">
-        <div className="surveillance__video">
+        <div className="surveillance__video mb-3">
           <Video />
         </div>
-        <div className="surveillance__detection" style={{ height: "34%" }}>
+        <div className="surveillance__detection" style={{ height: "33%" }}>
           <Detection />
         </div>
       </div>
