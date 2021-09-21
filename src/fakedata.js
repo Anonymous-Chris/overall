@@ -1,5 +1,35 @@
 const fakedata = [
   {
+    cameralogs: [
+      {
+        metadata: {
+          name: "Camera Event Logs",
+        },
+        data: [
+          {
+            camera_id: "CA1C22",
+            people_alert: "3",
+            time_stamp: "09/20/21 14:35:06",
+          },
+          {
+            camera_id: "CA1C14",
+            people_alert: "2",
+            time_stamp: "09/20/21 14:35:06",
+          },
+          {
+            camera_id: "CAIU07",
+            people_alert: "4",
+            time_stamp: "09/20/21 14:35:06",
+          },
+          {
+            camera_id: "CALU01",
+            people_alert: "5",
+            time_stamp: "09/20/21 14:35:06",
+          },
+        ],
+      },
+    ],
+
     dropdowns: [
       {
         metadata: {
