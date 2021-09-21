@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import "../css/surveillance.css";
 import Logs from "../components/features/surveillance/Logs";
 import Heatmaps from "../components/features/surveillance/Heatmaps";
@@ -24,7 +24,7 @@ const Surveillance = () => {
         <div className="surveillance__video">
           <Video />
         </div>
-        <div className="surveillance__detection">
+        <div className="surveillance__detection" style={{ height: "34%" }}>
           <Detection />
         </div>
       </div>
@@ -32,4 +32,4 @@ const Surveillance = () => {
   );
 };
 
-export default Surveillance
+export default Surveillance;

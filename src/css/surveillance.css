@@ -33,7 +33,18 @@
 
 /* for smaller screens */
 @media screen and (max-width: 753px) {
-  /* .surveillance__column__left > div {
+  .surveillance {
     height: auto;
-  } */
+  }
+
+  .surveillance__column__right {
+    height: 500px;
+  }
+  .surveillance__detection {
+    height: auto;
+  }
+
+  .detection {
+    height: 150px !important;
+  }
 }
