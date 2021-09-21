@@ -9,12 +9,14 @@
   border: 1px solid green;
   height: auto;
   max-height: 100%;
+  background: inherit;
 }
 
 .surveillance__column__right {
   border: 1px solid red;
   height: auto;
   max-height: 100%;
+  background: inherit;
 }
 
 /* medium screen */
