@@ -8,11 +8,11 @@ const Heatmaps = () => {
 
   },[])
   return (
-    <div className="heatmaps">
+    <div className="heatmaps h-100" style={{ background: "#161619" }}>
       <span>
         <h4>{data[0]?.metadata.name}</h4>
       </span>
-      <div >
+      <div className=" scrollbar" style={{height: '84%'}}>
         {data && (
           <ul className="list-group ">
             {data[0]?.data.map((singleLog, index) => (
