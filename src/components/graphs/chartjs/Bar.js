@@ -36,12 +36,12 @@ const Bar = () => {
           datasets: [
             {
               label: "camera1",
-              backgroundColor: "rgb(0, 197, 106)",
+              backgroundColor: "green",
               data: data1,
             },
             {
               label: "camera2",
-              backgroundColor: "rgb(255, 114, 107)",
+              backgroundColor: "blue",
               data: data2,
             },
             {
@@ -56,12 +56,12 @@ const Bar = () => {
             },
             {
               label: "camera5",
-              backgroundColor: "rgb(0, 197, 106)",
+              backgroundColor: "red",
               data: data5,
             },
             {
               label: "camera6",
-              backgroundColor: "rgb(255, 114, 107)",
+              backgroundColor: "white",
               data: data6,
             },
           ],
