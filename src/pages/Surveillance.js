@@ -10,13 +10,13 @@ const Surveillance = () => {
   return (
     <div className="surveillance row m-0 p-0">
       <div className="col-12 col-sm-12 col-md-3 col-lg-3 m-0 p-2 surveillance__column__left">
-        <div className="surveillance__logs w-100 ">
+        <div className="surveillance__logs w-100  ">
           <Logs />
         </div>
-        <div className="surveillance__heatmaps w-100 ">
+        <div className="surveillance__heatmaps w-100  ">
           <Heatmaps />
         </div>
-        <div className="surveillance__overallpeople w-100">
+        <div className="surveillance__overallpeople w-100  ">
           <OverallPeople />
         </div>
       </div>
