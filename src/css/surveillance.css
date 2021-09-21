@@ -38,13 +38,17 @@
   }
 
   .surveillance__column__right {
-    height: 500px;
-  }
-  .surveillance__detection {
     height: auto;
   }
 
+  .surveillance__video {
+    height: auto !important;
+  }
+  .surveillance__detection {
+    height: auto !important;
+  }
+
   .detection {
-    height: 150px !important;
+    height: 220px !important;
   }
 }
