@@ -9,7 +9,7 @@ import Detection from "../components/features/surveillance/Detection";
 const Surveillance = () => {
   return (
     <div className="surveillance row m-0 p-0">
-      <div className="col-12 col-sm-12 col-md-3 col-lg-3 m-0 p-2 surveillance__column__left">
+      <div className="col-12 col-sm-12 col-md-4 col-lg-3 m-0 p-2 surveillance__column__left">
         <div className="surveillance__logs w-100 mb-2">
           <Logs />
         </div>
@@ -20,7 +20,7 @@ const Surveillance = () => {
           <OverallPeople />
         </div>
       </div>
-      <div className="col-12 col-sm-12 col-md-9 col-lg-9 m-0 p-2 surveillance__column__right">
+      <div className="col-12 col-sm-12 col-md-8 col-lg-9 m-0 p-2 surveillance__column__right">
         <div className="surveillance__video mb-3">
           <Video />
         </div>
