@@ -2,6 +2,7 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
+    node: true,
   },
   extends: ["eslint:recommended", "plugin:react/recommended"],
   parserOptions: {
@@ -16,7 +17,10 @@ module.exports = {
   rules: {
     "no-extra-semi": "error",
     "react/prop-types": "off",
-    "comment-empty-line-before":["always",{ignore: ["after-comment", "stylelint-commands"]}]
+    "comment-empty-line-before": [
+      0,
+      { ignore: ["after-comment", "stylelint-commands"] },
+    ],
   },
   globals: {
     module: false,
