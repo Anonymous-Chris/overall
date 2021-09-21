@@ -1,5 +1,37 @@
 const fakedata = [
-  {
+  {    overallpeoplecount: [
+    {
+      metadata: {
+        name: "Overall People Detected",
+      },
+      data: [
+        {
+          name: "IC flashing",
+          detected: 8,
+        },
+        {
+          name: "Re-work",
+          detected: 1,
+        },
+        {
+          name: "Side Line",
+          detected: 6,
+        },
+        {
+          name: "PTH",
+          detected: 9,
+        },
+        {
+          name: "Press-Fit",
+          detected: 1,
+        },
+        {
+          name: "Wave-Machine",
+          detected: 5,
+        },
+      ],
+    },
+  ],
     surveillanceoverall: [
       {
         metadata: {
