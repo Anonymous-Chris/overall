@@ -8,7 +8,7 @@ const Logs = () => {
     setCameralogs(data);
   }, []);
   return (
-    <div className="logs scrollbar w-100 " style={{ background: "#161619"   }}>
+    <div className="logs scrollbar w-100 " style={{ background: "#161619" }}>
       {console.log(cameralogs)}
       <span className="logs__title">
         <h4>{cameralogs[0]?.metadata.name}</h4>
@@ -16,7 +16,11 @@ const Logs = () => {
       {cameralogs && (
         <ul className="list-group ">
           {cameralogs[0]?.data.map((singleLog, index) => (
-            <div className="card mb-2" key={index} style={{ background: "#212224" }}>
+            <div
+              className="card mb-2"
+              key={index}
+              style={{ background: "#212224" }}
+            >
               <div className="card-body">
                 {Object.entries(singleLog).map(([key, val]) => (
                   <footer key={key}>
@@ -24,13 +28,12 @@ const Logs = () => {
                       {key?.replaceAll("_", " ").toUpperCase()}
                     </span>{" "}
                     :{" "}
-                    <span
-                      className={`valueSection ${
-                        val === "Pass" ? "goodStatus" : ""
-                      }`}
-                    >
-                      {val?.toUpperCase()}
-                    </span>
+                    {key === "people_alert" && val > 2 ? (
+                      <i className="fal fa-exclamation-triangle" style={{color: 'red'}}></i>
+                    ) : (
+                      ""
+                    )}{" "}
+                    <span>{val?.toUpperCase()}</span>
                   </footer>
                 ))}
               </div>
