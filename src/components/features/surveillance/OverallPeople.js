@@ -11,9 +11,9 @@ const OverallPeople = () => {
   return (
     <div className="overallpeople pt-2 h-100" style={{background: 'rgb(22, 22, 25)'}}>
       {console.log(peopleDetected)}
-      <h4>{peopleDetected[0]?.metadata.name}</h4>
+      {/* <h4>{peopleDetected[0]?.metadata.name}</h4> */}
       <div className='d-flex align-items-center justify-content-center w-100' style={{height: '87%'}}> 
-      <Donut />
+      <Donut title={peopleDetected[0]?.metadata.name} />
       </div>
     </div>
   );
