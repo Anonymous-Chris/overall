@@ -1,5 +1,38 @@
 const fakedata = [
   {
+    surveillanceoverall: [
+      {
+        metadata: {
+          name: "Surveillance overall Heat Map",
+        },
+        data: [
+          {
+            camera_area: "FT",
+            detected: 13,
+          },
+          {
+            camera_area: "Re-work",
+            detected: 3,
+          },
+          {
+            camera_area: "Side Line",
+            detected: 5,
+          },
+          {
+            camera_area: "PTH",
+            detected: 6,
+          },
+          {
+            camera_area: "Press-Fit",
+            detected: 2,
+          },
+          {
+            camera_area: "Wave-Machine",
+            detected: 5,
+          },
+        ],
+      },
+    ],
     cameralogs: [
       {
         metadata: {
