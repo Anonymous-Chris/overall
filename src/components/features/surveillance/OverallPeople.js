@@ -1,7 +1,7 @@
 import React from "react";
 
 const OverallPeople = () => {
-  return <div>overallpeople</div>;
+  return <div className="overallpeople">overallpeople</div>;
 };
 
 export default OverallPeople;
