@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import Chart from "chart.js";
 
 const Donut = () => {
-  const data = [10, 30, 50, 10];
+  const data = [10, 30, 36, 10,5,9];
   useEffect(() => {
 
     Chart.helpers.each(Chart.instances, function (instance) {
@@ -16,14 +16,14 @@ const Donut = () => {
     new Chart(ctx, {
       type: "doughnut",
       data: {
-        labels: ["a",'b','c','d'],
+        labels: ["Camera1-Test",'Camera2-Test','Camera3-Test','Camera4-Testd','Camera5-Test','Camera6-Test'],
         datasets: [
           {
             label: "My First Dataset",
             data: data,
             pointStyle: "circle",
-            backgroundColor: ["red", "green", "blue", "white"],
-            hoverBackgroundColor: ["red", "green", "blue", "white"],
+            backgroundColor: ["red", "green", "blue", "white",'pink','yellow'],
+            hoverBackgroundColor: ["red", "green", "blue", "white",'pink','yellow'],
             hoverOffset: 4,
             borderWidth: 0,
             datalabels: {
