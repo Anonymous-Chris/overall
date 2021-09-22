@@ -32,12 +32,12 @@ function Donut(props) {
   useEffect(() => {
     var total = props.total;
     var current = props.current;
-    console.log(total, current);
+    // console.log(total, current);
     var totalStrokeDashArray = `${total} ${(100 - total).toFixed(1)}`;
     var currentStrokeDashArray = `${current} ${(100 - current).toFixed(1)}`;
     setCurrentColor(checkCurrentColor(current));
     setTotalColor(checkTotalColor(total));
-    console.log(totalStrokeDashArray, currentStrokeDashArray);
+    // console.log(totalStrokeDashArray, currentStrokeDashArray);
 
     setTotalStrokeDashArray(totalStrokeDashArray);
     setCurrentStrokeDashArray(currentStrokeDashArray);

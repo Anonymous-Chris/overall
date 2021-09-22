@@ -3,7 +3,7 @@ import "../css/home.css";
 import { Trans, useTranslation } from "react-i18next";
 function Home() {
   const { t, i18n } = useTranslation();
-  console.log(i18n.language);
+  // console.log(i18n.language);
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
   };

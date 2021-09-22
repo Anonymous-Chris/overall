@@ -10,7 +10,6 @@ const Pagination = () => {
   const totalPage = 100;
 
   useEffect(() => {
-    console.log(pageNumber);
     var _start = defaultNumber * pageNumber - defaultNumber + 1;
     var _end = defaultNumber * pageNumber;
     setStart(_start);

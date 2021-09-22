@@ -15,7 +15,6 @@ function CommonTable() {
   }, []);
   return (
     <div className={`commontable`}>
-      {console.log()}
       <DynamicTable
         tableData={
           Object.keys(tableData).length > 0

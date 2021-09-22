@@ -9,7 +9,6 @@ const Logs = () => {
   }, []);
   return (
     <div className="logs  w-100 h-100 " style={{ background: "#161619" }}>
-      {console.log(cameralogs)}
       <div  style={{height: '10%'}}>
       <span className="logs__title">
         <h4>{cameralogs[0]?.metadata.name}</h4>

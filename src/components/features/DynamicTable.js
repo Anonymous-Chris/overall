@@ -4,7 +4,6 @@ import AutoScroll from "./Autoscroll";
 import Pathname from "../functions/Pathname";
 
 function DynamicTable(props) {
-  console.log(props);
 
   useEffect(() => {
     // only have autoscroll for autoscroll page table
@@ -23,7 +22,6 @@ function DynamicTable(props) {
             //remove these headers
           }
         );
-        console.log(filteredArray);
         return filteredArray;
       } catch (e) {
         console.log("Keys is empty");

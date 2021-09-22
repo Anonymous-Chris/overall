@@ -1,11 +1,9 @@
 import $ from "jquery";
 
 export default function AutoScroll(value, datalength) {
-  console.log(value, datalength);
   try {
     if (datalength !== null && datalength !== undefined) {
       var $el = $("." + value);
-      console.log($el);
       var duration = datalength * 1000;
       anim();
       $el.hover(stop, anim);
