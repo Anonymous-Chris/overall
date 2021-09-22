@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import PowerSwitch from "./PowerSwitch";
 const Settings = () => {
   //   const [open, setOpen] = useState(false);
   const [open, setOpen] = useState(true);
@@ -31,16 +31,9 @@ const Settings = () => {
             style={{ listStyleType: "none" }}
           >
             {camera_list.map((item) => (
-              <div className="d-flex w-50 justify-content-between" key={item}>
-                <li className="" key={item}>Camera {item}</li>
-                <input
-                  key={item}
-                  type="checkbox"
-                  checked
-                  data-toggle="toggle"
-                  data-on="<i class='fa fa-play'></i> Play"
-                  data-off="<i class='fa fa-pause'></i> Pause"
-                ></input>
+              <div className="d-flex w-100 justify-content-between align-items-center" key={item}>
+                <li className="pb-1" key={`camera` +item}>Camera {item}</li>
+                <PowerSwitch key={item}/>
               </div>
             ))}
           </ul>
