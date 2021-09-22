@@ -16,9 +16,11 @@ const Logs = () => {
             {cameralogs[0]?.metadata.name}
           </h4>
         </span>
+        <div className="position-relative">
         <Settings/>
+        </div>
       </div>
-      <div className="scrollbar" style={{ height: "87%" }}>
+      <div className="scrollbar" style={{ height: "87%", zIndex: -1 }}>
         {" "}
         {cameralogs && (
           <ul className="list-group ">
