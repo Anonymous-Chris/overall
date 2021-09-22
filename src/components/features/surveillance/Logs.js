@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import fakedata from "../../../fakedata";
+import Settings from '../../features/surveillance/Settings'
 const Logs = () => {
   const [cameralogs, setCameralogs] = useState({});
   useEffect(() => {
@@ -9,12 +10,15 @@ const Logs = () => {
   }, []);
   return (
     <div className="logs  w-100 h-100 " style={{ background: "#161619" }}>
-      <div  style={{height: '10%'}}>
-      <span className="logs__title">
-        <h4>{cameralogs[0]?.metadata.name}</h4>
-      </span>
+      <div style={{ height: "10%" }} className="d-flex align-items-center justify-content-between">
+        <span className="logs__title">
+          <h4>
+            {cameralogs[0]?.metadata.name}
+          </h4>
+        </span>
+        <Settings/>
       </div>
-      <div className="scrollbar" style={{height: '87%'}}>
+      <div className="scrollbar" style={{ height: "87%" }}>
         {" "}
         {cameralogs && (
           <ul className="list-group ">
