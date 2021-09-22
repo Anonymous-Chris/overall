@@ -91,6 +91,7 @@ const Bar = () => {
               {
                 ticks: {
                   beginAtZero: true,
+                  maxTicksLimit: 6
                 },
               },
             ],
