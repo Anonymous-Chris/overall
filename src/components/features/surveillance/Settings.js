@@ -17,15 +17,19 @@ const Settings = () => {
 
   useEffect(() => {
     if (!localStorage.getItem("camera_list")) {
-      // localStorage.setItem("camera_list", JSON.stringify(camera_list));
+      localStorage.setItem("camera_list", JSON.stringify(camera_list));
+      dispatch({
+        type: "UPDATE_CAMERA_STATUS",
+        cameraStatus: camera_list,
+      });
     } else {
+      var _cameraList = (localStorage.getItem("camera_list"))
       setCameraList(JSON.parse(localStorage.getItem("camera_list")));
+      dispatch({
+        type: "UPDATE_CAMERA_STATUS",
+        cameraStatus: _cameraList,
+      });
     }
-
-    dispatch({
-      type:"UPDATE_CAMERA_STATUS",
-      cameraStatus: JSON.stringify(camera_list)
-    })
   }, []);
 
   // status of settings button
@@ -39,11 +43,12 @@ const Settings = () => {
       item.name === name ? (item["state"] = status) : "";
     });
     // console.log(camera_list);
+    localStorage.setItem("camera_list", JSON.stringify(camera_list));
+
     dispatch({
-      type:"UPDATE_CAMERA_STATUS",
-      cameraStatus: JSON.stringify(camera_list)
-    })
-    // localStorage.setItem("camera_list", JSON.stringify(camera_list));
+      type: "UPDATE_CAMERA_STATUS",
+      cameraStatus: JSON.stringify(camera_list),
+    });
   };
   return (
     <React.Fragment>
