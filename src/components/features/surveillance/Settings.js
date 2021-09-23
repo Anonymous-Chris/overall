@@ -7,12 +7,42 @@ const Settings = () => {
 
   const [open, setOpen] = useState(false);
   const [camera_list, setCameraList] = useState([
-    { name: "one", state: true },
-    { name: "two", state: true },
-    { name: "three", state: true },
-    { name: "four", state: true },
-    { name: "five", state: true },
-    { name: "six", state: true },
+    {
+      name: "one",
+      state: true,
+      videoSource:
+        "https://www.imgacademy.com/themes/custom/imgacademy/images/helpbox-contact.jpg",
+    },
+    {
+      name: "two",
+      state: true,
+      videoSource:
+        "https://www.imgacademy.com/themes/custom/imgacademy/images/helpbox-contact.jpg",
+    },
+    {
+      name: "three",
+      state: true,
+      videoSource:
+        "https://www.imgacademy.com/themes/custom/imgacademy/images/helpbox-contact.jpg",
+    },
+    {
+      name: "four",
+      state: true,
+      videoSource:
+        "https://www.imgacademy.com/themes/custom/imgacademy/images/helpbox-contact.jpg",
+    },
+    {
+      name: "five",
+      state: true,
+      videoSource:
+        "https://www.imgacademy.com/themes/custom/imgacademy/images/helpbox-contact.jpg",
+    },
+    {
+      name: "six",
+      state: true,
+      videoSource:
+        "https://www.imgacademy.com/themes/custom/imgacademy/images/helpbox-contact.jpg",
+    },
   ]);
 
   useEffect(() => {
@@ -23,7 +53,7 @@ const Settings = () => {
         cameraStatus: JSON.stringify(camera_list),
       });
     } else {
-      var _cameraList = (localStorage.getItem("camera_list"))
+      var _cameraList = localStorage.getItem("camera_list");
       setCameraList(JSON.parse(localStorage.getItem("camera_list")));
       dispatch({
         type: "UPDATE_CAMERA_STATUS",
