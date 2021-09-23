@@ -35,7 +35,7 @@ const fakedata = [
     surveillanceoverall: [
       {
         metadata: {
-          name: "Surveillance overall Heat Map",
+          name: "Surveillance Heat Map",
         },
         data: [
           {

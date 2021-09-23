@@ -59,6 +59,7 @@ const Donut = (props) => {
       options: {
         maintainAspectRatio: false,
         showAllTooltips: true,
+        responsive: true,
 
         legend: {
           display: true,
