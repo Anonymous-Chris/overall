@@ -3,7 +3,8 @@ import "../css/surveillance.css";
 import Logs from "../components/features/surveillance/Logs";
 import Heatmaps from "../components/features/surveillance/Heatmaps";
 import OverallPeople from "../components/features/surveillance/OverallPeople";
-import Video from "../components/features/surveillance/Video";
+// import Video from "../components/features/surveillance/Video";
+import VideoLandingPage from "../components/features/surveillance/VideoLandingPage";
 import Detection from "../components/features/surveillance/Detection";
 
 const Surveillance = () => {
@@ -22,7 +23,8 @@ const Surveillance = () => {
       </div>
       <div className="col-12 col-sm-12 col-md-8 col-lg-9 m-0 p-2 surveillance__column__right">
         <div className="surveillance__video mb-3">
-          <Video />
+          {/* <Video /> */}
+          <VideoLandingPage/>
         </div>
         <div className="surveillance__detection" style={{ height: "33%" }}>
           <Detection />
