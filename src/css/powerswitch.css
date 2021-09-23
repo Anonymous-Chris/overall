@@ -155,3 +155,14 @@
     transform: scale(1);
   }
 }
+
+@media screen and (max-width: 533px) {
+  .power-switch .button .power-on .circle,
+  .power-switch .button .power-off .circle {
+    opacity: 0.2;
+    transform: rotate(-28deg);
+    transform-origin: center 94px;
+    stroke-dasharray: 220;
+    stroke-dashoffset: 140;
+  }
+}

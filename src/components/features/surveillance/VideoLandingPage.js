@@ -4,11 +4,16 @@ import SingleVideo from "./SingleVideo";
 const VideoLandingPage = () => {
   const [{ cameraStatus }] = useStateValue();
   const [camera_list, setCameraList] = useState([]);
-
+  const [activeCameraCount, setActiveCameraCount] = useState(0);
   useEffect(() => {
     try {
       var camera_list = JSON.parse(cameraStatus);
-      //   console.log(camera_list, 'here');
+      // find the active camera count
+      var cameraCount = camera_list.filter(
+        ({ state }) => state === true
+      ).length;
+      setActiveCameraCount(cameraCount);
+
       setCameraList(camera_list);
     } catch (e) {
       console.log("error");
@@ -17,9 +22,9 @@ const VideoLandingPage = () => {
 
   const returnCameraComponent = (camera_list) => {
     if (camera_list.length > 0) {
-      console.log(camera_list);
+    console.log(activeCameraCount)
       var individualComponent = camera_list.map((item) =>
-        item.state ? <SingleVideo key={item.name} /> : ""
+        item.state ? <SingleVideo key={item.name} activeCameraCount={activeCameraCount}/> : ""
       );
       return individualComponent;
     }
