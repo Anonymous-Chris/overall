@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from "react";
 import PowerSwitch from "./PowerSwitch";
+import { useStateValue } from "../../../context-api/StateProvider";
 const Settings = () => {
   //   const [open, setOpen] = useState(false);
+  const [, dispatch] = useStateValue();
+
   const [open, setOpen] = useState(true);
   const [camera_list, setCameraList] = useState([
     { name: "one", state: false },
@@ -14,10 +17,15 @@ const Settings = () => {
 
   useEffect(() => {
     if (!localStorage.getItem("camera_list")) {
-      localStorage.setItem("camera_list", JSON.stringify(camera_list));
+      // localStorage.setItem("camera_list", JSON.stringify(camera_list));
     } else {
       setCameraList(JSON.parse(localStorage.getItem("camera_list")));
     }
+
+    dispatch({
+      type:"UPDATE_CAMERA_STATUS",
+      cameraStatus: JSON.stringify(camera_list)
+    })
   }, []);
 
   // status of settings button
@@ -30,8 +38,12 @@ const Settings = () => {
     camera_list.map((item) => {
       item.name === name ? (item["state"] = status) : "";
     });
-
-    localStorage.setItem("camera_list", JSON.stringify(camera_list));
+    // console.log(camera_list);
+    dispatch({
+      type:"UPDATE_CAMERA_STATUS",
+      cameraStatus: JSON.stringify(camera_list)
+    })
+    // localStorage.setItem("camera_list", JSON.stringify(camera_list));
   };
   return (
     <React.Fragment>

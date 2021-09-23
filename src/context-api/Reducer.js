@@ -8,6 +8,7 @@ export const initialState = {
   live: true,
   startDate: intialStartDate,
   endDate: initialEndDate,
+  cameraStatus: [],
 };
 
 const reducer = (state, action) => {
@@ -18,7 +19,11 @@ const reducer = (state, action) => {
         startDate: action.startDate,
         endDate: action.endDate,
       };
-
+    case "UPDATE_CAMERA_STATUS":
+      return {
+        ...state,
+        cameraStatus: action.cameraStatus,
+      };
     default:
       return state;
   }
