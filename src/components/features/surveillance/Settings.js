@@ -22,7 +22,7 @@ const Settings = () => {
 
   // status of settings button
   const toggleState = () => {
-    console.log("clicked");
+    // console.log("clicked");
     setOpen(!open);
   };
 
@@ -73,8 +73,6 @@ const Settings = () => {
           </ul>
         </div>
       )}
-
-      {console.log(open)}
     </React.Fragment>
   );
 };

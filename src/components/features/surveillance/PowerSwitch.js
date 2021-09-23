@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from "react";
 import "../../../css/powerswitch.css";
 const PowerSwitch = (props) => {
-  console.log(props.item);
+  // console.log(props.item);
   const [tempState,setTempState]=useState(false)
   useEffect(()=>{
     setTempState(props.item.state)

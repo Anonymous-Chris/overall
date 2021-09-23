@@ -78,7 +78,7 @@ const Donut = (props) => {
       },
     });
   }, []);
-  console.log(data);
+  // console.log(data);
   return (
     <React.Fragment>
       <div className="canvas" style={{ height: "inherit", width: " inherit" }}>
