@@ -1,13 +1,23 @@
-import React from "react";
+import React,{useState,useEffect} from "react";
 import "../../../css/powerswitch.css";
 const PowerSwitch = (props) => {
+  console.log(props.item);
+  const [tempState,setTempState]=useState(false)
+  useEffect(()=>{
+    setTempState(props.item.state)
+  },[])
   const updateStatus = () => {
-    props.updateStateInParent(props.item.name, !props.item.state)
+    setTempState(!props.item.state)
+    props.updateStateInParent(props.item.name, !props.item.state);
   };
   return (
     <React.Fragment>
       <div className="power-switch" onClick={updateStatus}>
-        <input type="checkbox" />
+        {props.item.state && tempState!==undefined ? (
+          <input type="checkbox" defaultChecked />
+        ) : (
+          <input type="checkbox" />
+        )}
         <div className="button">
           <svg className="power-off">
             <use xlinkHref="#line" className="line" />

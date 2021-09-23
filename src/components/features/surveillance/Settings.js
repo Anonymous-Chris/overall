@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import PowerSwitch from "./PowerSwitch";
 const Settings = () => {
   //   const [open, setOpen] = useState(false);
   const [open, setOpen] = useState(true);
-  const [camera_list] = useState([
+  const [camera_list, setCameraList] = useState([
     { name: "one", state: false },
     { name: "two", state: false },
     { name: "three", state: false },
@@ -12,9 +12,13 @@ const Settings = () => {
     { name: "six", state: false },
   ]);
 
-  if (!localStorage.getItem("camera_list")) {
-    localStorage.setItem("camera_list", JSON.stringify(camera_list));
-  }
+  useEffect(() => {
+    if (!localStorage.getItem("camera_list")) {
+      localStorage.setItem("camera_list", JSON.stringify(camera_list));
+    } else {
+      setCameraList(JSON.parse(localStorage.getItem("camera_list")));
+    }
+  }, []);
 
   // status of settings button
   const toggleState = () => {
