@@ -6,12 +6,12 @@ const Settings = () => {
   const [, dispatch] = useStateValue();
 
   const [open, setOpen] = useState(false);
+  //  send either video or an image source
   const [camera_list, setCameraList] = useState([
     {
       name: "one",
       state: true,
-      videoSource:
-        "https://www.imgacademy.com/themes/custom/imgacademy/images/helpbox-contact.jpg",
+      videoSource: "https://www.youtube.com/embed/l4nfjPLkRXo",
     },
     {
       name: "two",

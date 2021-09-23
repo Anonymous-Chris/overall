@@ -2,7 +2,7 @@ import React from "react";
 import { FullScreen, useFullScreenHandle } from "react-full-screen";
 
 const SingleVideo = (props) => {
-  console.log(props.activeCameraCount);
+  console.log(props);
   const handle = useFullScreenHandle();
   var handleExpand = (handle) => {
     if (handle.active) {
@@ -11,12 +11,27 @@ const SingleVideo = (props) => {
       return handle.enter;
     }
   };
+
+  const addVideoorImage = (videoSource) =>
+    videoSource?.match(/\.(jpeg|jpg|gif|png)$/) != null ? (
+      <img className="w-100" src={videoSource} alt="image1" />
+    ) : (
+      <iframe
+        className="w-100 h-auto "
+        src={videoSource}
+        title="YouTube video player"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      ></iframe>
+    );
   const getComponent = (cameraName, videoSource) => (
     <FullScreen
       handle={handle}
       className="w-100 h-100 d-flex align-items-center justify-content-center"
     >
-      <img className="w-100" src={videoSource} alt="image1" />
+      {/**/}
+      {addVideoorImage(videoSource)}
       <div className="w-100 d-flex position-absolute p-1 bottom-0 start-0 responsive__bar">
         <div className="livebtn  bottom-0 start-0 p-1">live</div>
         <div className="camera p-1">{cameraName}</div>
