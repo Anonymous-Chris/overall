@@ -1,6 +1,6 @@
 import React from "react";
 import { FullScreen, useFullScreenHandle } from "react-full-screen";
-
+import '../../../css/responsive2x2.css'
 const SingleVideo = (props) => {
   console.log(props);
   const handle = useFullScreenHandle();
