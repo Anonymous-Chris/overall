@@ -5,14 +5,14 @@ const Settings = () => {
   //   const [open, setOpen] = useState(false);
   const [, dispatch] = useStateValue();
 
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   const [camera_list, setCameraList] = useState([
-    { name: "one", state: false },
-    { name: "two", state: false },
-    { name: "three", state: false },
-    { name: "four", state: false },
-    { name: "five", state: false },
-    { name: "six", state: false },
+    { name: "one", state: true },
+    { name: "two", state: true },
+    { name: "three", state: true },
+    { name: "four", state: true },
+    { name: "five", state: true },
+    { name: "six", state: true },
   ]);
 
   useEffect(() => {
@@ -20,7 +20,7 @@ const Settings = () => {
       localStorage.setItem("camera_list", JSON.stringify(camera_list));
       dispatch({
         type: "UPDATE_CAMERA_STATUS",
-        cameraStatus: camera_list,
+        cameraStatus: JSON.stringify(camera_list),
       });
     } else {
       var _cameraList = (localStorage.getItem("camera_list"))
