@@ -1,9 +1,12 @@
 import React from "react";
 import "../../../css/powerswitch.css";
-const PowerSwitch = () => {
+const PowerSwitch = (props) => {
+  const updateStatus = () => {
+    props.updateStateInParent(props.item.name, !props.item.state)
+  };
   return (
     <React.Fragment>
-      <div className="power-switch">
+      <div className="power-switch" onClick={updateStatus}>
         <input type="checkbox" />
         <div className="button">
           <svg className="power-off">
@@ -18,20 +21,20 @@ const PowerSwitch = () => {
       </div>
       {/* SVG */}
       <svg xmlns="http://www.w3.org/2000/svg" style={{ display: "none" }}>
-      <symbol
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 100 100"
-            id="line"
-          >
-            <line x1={50} y1={30} x2={50} y2={50} />
-          </symbol>
-          <symbol
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 100 100"
-            id="circle"
-          >
-            <circle cx={70} cy={60} r={20} />
-          </symbol>
+        <symbol
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 100 100"
+          id="line"
+        >
+          <line x1={50} y1={30} x2={50} y2={50} />
+        </symbol>
+        <symbol
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 100 100"
+          id="circle"
+        >
+          <circle cx={70} cy={60} r={20} />
+        </symbol>
       </svg>
     </React.Fragment>
   );

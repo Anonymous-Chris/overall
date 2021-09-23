@@ -3,10 +3,31 @@ import PowerSwitch from "./PowerSwitch";
 const Settings = () => {
   //   const [open, setOpen] = useState(false);
   const [open, setOpen] = useState(true);
-  const camera_list = [1, 2, 3, 4, 5, 6];
+  const [camera_list] = useState([
+    { name: "one", state: false },
+    { name: "two", state: false },
+    { name: "three", state: false },
+    { name: "four", state: false },
+    { name: "five", state: false },
+    { name: "six", state: false },
+  ]);
+
+  if (!localStorage.getItem("camera_list")) {
+    localStorage.setItem("camera_list", JSON.stringify(camera_list));
+  }
+
+  // status of settings button
   const toggleState = () => {
     console.log("clicked");
     setOpen(!open);
+  };
+
+  const updateStateInParent = (name, status) => {
+    camera_list.map((item) => {
+      item.name === name ? (item["state"] = status) : "";
+    });
+
+    localStorage.setItem("camera_list", JSON.stringify(camera_list));
   };
   return (
     <React.Fragment>
@@ -31,9 +52,18 @@ const Settings = () => {
             style={{ listStyleType: "none" }}
           >
             {camera_list.map((item) => (
-              <div className="d-flex w-100 justify-content-between align-items-center" key={item}>
-                <li className="pb-1" key={`camera` +item}>Camera {item}</li>
-                <PowerSwitch key={item}/>
+              <div
+                className="d-flex w-100 justify-content-between align-items-center"
+                key={item.name}
+              >
+                <li className="pb-1" key={`camera` + item.name}>
+                  Camera {item.name}
+                </li>
+                <PowerSwitch
+                  key={item.name}
+                  item={item}
+                  updateStateInParent={updateStateInParent}
+                />
               </div>
             ))}
           </ul>
