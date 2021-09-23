@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useStateValue } from "../../../context-api/StateProvider";
 import SingleVideo from "./SingleVideo";
+
 const VideoLandingPage = () => {
   const [{ cameraStatus }] = useStateValue();
   const [camera_list, setCameraList] = useState([]);

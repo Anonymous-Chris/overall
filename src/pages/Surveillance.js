@@ -1,10 +1,13 @@
-import React from "react";
+import React,{Suspense} from "react";
 import "../css/surveillance.css";
 import Logs from "../components/features/surveillance/Logs";
 import Heatmaps from "../components/features/surveillance/Heatmaps";
 import OverallPeople from "../components/features/surveillance/OverallPeople";
 // import Video from "../components/features/surveillance/Video";
-import VideoLandingPage from "../components/features/surveillance/VideoLandingPage";
+// import VideoLandingPage from "../components/features/surveillance/VideoLandingPage";
+const VideoLandingPage = React.lazy(() =>
+  import("../components/features/surveillance/VideoLandingPage")
+);
 import Detection from "../components/features/surveillance/Detection";
 
 const Surveillance = () => {
@@ -24,7 +27,9 @@ const Surveillance = () => {
       <div className="col-12 col-sm-12 col-md-8 col-lg-9 m-0 p-2 surveillance__column__right">
         <div className="surveillance__video mb-3">
           {/* <Video /> */}
-          <VideoLandingPage/>
+          <Suspense fallback={<div>Loading...</div>}>
+            <VideoLandingPage />
+          </Suspense>
         </div>
         <div className="surveillance__detection" style={{ height: "33%" }}>
           <Detection />
