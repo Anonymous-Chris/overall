@@ -10,6 +10,8 @@ export const initialState = {
   endDate: initialEndDate,
   cameraStatus: [],
   testArray: [],
+  testObject: {},
+  todoAppState: {},
 };
 
 const reducer = (state, action) => {
@@ -25,10 +27,24 @@ const reducer = (state, action) => {
         ...state,
         cameraStatus: action.cameraStatus,
       };
-    case "UPDATE_TEST":
+    case "UPDATE_TEST_ARRAY":
       return {
         ...state,
         testArray: action.testArray,
+      };
+    case "UPDATE_TEST_OBJECT":
+      return {
+        ...state,
+        testObject: action.testObject,
+      };
+
+    case "UPDATE_TEST_ARRAY_AND_OBJECT":
+      console.log(action);
+      console.log(state)
+
+      return {
+        ...state,
+        todoAppState: action.todoAppState,
       };
     default:
       return state;

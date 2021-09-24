@@ -11,7 +11,7 @@ const Heatmaps = () => {
 
   return (
     <div className="heatmaps text-center w-100" style={{ height: "88vh" }}>
-      {console.log(counter)}
+      {/* {console.log(counter)} */}
       <h1>Heatmaps (Chosen : {counter})</h1>
       <div
         className="col-12 col-sm-12 col-md-12 col-lg-8 m-auto"

@@ -23,7 +23,7 @@ const VideoLandingPage = () => {
 
   const returnCameraComponent = (camera_list) => {
     if (camera_list.length > 0) {
-    console.log(activeCameraCount)
+    // console.log(activeCameraCount)
       var individualComponent = camera_list.map((item) =>
         item.state ? <SingleVideo key={item.name} activeCameraCount={activeCameraCount} name={item.name} videoSource={item.videoSource}/> : ""
       );
