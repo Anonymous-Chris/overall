@@ -9,6 +9,7 @@ export const initialState = {
   startDate: intialStartDate,
   endDate: initialEndDate,
   cameraStatus: [],
+  testArray: [],
 };
 
 const reducer = (state, action) => {
@@ -23,6 +24,11 @@ const reducer = (state, action) => {
       return {
         ...state,
         cameraStatus: action.cameraStatus,
+      };
+    case "UPDATE_TEST":
+      return {
+        ...state,
+        testArray: action.testArray,
       };
     default:
       return state;

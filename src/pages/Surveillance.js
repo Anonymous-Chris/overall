@@ -9,7 +9,8 @@ const VideoLandingPage = React.lazy(() =>
   import("../components/features/surveillance/VideoLandingPage")
 );
 import Detection from "../components/features/surveillance/Detection";
-
+import Testing from '../components/features/testing/CheckContextApI'
+import GetData from '../components/features/testing/GetDataTest'
 const Surveillance = () => {
   return (
     <div className="surveillance row m-0 p-0">
@@ -34,6 +35,10 @@ const Surveillance = () => {
         <div className="surveillance__detection" style={{ height: "33%" }}>
           <Detection />
         </div>
+      </div>
+      <div className="w-100 h-25" style={{background: 'black'}}>
+        <Testing/>
+        <GetData/>
       </div>
     </div>
   );
