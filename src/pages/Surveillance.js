@@ -1,4 +1,4 @@
-import React, { useState, Suspense } from "react";
+import React, { useState, Suspense, useEffect } from "react";
 import "react-grid-layout/css/styles.css";
 import "react-resizable/css/styles.css";
 import { Responsive, WidthProvider } from "react-grid-layout";
@@ -22,6 +22,9 @@ function Surveillance() {
     JSON.parse(JSON.stringify(originalLayout))
   );
 
+  useEffect(() => {
+    localStorage.removeItem("rgl-7");
+  }, []);
   const onLayoutChange = (layout_surveillance) => {
     saveToLS("layout_surveillance", layout_surveillance);
   };
@@ -55,7 +58,7 @@ function Surveillance() {
         preventCollision={true}
         onLayoutChange={onLayoutChange}
       >
-                <div
+        <div
           key="0"
           data-grid={{ h: 4, w: 4, x: 0, y: 0, moved: false, static: false }}
           style={{
@@ -70,7 +73,7 @@ function Surveillance() {
         </div>
         <div
           key="1"
-          data-grid={{  w: 4, h: 4, x: 0, y: 8, moved: false, static: false }}
+          data-grid={{ w: 4, h: 4, x: 0, y: 8, moved: false, static: false }}
           style={{
             border: "2px solid black",
             backgroundPosition: "center",
@@ -83,7 +86,7 @@ function Surveillance() {
         </div>
         <div
           key="2"
-          data-grid={{w: 4, h: 4, x: 0, y: 4, moved: false, static: false }}
+          data-grid={{ w: 4, h: 4, x: 0, y: 4, moved: false, static: false }}
           style={{
             border: "2px solid black",
             backgroundPosition: "center",
@@ -122,7 +125,6 @@ function Surveillance() {
         >
           <Detection />
         </div>
-
       </ResponsiveGridLayout>
     </div>
   );
