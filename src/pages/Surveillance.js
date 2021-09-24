@@ -55,9 +55,22 @@ function Surveillance() {
         preventCollision={true}
         onLayoutChange={onLayoutChange}
       >
+                <div
+          key="0"
+          data-grid={{ h: 4, w: 4, x: 0, y: 0, moved: false, static: false }}
+          style={{
+            border: "2px solid black",
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+            color: "white",
+          }}
+        >
+          <Logs />
+        </div>
         <div
-          key="5"
-          data-grid={{ w: 4, h: 4, x: 0, y: 4, moved: false, static: false }}
+          key="1"
+          data-grid={{  w: 4, h: 4, x: 0, y: 8, moved: false, static: false }}
           style={{
             border: "2px solid black",
             backgroundPosition: "center",
@@ -69,8 +82,8 @@ function Surveillance() {
           <Heatmaps />
         </div>
         <div
-          key="1"
-          data-grid={{ w: 4, h: 4, x: 0, y: 8, moved: false, static: false }}
+          key="2"
+          data-grid={{w: 4, h: 4, x: 0, y: 4, moved: false, static: false }}
           style={{
             border: "2px solid black",
             backgroundPosition: "center",
@@ -82,7 +95,7 @@ function Surveillance() {
           <OverallPeople />
         </div>
         <div
-          key="2"
+          key="3"
           data-grid={{ w: 8, h: 8, x: 4, y: 0, moved: false, static: false }}
           style={{
             border: "2px solid black",
@@ -109,19 +122,7 @@ function Surveillance() {
         >
           <Detection />
         </div>
-        <div
-          key="0"
-          data-grid={{ h: 4, w: 4, x: 0, y: 0, moved: false, static: false }}
-          style={{
-            border: "2px solid black",
-            backgroundPosition: "center",
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-            color: "white",
-          }}
-        >
-          <Logs />
-        </div>
+
       </ResponsiveGridLayout>
     </div>
   );
