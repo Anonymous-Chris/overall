@@ -8,7 +8,7 @@ const VideoLandingPage = () => {
   const [activeCameraCount, setActiveCameraCount] = useState(0);
   useEffect(() => {
     try {
-      var camera_list = JSON.parse(cameraStatus);
+      var camera_list = (cameraStatus);
       // find the active camera count
       var cameraCount = camera_list.filter(
         ({ state }) => state === true

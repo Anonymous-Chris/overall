@@ -4,8 +4,9 @@ const PowerSwitch = (props) => {
   // console.log(props.item);
   const [tempState,setTempState]=useState(false)
   useEffect(()=>{
+    console.log(props.item.state)
     setTempState(props.item.state)
-  },[])
+  },[props])
   const updateStatus = () => {
     setTempState(!props.item.state)
     props.updateStateInParent(props.item.name, !props.item.state);
@@ -13,7 +14,7 @@ const PowerSwitch = (props) => {
   return (
     <React.Fragment>
       <div className="power-switch" onClick={updateStatus}>
-        {props.item.state && tempState!==undefined ? (
+        {props.item.state && tempState ? (
           <input type="checkbox" defaultChecked />
         ) : (
           <input type="checkbox" />

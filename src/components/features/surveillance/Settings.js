@@ -46,15 +46,17 @@ const Settings = () => {
   ]);
 
   useEffect(() => {
+    // localStorage.clear('camera_list')
     if (!localStorage.getItem("camera_list")) {
       localStorage.setItem("camera_list", JSON.stringify(camera_list));
       dispatch({
         type: "UPDATE_CAMERA_STATUS",
-        cameraStatus: JSON.stringify(camera_list),
+        cameraStatus: (camera_list),
       });
     } else {
-      var _cameraList = localStorage.getItem("camera_list");
-      setCameraList(JSON.parse(localStorage.getItem("camera_list")));
+      var _cameraList = JSON.parse(localStorage.getItem("camera_list"));
+      console.log(_cameraList)
+      setCameraList(_cameraList);
       dispatch({
         type: "UPDATE_CAMERA_STATUS",
         cameraStatus: _cameraList,
@@ -74,10 +76,10 @@ const Settings = () => {
     });
     // console.log(camera_list);
     localStorage.setItem("camera_list", JSON.stringify(camera_list));
-
+console.log(camera_list)
     dispatch({
       type: "UPDATE_CAMERA_STATUS",
-      cameraStatus: JSON.stringify(camera_list),
+      cameraStatus: (camera_list),
     });
   };
   return (
@@ -102,6 +104,7 @@ const Settings = () => {
             className="m-0 p-2 w-100 d-flex flex-column align-items-center"
             style={{ listStyleType: "none" }}
           >
+            {console.log(camera_list)}
             {camera_list.map((item) => (
               <div
                 className="d-flex w-100 justify-content-between align-items-center"
