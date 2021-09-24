@@ -39,12 +39,22 @@ const reducer = (state, action) => {
       };
 
     case "UPDATE_TEST_ARRAY_AND_OBJECT":
-      console.log(action);
+      console.log(action.todoAppState);
       console.log(state)
 
       return {
         ...state,
-        todoAppState: action.todoAppState,
+        todoAppState: action.todoAppState.todos.map(item=>{
+          if(item.id===action.payload) {
+            return {...item, completed:false, text:'unknown'}
+          }
+          return {
+            ...item, 
+            text: 'chris if here'
+          }
+        })
+
+
       };
     default:
       return state;

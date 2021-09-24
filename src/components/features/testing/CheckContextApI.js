@@ -38,6 +38,7 @@ const CheckContextApI = () => {
     dispatch({
         type: "UPDATE_TEST_ARRAY_AND_OBJECT",
         todoAppState: todoAppState,
+        payload:2
       });
   }
   return (
