@@ -29,6 +29,7 @@ function Surveillance() {
     console.log(layout_surveillance,layouts)
     if(layouts?.xs?.length>0){
       layouts.xs[3].h=16
+      layouts.xs[4].h=3
     }
     saveToLS("layout_surveillance", layouts);
   };
