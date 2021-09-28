@@ -66,7 +66,7 @@ const Settings = () => {
 
   // status of settings button
   const toggleState = () => {
-    // console.log("clicked");
+     console.log("clicked");
     setOpen(!open);
   };
 

@@ -61,7 +61,6 @@ const VideoLandingPage = () => {
               width: "15px",
               height: "15px",
               marginRight: "5px",
-              zIndex: 1,
             }}
           />
         </div>

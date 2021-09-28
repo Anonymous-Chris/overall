@@ -156,7 +156,7 @@
   }
 }
 
-@media screen and (max-width: 533px) {
+/* @media screen and (max-width: 533px) {
   .power-switch .button .power-on .circle,
   .power-switch .button .power-off .circle {
     opacity: 0.2;
@@ -165,4 +165,4 @@
     stroke-dasharray: 220;
     stroke-dashoffset: 140;
   }
-}
+} */
