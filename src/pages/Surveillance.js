@@ -30,7 +30,7 @@ function Surveillance() {
     if(layouts?.xs?.length>0){
       layouts.xs[3].h=16
     }
-    saveToLS("layout_surveillance", layout_surveillance);
+    saveToLS("layout_surveillance", layouts);
   };
   return (
     <div className="text-center w-100 h-100" style={{ background: " black" }}>
@@ -43,16 +43,10 @@ function Surveillance() {
         onChange={(evt) => setColumns(Number(evt.target.value))}
       /> */}
       <ResponsiveGridLayout
-        breakpoints={{ lg: 1200, md: 996, sm: 768, xs: 480, xxs: 0 }}
         autoSize={false}
         rowHeight={70}
         cols={{ lg: 12, md: 6, sm: 6, xs: 4, xxs: 2 }}
-        layouts={{
-          lg: layout_surveillance,
-          md: layout_surveillance,
-          sm: layout_surveillance,
-          xs: layout_surveillance,
-        }}
+        layouts={layout_surveillance}
         containerPadding={[15, 15]}
         margin={[5, 5]}
         isDraggable={true}
