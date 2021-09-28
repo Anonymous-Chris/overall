@@ -41,9 +41,23 @@ const VideoLandingPage = () => {
     }
   };
 
+  const resetLayout = () => {
+    console.log("pressed reset layout");
+  };
   return (
     <div className=" h-100 w-100 m-0 p-1 postion-relative">
-      <div className="position-absolute" style={{ right: "10px", zIndex: 1 }}>
+      <div className="position-absolute d-flex align-items-center justify-content-center" style={{ right: "10px", zIndex: 1 }}>
+        <div onClick={resetLayout}>
+          <img
+            src="https://www.clipartmax.com/png/middle/144-1445291_reset-svg-png-icon-free-download-icon.png"
+            style={{
+              width: "15px",
+              height: "15px",
+              marginRight: "5px",
+              zIndex: 1,
+            }}
+          />
+        </div>
         <Settings />
       </div>
       <div className="row h-100 w-100 m-0">
