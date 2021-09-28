@@ -14,24 +14,24 @@ const VideoLandingPage = React.lazy(() =>
 import Detection from "../components/features/surveillance/Detection";
 // import Testing from "../components/features/testing/CheckContextApI";
 // import GetData from "../components/features/testing/GetDataTest";
-const originalLayout = getFromLS("layout_surveillance") || [];
+const originalLayout = getFromLS("layouts") || [];
 
 function Surveillance() {
   const ResponsiveGridLayout = WidthProvider(Responsive);
-  const [layout_surveillance] = useState(
+  const [layouts] = useState(
     JSON.parse(JSON.stringify(originalLayout))
   );
 
   useEffect(() => {
     // localStorage.removeItem("rgl-8");
   }, []);
-  const onLayoutChange = (layout_surveillance, layouts) => {
-    console.log(layout_surveillance, layouts);
+  const onLayoutChange = (layout, layouts) => {
+    console.log(layout, layouts);
     if (layouts?.xs?.length > 0) {
       layouts.xs[3].h = 16;
       layouts.xs[4].h = 3;
     }
-    saveToLS("layout_surveillance", layouts);
+    saveToLS("layouts", layouts);
   };
   return (
     <div className="text-center w-100 h-100" style={{ background: " black" }}>
@@ -46,7 +46,7 @@ function Surveillance() {
       <ResponsiveGridLayout
         rowHeight={70}
         cols={{ lg: 12, md: 6, sm: 6, xs: 4, xxs: 2 }}
-        layouts={layout_surveillance}
+        layouts={layouts}
         margin={[5, 5]}
         isDraggable={true}
         isResizable={true}
