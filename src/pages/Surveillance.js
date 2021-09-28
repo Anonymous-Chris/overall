@@ -18,18 +18,23 @@ const originalLayout = getFromLS("layouts") || [];
 
 function Surveillance() {
   const ResponsiveGridLayout = WidthProvider(Responsive);
-  const [layouts] = useState(
-    JSON.parse(JSON.stringify(originalLayout))
-  );
+  const [layouts] = useState(JSON.parse(JSON.stringify(originalLayout)));
 
   useEffect(() => {
     // localStorage.removeItem("rgl-8");
   }, []);
+
   const onLayoutChange = (layout, layouts) => {
     console.log(layout, layouts);
+    // change layouts for xs and xss screens
     if (layouts?.xs?.length > 0) {
       layouts.xs[3].h = 16;
       layouts.xs[4].h = 3;
+    }
+
+    if (layouts?.xxs?.length > 0) {
+      layouts.xxs[3].h = 16;
+      layouts.xxs[4].h = 3;
     }
     saveToLS("layouts", layouts);
   };
@@ -45,7 +50,7 @@ function Surveillance() {
       /> */}
       <ResponsiveGridLayout
         rowHeight={70}
-        cols={{ lg: 12, md: 6, sm: 6, xs: 4, xxs: 2 }}
+        cols={{ lg: 12, md: 6, sm: 6, xs: 4, xxs: 4 }}
         layouts={layouts}
         margin={[5, 5]}
         isDraggable={true}
