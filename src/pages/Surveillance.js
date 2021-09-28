@@ -25,11 +25,11 @@ function Surveillance() {
   useEffect(() => {
     // localStorage.removeItem("rgl-8");
   }, []);
-  const onLayoutChange = (layout_surveillance,layouts) => {
-    console.log(layout_surveillance,layouts)
-    if(layouts?.xs?.length>0){
-      layouts.xs[3].h=16
-      layouts.xs[4].h=3
+  const onLayoutChange = (layout_surveillance, layouts) => {
+    console.log(layout_surveillance, layouts);
+    if (layouts?.xs?.length > 0) {
+      layouts.xs[3].h = 16;
+      layouts.xs[4].h = 3;
     }
     saveToLS("layout_surveillance", layouts);
   };
@@ -44,17 +44,14 @@ function Surveillance() {
         onChange={(evt) => setColumns(Number(evt.target.value))}
       /> */}
       <ResponsiveGridLayout
-        autoSize={false}
         rowHeight={70}
         cols={{ lg: 12, md: 6, sm: 6, xs: 4, xxs: 2 }}
         layouts={layout_surveillance}
-        containerPadding={[15, 15]}
         margin={[5, 5]}
         isDraggable={true}
         isResizable={true}
-        compactType={null}
-        useCSSTransforms={true}
-        preventCollision={true}
+        isDroppable={true}
+        resizeHandles={["s", "w", "e", "n", "sw", "nw", "se", "ne"]}
         onLayoutChange={onLayoutChange}
       >
         <div
