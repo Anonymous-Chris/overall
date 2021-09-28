@@ -14,7 +14,7 @@ const VideoLandingPage = React.lazy(() =>
 import Detection from "../components/features/surveillance/Detection";
 // import Testing from "../components/features/testing/CheckContextApI";
 // import GetData from "../components/features/testing/GetDataTest";
-const originalLayout = getFromLS("layouts") || [];
+const originalLayout = getFromLS("layouts") || {};
 
 function Surveillance() {
   const ResponsiveGridLayout = WidthProvider(Responsive);
