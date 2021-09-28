@@ -25,7 +25,11 @@ function Surveillance() {
   useEffect(() => {
     localStorage.removeItem("rgl-7");
   }, []);
-  const onLayoutChange = (layout_surveillance) => {
+  const onLayoutChange = (layout_surveillance,layouts) => {
+    console.log(layout_surveillance,layouts)
+    if(layouts?.xs?.length>0){
+      layouts.xs[3].h=16
+    }
     saveToLS("layout_surveillance", layout_surveillance);
   };
   return (
