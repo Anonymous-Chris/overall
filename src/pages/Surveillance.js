@@ -23,7 +23,7 @@ function Surveillance() {
   );
 
   useEffect(() => {
-    localStorage.removeItem("rgl-7");
+    // localStorage.removeItem("rgl-8");
   }, []);
   const onLayoutChange = (layout_surveillance,layouts) => {
     console.log(layout_surveillance,layouts)
@@ -138,7 +138,7 @@ function getFromLS(key) {
   let ls = {};
   if (global.localStorage) {
     try {
-      ls = JSON.parse(global.localStorage.getItem("rgl-7")) || {};
+      ls = JSON.parse(global.localStorage.getItem("rgl-8")) || {};
     } catch (e) {
       /*Ignore*/
     }
@@ -149,7 +149,7 @@ function getFromLS(key) {
 function saveToLS(key, value) {
   if (global.localStorage) {
     global.localStorage.setItem(
-      "rgl-7",
+      "rgl-8",
       JSON.stringify({
         [key]: value,
       })
