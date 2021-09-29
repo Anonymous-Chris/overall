@@ -47,39 +47,49 @@ const Settings = () => {
 
   useEffect(() => {
     // localStorage.clear('camera_list')
-    if (!localStorage.getItem("camera_list")) {
-      localStorage.setItem("camera_list", JSON.stringify(camera_list));
-      dispatch({
-        type: "UPDATE_CAMERA_STATUS",
-        cameraStatus: (camera_list),
-      });
-    } else {
-      var _cameraList = JSON.parse(localStorage.getItem("camera_list"));
-      console.log(_cameraList)
-      setCameraList(_cameraList);
-      dispatch({
-        type: "UPDATE_CAMERA_STATUS",
-        cameraStatus: _cameraList,
-      });
+    // if (!localStorage.getItem("camera_list")) {
+    //   localStorage.setItem("camera_list", JSON.stringify(camera_list));
+    //   dispatch({
+    //     type: "UPDATE_CAMERA_STATUS",
+    //     cameraStatus: camera_list,
+    //   });
+    // } else {
+    //   var _cameraList = JSON.parse(localStorage.getItem("camera_list"));
+    //   console.log(_cameraList);
+    //   setCameraList(_cameraList);
+    //   dispatch({
+    //     type: "UPDATE_CAMERA_STATUS",
+    //     cameraStatus: _cameraList,
+    //   });
+    // }
+
+    if (localStorage.getItem("camera_list")) {
+      setCameraList(JSON.parse(localStorage.getItem("camera_list")));
     }
   }, []);
 
+  useEffect(() => {
+    dispatch({
+      type: "UPDATE_CAMERA_STATUS",
+      cameraStatus: camera_list,
+    });
+  }, [camera_list,dispatch]);
+
   // status of settings button
   const toggleState = () => {
-     console.log("clicked");
+    console.log("clicked");
     setOpen(!open);
   };
 
   const updateStateInParent = (name, status) => {
-    camera_list.map((item) => {
-      item.name === name ? (item["state"] = status) : "";
-    });
+    camera_list.map((item) =>
+      item.name === name ? (item["state"] = status) : ""
+    );
     // console.log(camera_list);
     localStorage.setItem("camera_list", JSON.stringify(camera_list));
-console.log(camera_list)
     dispatch({
       type: "UPDATE_CAMERA_STATUS",
-      cameraStatus: (camera_list),
+      cameraStatus: camera_list,
     });
   };
   return (
@@ -105,6 +115,7 @@ console.log(camera_list)
             style={{ listStyleType: "none" }}
           >
             {console.log(camera_list)}
+            {console.log("here")}
             {camera_list.map((item) => (
               <div
                 className="d-flex w-100 justify-content-between align-items-center"
