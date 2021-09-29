@@ -53,16 +53,24 @@ function Surveillance() {
     saveToLS("layouts", layouts);
   };
 
+  // pass default props for the layout when nothing is present
+  Surveillance.defaultProps = {
+    className: "layout",
+    cols: { lg: 12, md: 10, sm: 6, xs: 4, xxs: 2 },
+    rowHeight: 70,
+  };
+  
   return (
     <div className="text-center w-100 h-100" style={{ background: " black" }}>
       <ResponsiveGridLayout
+        className="layout"
         rowHeight={70}
         cols={{ lg: 12, md: 6, sm: 6, xs: 4, xxs: 4 }}
         layouts={layouts}
         margin={[5, 5]}
         isDraggable={draggable}
         isResizable={true}
-        draggableCancel='.cancelDraggable'
+        draggableCancel=".cancelDraggable"
         resizeHandles={["s", "w", "e", "n", "sw", "nw", "se", "ne"]}
         onLayoutChange={onLayoutChange}
       >
