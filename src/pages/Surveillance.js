@@ -19,10 +19,24 @@ const originalLayout = getFromLS("layouts") || {};
 function Surveillance() {
   const ResponsiveGridLayout = WidthProvider(Responsive);
   const [layouts] = useState(JSON.parse(JSON.stringify(originalLayout)));
+  const [draggable, setDraggable] = useState(true);
 
+  // turn of draggable if it is a touch device
   useEffect(() => {
     // localStorage.removeItem("rgl-8");
+    const isTouchDevice = () => {
+      return window.matchMedia("(pointer: coarse)").matches;
+    };
+    if (isTouchDevice() && window.screen.width <= 768) {
+      setDraggable(false);
+    }
   }, []);
+
+  window.addEventListener("resize", () => {
+    if (window.screen.width > 768) {
+      setDraggable(true);
+    }
+  });
 
   const onLayoutChange = (layout, layouts) => {
     console.log(layout, layouts);
@@ -38,24 +52,16 @@ function Surveillance() {
     }
     saveToLS("layouts", layouts);
   };
+
   return (
     <div className="text-center w-100 h-100" style={{ background: " black" }}>
-      {/* <input
-        type="number"
-        step="1"
-        min="3"
-        max="12"
-        value={columns}
-        onChange={(evt) => setColumns(Number(evt.target.value))}
-      /> */}
       <ResponsiveGridLayout
         rowHeight={70}
         cols={{ lg: 12, md: 6, sm: 6, xs: 4, xxs: 4 }}
         layouts={layouts}
         margin={[5, 5]}
-        isDraggable={true}
+        isDraggable={draggable}
         isResizable={true}
-        isDroppable={true}
         resizeHandles={["s", "w", "e", "n", "sw", "nw", "se", "ne"]}
         onLayoutChange={onLayoutChange}
       >
