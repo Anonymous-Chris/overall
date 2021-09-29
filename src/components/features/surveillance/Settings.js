@@ -114,8 +114,8 @@ const Settings = () => {
             className="m-0 p-2 w-100 d-flex flex-column align-items-center"
             style={{ listStyleType: "none" }}
           >
-            {console.log(camera_list)}
-            {console.log("here")}
+            {/* {console.log(camera_list)}
+            {console.log("here")} */}
             {camera_list.map((item) => (
               <div
                 className="d-flex w-100 justify-content-between align-items-center"

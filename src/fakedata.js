@@ -72,24 +72,44 @@ const fakedata = [
         },
         data: [
           {
-            camera_id: "CA1C22",
+            camera_id: "one",
             people_alert: "3",
             time_stamp: "09/20/21 14:35:06",
           },
           {
-            camera_id: "CA1C14",
+            camera_id: "two",
             people_alert: "2",
             time_stamp: "09/20/21 14:35:06",
           },
           {
-            camera_id: "CAIU07",
+            camera_id: "three",
             people_alert: "4",
             time_stamp: "09/20/21 14:35:06",
           },
           {
-            camera_id: "CALU01",
+            camera_id: "four",
             people_alert: "5",
             time_stamp: "09/20/21 14:35:06",
+          },
+          {
+            camera_id: "five",
+            people_alert: "3",
+            time_stamp: "09/20/22 14:35:06",
+          },
+          {
+            camera_id: "six",
+            people_alert: "2",
+            time_stamp: "09/20/22 14:35:06",
+          },
+          {
+            camera_id: "three",
+            people_alert: "4",
+            time_stamp: "09/20/22 14:35:06",
+          },
+          {
+            camera_id: "four",
+            people_alert: "5",
+            time_stamp: "09/20/22 14:35:06",
           },
         ],
       },
