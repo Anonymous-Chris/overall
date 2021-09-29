@@ -51,7 +51,7 @@ const VideoLandingPage = () => {
   return (
     <div className=" h-100 w-100 m-0 p-1 postion-relative">
       <div
-        className="position-absolute d-flex align-items-center justify-content-center"
+        className="position-absolute d-flex align-items-center justify-content-center cancelDraggable"
         style={{ right: "10px", zIndex: 1 }}
       >
         <div onClick={resetLayout}>

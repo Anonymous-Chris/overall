@@ -62,6 +62,7 @@ function Surveillance() {
         margin={[5, 5]}
         isDraggable={draggable}
         isResizable={true}
+        draggableCancel='.cancelDraggable'
         resizeHandles={["s", "w", "e", "n", "sw", "nw", "se", "ne"]}
         onLayoutChange={onLayoutChange}
       >

@@ -17,7 +17,7 @@ const Logs = () => {
         </span>
 
       </div>
-      <div className="scrollbar" style={{ height: "87%", zIndex: -1 }}>
+      <div className="scrollbar cancelDraggable" style={{ height: "87%", zIndex: -1 }}>
         {" "}
         {cameralogs && (
           <ul className="list-group ">

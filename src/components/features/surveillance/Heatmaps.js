@@ -15,7 +15,7 @@ const Heatmaps = () => {
       <span>
         <h4>{data[0]?.metadata.name}</h4>
       </span>
-      <div className="scrollbar w-100 d-flex align-items-center" style={{ height: "84%" }}>
+      <div className="scrollbar w-100 d-flex align-items-center cancelDraggable" style={{ height: "84%" }}>
         {data && (
           <ul
             className="m-0 p-0 d-flex w-100 h-75 camera-list"
