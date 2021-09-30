@@ -4,12 +4,12 @@ import Chart from "chart.js";
 const Donut = (props) => {
   useEffect(() => {
     const data = props.data;
-    console.log(data);
+    // console.log(data);
 
     const detectedData = data?.map((item) => item.detected);
     const labels = data?.map((item) => item.name);
     const backgroundColor = ["red", "green", "blue", "white", "pink", "yellow"];
-    console.log(detectedData, labels);
+    // console.log(detectedData, labels);
 
     Chart.helpers.each(Chart.instances, function (instance) {
       if (instance.chart.canvas.id === "pie_pie") {

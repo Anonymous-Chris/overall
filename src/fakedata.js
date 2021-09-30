@@ -1,5 +1,65 @@
 const fakedata = [
   {
+    peoplecountbytime: [
+      {
+        metadata: {
+          name: "People Detected(Time)",
+        },
+        data: [
+          {
+            camera_id: "one",
+            label: "camera1",
+            backgroundColor: "green",
+            data: [10, 5, 7, 9, 4, 9, 10, 5, 7, 9, 4, 9],
+          },
+          {
+            camera_id: "two",
+            label: "camera2",
+            backgroundColor: "blue",
+            data: [7, 1, 3, 5, 5, 4, 10, 5, 6, 9, 4, 0],
+          },
+          {
+            camera_id: "three",
+            label: "camera3",
+            backgroundColor: "rgb(0, 197, 106)",
+            data: [10, 5, 7, 9, 4, 9, 0, 2, 5, 5, 2, 0],
+          },
+          {
+            camera_id: "four",
+            label: "camera4",
+            backgroundColor: "rgb(255, 114, 107)",
+            data: [7, 1, 3, 2, 5, 4, 3, 1, 7, 9, 4, 9],
+          },
+          {
+            camera_id: "five",
+            label: "camera5",
+            backgroundColor: "red",
+            data: [0, 1, 0, 5, 5, 4, 2, 3, 8, 7, 1, 8],
+          },
+          {
+            camera_id: "six",
+            label: "camera6",
+            backgroundColor: "white",
+            data: [1, 5, 0, 9, 0, 9, 5, 4, 7, 0, 0, 9],
+          },
+        ],
+        labels: [
+          "Time1-Test",
+          "Time2-Test",
+          "Time3-Test",
+          "Time4-Testd",
+          "Time5-Test",
+          "Time6-Test",
+          "Time7-Test",
+          "Time8-Test",
+          "Time9-Test",
+          "Time10-Test",
+          "Time11-Test",
+          "Time12-Test",
+        ],
+      },
+    ],
+
     overallpeoplecount: [
       {
         metadata: {
@@ -48,26 +108,33 @@ const fakedata = [
           {
             camera_area: "FT",
             detected: 13,
+            camera_id: "one",
           },
           {
             camera_area: "Re-work",
+
             detected: 3,
+            camera_id: "two",
           },
           {
             camera_area: "Side Line",
             detected: 5,
+            camera_id: "three",
           },
           {
             camera_area: "PTH",
             detected: 6,
+            camera_id: "four",
           },
           {
             camera_area: "Press-Fit",
             detected: 2,
+            camera_id: "five",
           },
           {
             camera_area: "Wave-Machine",
             detected: 5,
+            camera_id: "six",
           },
         ],
       },

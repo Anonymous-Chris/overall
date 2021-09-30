@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import fakedata from "../../../fakedata";
 import { useStateValue } from "../../../context-api/StateProvider";
+import getFilteredData from "../../functions/getFilteredData";
 
 const Logs = () => {
   const [cameralogs, setCameralogs] = useState({});
@@ -9,25 +10,9 @@ const Logs = () => {
   useEffect(() => {
     let data = fakedata[0].cameralogs;
 
-    //  create a copy of an object as it points to the
-    //same reference if a new object is created
-    var tempMyObj = JSON.parse(JSON.stringify(data));
+    const returnedData = getFilteredData(data, cameraStatus);
 
-    var data1 = data[0].data;
-    // filter out camera
-    const cameraStatusFalse = cameraStatus.filter(
-      (item) => item.state === false
-    );
-
-    // filter out result from both arrays
-    let result = data1.filter(
-      (o1) => !cameraStatusFalse.some((o2) => o1.camera_id === o2.name)
-    );
-
-    // insert the data value in original object
-    tempMyObj[0]["data"] = result;
-
-    setCameralogs(tempMyObj);
+    setCameralogs(returnedData);
   }, [JSON.stringify(cameraStatus)]);
 
   return (

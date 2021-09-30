@@ -39,7 +39,7 @@ function Surveillance() {
   });
 
   const onLayoutChange = (layout, layouts) => {
-    console.log(layout, layouts);
+    // console.log(layout, layouts);
     // change layouts for xs and xss screens
     if (layouts?.xs?.length > 0) {
       layouts.xs[3].h = 16;
