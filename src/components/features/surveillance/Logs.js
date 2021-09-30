@@ -6,6 +6,7 @@ import getFilteredData from "../../functions/getFilteredData";
 const Logs = () => {
   const [cameralogs, setCameralogs] = useState({});
   const [{ cameraStatus }] = useStateValue();
+  const updateCameraStatus =JSON.stringify(cameraStatus)
 
   useEffect(() => {
     let data = fakedata[0].cameralogs;
@@ -13,7 +14,7 @@ const Logs = () => {
     const returnedData = getFilteredData(data, cameraStatus);
 
     setCameralogs(returnedData);
-  }, [JSON.stringify(cameraStatus)]);
+  }, [updateCameraStatus,cameraStatus]);
 
   return (
     <div className="logs  w-100 h-100 " style={{ background: "#161619" }}>

@@ -7,6 +7,8 @@ const VideoLandingPage = () => {
   const [{ cameraStatus }] = useStateValue();
   const [camera_list, setCameraList] = useState([]);
   const [activeCameraCount, setActiveCameraCount] = useState(0);
+  const updateCameraStatus =JSON.stringify(cameraStatus)
+
   useEffect(() => {
     try {
       var camera_list = cameraStatus;
@@ -15,12 +17,12 @@ const VideoLandingPage = () => {
         ({ state }) => state === true
       ).length;
       setActiveCameraCount(cameraCount);
-
+console.log(cameraCount)
       setCameraList(camera_list);
     } catch (e) {
       console.log("error");
     }
-  }, [cameraStatus]);
+  }, [updateCameraStatus,cameraStatus]);
 
   const returnCameraComponent = (camera_list) => {
     if (camera_list.length > 0) {

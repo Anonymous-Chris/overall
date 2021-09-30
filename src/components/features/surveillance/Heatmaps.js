@@ -7,6 +7,7 @@ import getFilteredData from "../../functions/getFilteredData";
 const Heatmaps = () => {
   const [data, setData] = useState({});
   const [{ cameraStatus }] = useStateValue();
+  const updateCameraStatus =JSON.stringify(cameraStatus)
 
   useEffect(() => {
     let data = fakedata[0].surveillanceoverall;
@@ -14,7 +15,7 @@ const Heatmaps = () => {
 
     setData(returnedData);
     Slider();
-  }, [JSON.stringify(cameraStatus)]);
+  }, [updateCameraStatus,cameraStatus]);
 
   return (
     <div className="heatmaps h-100 pt-2 " style={{ background: "#161619" }}>

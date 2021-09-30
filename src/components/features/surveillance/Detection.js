@@ -7,6 +7,7 @@ import { useStateValue } from "../../../context-api/StateProvider";
 const Detection = () => {
   const [barData, setBarData] = useState({});
   const [{ cameraStatus }] = useStateValue();
+  const updateCameraStatus =JSON.stringify(cameraStatus)
 
   useEffect(() => {
     let data = fakedata[0].peoplecountbytime;
@@ -14,8 +15,8 @@ const Detection = () => {
     const returnedData = getFilteredData(data, cameraStatus);
     // console.log(returnedData)
         setBarData(returnedData);
-  }, [JSON.stringify(cameraStatus)]);
-  return (
+      }, [updateCameraStatus,cameraStatus]);
+      return (
     <div
       className="detection w-100"
       style={{ height: "100%", background: "#161619" }}

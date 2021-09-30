@@ -6,12 +6,13 @@ import getFilteredData from "../../functions/getFilteredData";
 const OverallPeople = () => {
   const [peopleDetected, setPeopleDetected] = useState({});
   const [{ cameraStatus }] = useStateValue();
+  const updateCameraStatus =JSON.stringify(cameraStatus)
 
   useEffect(() => {
     let data = fakedata[0].overallpeoplecount;
     const returnedData = getFilteredData(data, cameraStatus);
     setPeopleDetected(returnedData);
-  }, [JSON.stringify(cameraStatus)]);
+  }, [updateCameraStatus,cameraStatus]);
 
   return (
     <div
