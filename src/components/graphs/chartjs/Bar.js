@@ -14,7 +14,7 @@ const Bar = (props) => {
       obj["data"] = item.data;
       filteredData.push(obj);
     });
-    console.log(typeof props.data);
+    // console.log(typeof props.data);
     Chart.helpers.each(Chart.instances, function (instance) {
       if (instance.chart.canvas.id === "bar_bar") {
         instance.destroy();

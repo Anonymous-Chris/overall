@@ -12,7 +12,7 @@ const Detection = () => {
     let data = fakedata[0].peoplecountbytime;
 
     const returnedData = getFilteredData(data, cameraStatus);
-    console.log(returnedData)
+    // console.log(returnedData)
         setBarData(returnedData);
   }, [JSON.stringify(cameraStatus)]);
   return (
