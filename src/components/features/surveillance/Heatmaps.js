@@ -3,7 +3,7 @@ import fakedata from "../../../fakedata";
 import Slider from "../../functions/Slider";
 import { useStateValue } from "../../../context-api/StateProvider";
 import getFilteredData from "../../functions/getFilteredData";
-
+import '../../../css/heatmaps_camera.css'
 const Heatmaps = () => {
   const [data, setData] = useState({});
   const [{ cameraStatus }] = useStateValue();
@@ -19,9 +19,12 @@ const Heatmaps = () => {
 
   return (
     <div className="heatmaps h-100 pt-2 " style={{ background: "#161619" }}>
-      <span>
+      <div className="d-flex w-100">
+      <span className="heatmaps__title">
         <h4>{data[0]?.metadata.name}</h4>
       </span>
+      <button className="heatmaps__redirection cancelDraggable">View Heat map</button>
+      </div>
       <div
         className="scrollbar w-100 d-flex align-items-center cancelDraggable"
         style={{ height: "84%" }}
