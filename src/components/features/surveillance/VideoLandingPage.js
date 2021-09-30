@@ -17,7 +17,6 @@ const VideoLandingPage = () => {
         ({ state }) => state === true
       ).length;
       setActiveCameraCount(cameraCount);
-console.log(cameraCount)
       setCameraList(camera_list);
     } catch (e) {
       console.log("error");
