@@ -1,6 +1,63 @@
 const fakedata = [
   {
-    overallstationdetection: [
+    overallstationtotal: [
+      {
+        metadata: {
+          name: "Overall Station Detection",
+        },
+        data: [
+          {
+            name: "floor_operator",
+            detected: "8",
+            backgroundColor: "blue",
+          },
+        ],
+        alignHorizontal: true,
+      },
+    ],
+
+    overallstationdetections: [
+      {
+        metadata: {
+          name: "Overall Station Detection",
+        },
+        data: [
+          {
+            camera_area: "FT",
+            detected: 13,
+            camera_id: "one",
+          },
+          {
+            camera_area: "Re-work",
+
+            detected: 3,
+            camera_id: "two",
+          },
+          {
+            camera_area: "Side Line",
+            detected: 5,
+            camera_id: "three",
+          },
+          {
+            camera_area: "PTH",
+            detected: 6,
+            camera_id: "four",
+          },
+          {
+            camera_area: "Press-Fit",
+            detected: 2,
+            camera_id: "five",
+          },
+          {
+            camera_area: "Wave-Machine",
+            detected: 5,
+            camera_id: "six",
+          },
+        ],
+        alignHorizontal: true,
+      },
+    ],
+    overallstationcircledata: [
       {
         metadata: {
           name: "Overall Station Detection",
