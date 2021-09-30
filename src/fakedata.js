@@ -1,37 +1,44 @@
 const fakedata = [
-  {    overallpeoplecount: [
-    {
-      metadata: {
-        name: "Overall People Detected",
+  {
+    overallpeoplecount: [
+      {
+        metadata: {
+          name: "Overall People Detected",
+        },
+        data: [
+          {
+            name: "IC flashing",
+            detected: 8,
+            camera_id: "one",
+          },
+          {
+            name: "Side Line",
+            detected: 6,
+            camera_id: "two",
+          },
+          {
+            name: "PTH",
+            detected: 9,
+            camera_id: "three",
+          },
+          {
+            name: "Press-Fit",
+            detected: 1,
+            camera_id: "four",
+          },
+          {
+            name: "Wave-Machine",
+            detected: 5,
+            camera_id: "five",
+          },
+          {
+            name: "Re-work",
+            detected: 1,
+            camera_id: "six",
+          },
+        ],
       },
-      data: [
-        {
-          name: "IC flashing",
-          detected: 8,
-        },
-        {
-          name: "Re-work",
-          detected: 1,
-        },
-        {
-          name: "Side Line",
-          detected: 6,
-        },
-        {
-          name: "PTH",
-          detected: 9,
-        },
-        {
-          name: "Press-Fit",
-          detected: 1,
-        },
-        {
-          name: "Wave-Machine",
-          detected: 5,
-        },
-      ],
-    },
-  ],
+    ],
     surveillanceoverall: [
       {
         metadata: {

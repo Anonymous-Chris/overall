@@ -2,8 +2,15 @@ import React, { useEffect } from "react";
 import Chart from "chart.js";
 
 const Donut = (props) => {
-  const data = [10, 30, 36, 10, 5, 9];
   useEffect(() => {
+    const data = props.data;
+    console.log(data);
+
+    const detectedData = data?.map((item) => item.detected);
+    const labels = data?.map((item) => item.name);
+    const backgroundColor = ["red", "green", "blue", "white", "pink", "yellow"];
+    console.log(detectedData, labels);
+
     Chart.helpers.each(Chart.instances, function (instance) {
       if (instance.chart.canvas.id === "pie_pie") {
         instance.destroy();
@@ -15,27 +22,13 @@ const Donut = (props) => {
     new Chart(ctx, {
       type: "doughnut",
       data: {
-        labels: [
-          "Camera1-Test",
-          "Camera2-Test",
-          "Camera3-Test",
-          "Camera4-Testd",
-          "Camera5-Test",
-          "Camera6-Test",
-        ],
+        labels: labels,
         datasets: [
           {
             label: "My First Dataset",
-            data: data,
+            data: detectedData,
             pointStyle: "circle",
-            backgroundColor: [
-              "red",
-              "green",
-              "blue",
-              "white",
-              "pink",
-              "yellow",
-            ],
+            backgroundColor: backgroundColor,
             hoverBackgroundColor: [
               "red",
               "green",
@@ -71,14 +64,14 @@ const Donut = (props) => {
         },
         title: {
           display: true,
-          text: props?.title || 'Detected People',
+          text: props?.title || "Detected People",
           position: "top",
           fontColor: "white",
           fontFamily: "'Roboto Condensed', sans-serif",
         },
       },
     });
-  }, []);
+  }, [props]);
   // console.log(data);
   return (
     <React.Fragment>

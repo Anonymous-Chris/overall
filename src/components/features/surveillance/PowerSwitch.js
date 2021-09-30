@@ -4,7 +4,7 @@ const PowerSwitch = (props) => {
   // console.log(props.item);
   const [tempState,setTempState]=useState(false)
   useEffect(()=>{
-    console.log(props.item.state)
+    // console.log(props.item.state)
     setTempState(props.item.state)
   },[props])
   const updateStatus = () => {
