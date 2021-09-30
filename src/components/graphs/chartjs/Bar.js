@@ -2,10 +2,19 @@ import React, { useEffect } from "react";
 import Chart from "chart.js";
 
 const Bar = (props) => {
-    // console.log(props.data)
+  // console.log(props.data)
 
-useEffect(() => {
-
+  useEffect(() => {
+    const filteredData = [];
+    // converting to the format the data is required
+    props.data?.map((item) => {
+      const obj = {};
+      obj["label"] = item.label;
+      obj["backgroundColor"] = item.backgroundColor;
+      obj["data"] = item.data;
+      filteredData.push(obj);
+    });
+    console.log(typeof props.data);
     Chart.helpers.each(Chart.instances, function (instance) {
       if (instance.chart.canvas.id === "bar_bar") {
         instance.destroy();
@@ -15,8 +24,8 @@ useEffect(() => {
       new Chart(ctx, {
         type: "bar",
         data: {
-          labels:props.labels,
-          datasets: []
+          labels: props.labels,
+          datasets: filteredData,
         },
         options: {
           responsive: true,
@@ -34,7 +43,7 @@ useEffect(() => {
           title: {
             display: true,
             text: props.title,
-            position:'bottom',
+            position: "bottom",
             fontColor: "white",
             fontFamily: "'Roboto Condensed', sans-serif",
           },
@@ -43,7 +52,7 @@ useEffect(() => {
               {
                 ticks: {
                   beginAtZero: true,
-                  maxTicksLimit: 6
+                  maxTicksLimit: 6,
                 },
               },
             ],
@@ -51,7 +60,7 @@ useEffect(() => {
         },
       });
     });
-  },[props]);
+  }, [props]);
 
   return (
     <React.Fragment>
