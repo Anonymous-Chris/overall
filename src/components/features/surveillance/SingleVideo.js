@@ -14,7 +14,7 @@ const SingleVideo = (props) => {
 
   const addVideoorImage = (videoSource) =>
     videoSource?.match(/\.(jpeg|jpg|gif|png)$/) != null ? (
-      <img className="w-100" src={videoSource} alt="image1" />
+      <img className="w-100 h-auto " src={videoSource} alt="image1" style={{objectFit: 'contain', maxHeight: '100%', maxWidth: '100%'}}/>
     ) : (
       <iframe
         className="w-100 h-auto "
