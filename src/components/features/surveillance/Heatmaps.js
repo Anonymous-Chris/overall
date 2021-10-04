@@ -3,11 +3,12 @@ import fakedata from "../../../fakedata";
 import Slider from "../../functions/Slider";
 import { useStateValue } from "../../../context-api/StateProvider";
 import getFilteredData from "../../functions/getFilteredData";
-import '../../../css/heatmaps_camera.css'
+import "../../../css/heatmaps_camera.css";
+import { Link } from "react-router-dom";
 const Heatmaps = () => {
   const [data, setData] = useState({});
   const [{ cameraStatus }] = useStateValue();
-  const updateCameraStatus =JSON.stringify(cameraStatus)
+  const updateCameraStatus = JSON.stringify(cameraStatus);
 
   useEffect(() => {
     let data = fakedata[0].surveillanceoverall;
@@ -15,15 +16,17 @@ const Heatmaps = () => {
 
     setData(returnedData);
     Slider();
-  }, [updateCameraStatus,cameraStatus]);
+  }, [updateCameraStatus, cameraStatus]);
 
   return (
     <div className="heatmaps h-100 pt-2 " style={{ background: "#161619" }}>
       <div className="d-flex w-100">
-      <span className="heatmaps__title">
-        <h4>{data[0]?.metadata.name}</h4>
-      </span>
-      <button className="heatmaps__redirection cancelDraggable">View Heat map</button>
+        <span className="heatmaps__title">
+          <h4>{data[0]?.metadata.name}</h4>
+        </span>{" "}
+        <Link to="/floorheatmap" className="heatmaps__redirection d-flex align-items-center justify-content-center cancelDraggable">
+            View Heat map
+        </Link>
       </div>
       <div
         className="scrollbar w-100 d-flex align-items-center cancelDraggable"

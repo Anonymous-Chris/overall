@@ -19,6 +19,7 @@ import Pagination from "./components/features/Pagination";
 import Heatmaps from "./components/features/Heatmaps";
 import Charts from "./components/features/Charts";
 import ThreeD from "./components/ThreeD";
+import FloorHeatmap from "./components/features/surveillance/FloorHeatmap";
 function App() {
   return (
     <div className="App">
@@ -36,11 +37,10 @@ function App() {
               render={() => <Responsive2X2 />}
             />
 
-            <Route
-              exact
-              path="/surveillance"
-              render={() => <Surveillance />}
-            />
+            <Route exact path="/surveillance" render={() => <Surveillance />} />
+            <Route exact path="/surveillance" render={() => <Surveillance />} />
+
+            <Route exact path="/floorheatmap" render={() => <FloorHeatmap />} />
             <Route exact path="/features" render={() => <Features />} />
             <Route
               exact

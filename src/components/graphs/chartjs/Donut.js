@@ -8,7 +8,11 @@ const Donut = (props) => {
 
     const detectedData = data?.map((item) => item.detected);
     const labels = data?.map((item) => item.name);
-    const backgroundColor = ["red", "green", "blue", "white", "pink", "yellow"];
+    // const backgroundColor = ["red", "green", "blue", "white", "pink", "yellow"];
+
+    const backgroundColor = data?.map((item=>item.backgroundColor))
+    const hoverBackgroundColor = data?.map((item=>item.backgroundColor))
+
     // console.log(detectedData, labels);
 
     Chart.helpers.each(Chart.instances, function (instance) {
@@ -29,14 +33,7 @@ const Donut = (props) => {
             data: detectedData,
             pointStyle: "circle",
             backgroundColor: backgroundColor,
-            hoverBackgroundColor: [
-              "red",
-              "green",
-              "blue",
-              "white",
-              "pink",
-              "yellow",
-            ],
+            hoverBackgroundColor: hoverBackgroundColor,
             hoverOffset: 4,
             borderWidth: 0,
             datalabels: {
@@ -55,7 +52,7 @@ const Donut = (props) => {
         responsive: true,
 
         legend: {
-          display: true,
+          display: props.displayLegend,
           position: "bottom",
           labels: {
             usePointStyle: true,
@@ -68,6 +65,7 @@ const Donut = (props) => {
           position: "top",
           fontColor: "white",
           fontFamily: "'Roboto Condensed', sans-serif",
+          fontSize: 20
         },
       },
     });

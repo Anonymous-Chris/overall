@@ -1,5 +1,30 @@
 const fakedata = [
   {
+    overallstationdetection: [
+      {
+        metadata: {
+          name: "Overall Station Detection",
+        },
+        data: [
+          {
+            name: "floor_operator",
+            detected: 8,
+            backgroundColor: "blue",
+          },
+          {
+            name: "floor_manager",
+            detected: 6,
+            backgroundColor: "black",
+          },
+          {
+            name: "anonymous",
+            detected: 9,
+            backgroundColor: "gray",
+          },
+        ],
+        displayLegend: false,
+      },
+    ],
     peoplecountbytime: [
       {
         metadata: {
@@ -70,33 +95,40 @@ const fakedata = [
             name: "IC flashing",
             detected: 8,
             camera_id: "one",
+            backgroundColor: "red",
           },
           {
             name: "Side Line",
             detected: 6,
             camera_id: "two",
+            backgroundColor: "green",
           },
           {
             name: "PTH",
             detected: 9,
             camera_id: "three",
+            backgroundColor: "blue",
           },
           {
             name: "Press-Fit",
             detected: 1,
             camera_id: "four",
+            backgroundColor: "white",
           },
           {
             name: "Wave-Machine",
             detected: 5,
             camera_id: "five",
+            backgroundColor: "pink",
           },
           {
             name: "Re-work",
             detected: 1,
             camera_id: "six",
+            backgroundColor: "yellow",
           },
         ],
+        displayLegend: true,
       },
     ],
     surveillanceoverall: [

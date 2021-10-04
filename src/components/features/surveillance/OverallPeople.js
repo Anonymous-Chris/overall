@@ -27,6 +27,7 @@ const OverallPeople = () => {
         <Donut
           title={peopleDetected[0]?.metadata.name}
           data={peopleDetected[0]?.data}
+          displayLegend={peopleDetected[0]?.displayLegend}
         />
       </div>
     </div>
