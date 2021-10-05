@@ -6,13 +6,13 @@ import LazyLoad from "react-lazyload";
 const SingleVideo = (props) => {
   // console.log(props);
   const handle = useFullScreenHandle();
-  var handleExpand = (handle) => {
-    if (handle.active) {
-      return handle.exit;
-    } else {
-      return handle.enter;
-    }
-  };
+  // var handleExpand = (handle) => {
+  //   if (handle.active) {
+  //     return handle.exit;
+  //   } else {
+  //     return handle.enter;
+  //   }
+  // };
 
   const addVideoorImage = (videoSource) =>
     videoSource?.match(/\.(jpeg|jpg|gif|png)$/) != null ? (
@@ -56,11 +56,11 @@ const SingleVideo = (props) => {
     >
       {/**/}
       {addVideoorImage(videoSource)}
-      <div className="w-100 d-flex position-absolute p-1 bottom-0 start-0 responsive__bar">
+      {/* <div className="w-100 d-flex position-absolute p-1 bottom-0 start-0 responsive__bar">
         <div className="livebtn  bottom-0 start-0 p-1">live</div>
         <div className="camera p-1">{cameraName}</div>
         <i className="fas fa-expand fa-2x" onClick={handleExpand(handle)}></i>
-      </div>
+      </div> */}
     </FullScreen>
   );
   return props.activeCameraCount === 1 ? (
