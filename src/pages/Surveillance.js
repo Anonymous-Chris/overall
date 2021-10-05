@@ -53,12 +53,7 @@ function Surveillance() {
     saveToLS("layouts", layouts);
   };
 
-  // pass default props for the layout when nothing is present
-  Surveillance.defaultProps = {
-    className: "layout",
-    cols:{ lg: 12, md: 6, sm: 6, xs: 4, xxs: 4 },
-    rowHeight: 70,
-  };
+
   
   return (
     <div className="text-center w-100 h-100" style={{ background: " black" }}>
@@ -168,5 +163,12 @@ function saveToLS(key, value) {
     );
   }
 }
+
+  // pass default props for the layout when nothing is present
+  Surveillance.defaultProps = {
+    className: "layout",
+    cols:{ lg: 12, md: 6, sm: 6, xs: 4, xxs: 4 },
+    rowHeight: 70,
+  };
 
 export default Surveillance;
