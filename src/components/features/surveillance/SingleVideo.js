@@ -24,16 +24,14 @@ const SingleVideo = (props) => {
           style={{ objectFit: "contain", maxHeight: "100%", maxWidth: "100%" }}
         />
       </LazyLoad>
+    ) : videoSource.includes("mp4") ? (
+      <LazyLoad>
+        <video className="w-100 h-100" controls autoPlay muted>
+          <source src={videoSource} type="video/mp4" />
+        </video>
+      </LazyLoad>
     ) : (
       <LazyLoad>
-        {/* <iframe
-          className="w-100 h-auto "
-          src={videoSource}
-          title="YouTube video player"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        ></iframe> */}
         <div style={{ paddingTop: "56.25%" }}>
           <iframe
             className="w-100 h-100"
