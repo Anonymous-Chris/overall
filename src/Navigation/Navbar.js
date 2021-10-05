@@ -105,6 +105,9 @@ function Navbar() {
                 <NavLink exact to="/animations/3d">
                   {t("navbar.animations3")}
                 </NavLink>
+                <NavLink exact to="/animations/lazyloading">
+                  {t("navbar.animations4")}
+                </NavLink>
               </div>
             </li>
             <li className="navbar__item">

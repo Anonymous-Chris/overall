@@ -8,7 +8,8 @@
       "surveillance": "наблюдение",
       "animations1": "тепловые карты",
       "animations2": "диаграммы",
-      "animations3": "3 Д"
+      "animations3": "3 Д",
+      "animations4":"ленивая загрузка"
     },
     "home": {
       "introduction__title": "Вступление",

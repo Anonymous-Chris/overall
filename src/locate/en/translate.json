@@ -8,7 +8,8 @@
       "surveillance": "Surveillance",
       "animations1": "Heatmaps",
       "animations2": "Charts",
-      "animations3": "3 D"
+      "animations3": "3 D",
+      "animations4":"Lazy Loading"
     },
     "home": {
       "introduction__title": "Introduction",

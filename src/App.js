@@ -19,6 +19,7 @@ import Pagination from "./components/features/Pagination";
 import Heatmaps from "./components/features/Heatmaps";
 import Charts from "./components/features/Charts";
 import ThreeD from "./components/ThreeD";
+import LazyLoading from "./components/features/lazyloading/LazyLoading";
 import FloorHeatmap from "./components/features/surveillance/FloorHeatmap";
 function App() {
   return (
@@ -92,6 +93,8 @@ function App() {
             />
             <Route exact path="/animations/charts" render={() => <Charts />} />
             <Route exact path="/animations/3d" render={() => <ThreeD />} />
+            <Route exact path="/animations/lazyloading" render={() => <LazyLoading />} />
+
           </Switch>
         </Router>
       </div>
