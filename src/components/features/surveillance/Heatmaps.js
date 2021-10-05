@@ -25,7 +25,7 @@ const Heatmaps = () => {
           <h4>{data[0]?.metadata.name}</h4>
         </span>{" "}
         <Link to="/floorheatmap" className="heatmaps__redirection d-flex align-items-center justify-content-center cancelDraggable">
-            View Heat map
+            View Heat Map
         </Link>
       </div>
       <div

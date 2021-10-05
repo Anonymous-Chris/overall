@@ -11,7 +11,7 @@ const Settings = () => {
     {
       name: "one",
       state: true,
-      videoSource: "https://www.youtube.com/embed/l4nfjPLkRXo",
+      videoSource: "https://www.youtube.com/embed/EgeqKqwebZI",
     },
     {
       name: "two",

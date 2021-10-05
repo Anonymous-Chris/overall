@@ -133,59 +133,59 @@ const fakedata = [
     peoplecountbytime: [
       {
         metadata: {
-          name: "People Detected(Time)",
+          name: "People Detected(Every 2 hours)",
         },
         data: [
           {
             camera_id: "one",
             label: "camera1",
             backgroundColor: "red",
-            data: [10, 5, 7, 9, 4, 9, 10, 5, 7, 9, 4, 9],
+            data: [4, 5, 2, 0, 4, 2, 1, 5, 2, 1, 4, 3],
           },
           {
             camera_id: "two",
             label: "camera2",
             backgroundColor: "green",
-            data: [7, 1, 3, 5, 5, 4, 10, 5, 6, 9, 4, 0],
+            data: [5, 1, 3, 2, 1, 0, 3, 5, 3, 1, 4, 0],
           },
           {
             camera_id: "three",
             label: "camera3",
             backgroundColor: "blue",
-            data: [10, 5, 7, 9, 4, 9, 0, 2, 5, 5, 2, 0],
+            data: [3, 5, 1, 2, 4, 1, 0, 2, 4, 5, 2, 0],
           },
           {
             camera_id: "four",
             label: "camera4",
             backgroundColor: "white",
-            data: [7, 1, 3, 2, 5, 4, 3, 1, 7, 9, 4, 9],
+            data: [0, 1, 3, 2, 5, 4, 3, 1, 2, 1, 4, 1],
           },
           {
             camera_id: "five",
             label: "camera5",
             backgroundColor: "pink",
-            data: [0, 1, 0, 5, 5, 4, 2, 3, 8, 7, 1, 8],
+            data: [0, 1, 0, 5, 5, 4, 2, 3, 5, 2, 1, 4],
           },
           {
             camera_id: "six",
             label: "camera6",
             backgroundColor: "yellow",
-            data: [1, 5, 0, 9, 0, 9, 5, 4, 7, 0, 0, 9],
+            data: [1, 5, 0, 1, 0, 1, 5, 4, 3, 0, 0, 1],
           },
         ],
         labels: [
-          "Time1-Test",
-          "Time2-Test",
-          "Time3-Test",
-          "Time4-Testd",
-          "Time5-Test",
-          "Time6-Test",
-          "Time7-Test",
-          "Time8-Test",
-          "Time9-Test",
-          "Time10-Test",
-          "Time11-Test",
-          "Time12-Test",
+          "00:00-01:59",
+          "02:00-03:59",
+          "04:00-05:59",
+          "06:00-07:59",
+          "08:00-09:59",
+          "10:00-11:59",
+          "12:00-13:59",
+          "14:00-15:59",
+          "16:00-17:59",
+          "18:00-19:59",
+          "20:00-21:59",
+          "22:00-23:59",
         ],
       },
     ],
@@ -193,7 +193,7 @@ const fakedata = [
     overallpeoplecount: [
       {
         metadata: {
-          name: "Overall People Detected",
+          name: "Overall Detected",
         },
         data: [
           {
@@ -239,7 +239,7 @@ const fakedata = [
     surveillanceoverall: [
       {
         metadata: {
-          name: "Surveillance Heat Map",
+          name: " Heat Map",
         },
         data: [
           {
@@ -279,7 +279,7 @@ const fakedata = [
     cameralogs: [
       {
         metadata: {
-          name: "Camera Event Logs",
+          name: " Event Logs",
         },
         data: [
           {
