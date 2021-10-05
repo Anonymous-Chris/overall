@@ -7,7 +7,7 @@ const VideoLandingPage = () => {
   const [{ cameraStatus }] = useStateValue();
   const [camera_list, setCameraList] = useState([]);
   const [activeCameraCount, setActiveCameraCount] = useState(0);
-  const updateCameraStatus =JSON.stringify(cameraStatus)
+  const updateCameraStatus = JSON.stringify(cameraStatus);
 
   useEffect(() => {
     try {
@@ -21,7 +21,7 @@ const VideoLandingPage = () => {
     } catch (e) {
       console.log("error");
     }
-  }, [updateCameraStatus,cameraStatus]);
+  }, [updateCameraStatus, cameraStatus]);
 
   const returnCameraComponent = (camera_list) => {
     if (camera_list.length > 0) {
@@ -42,6 +42,8 @@ const VideoLandingPage = () => {
     }
   };
 
+  const checkChanges = () => localStorage.clear()
+
   const resetLayout = () => {
     console.log("pressed reset layout");
     // go back to default layout
@@ -50,11 +52,14 @@ const VideoLandingPage = () => {
     window.location.reload(false);
   };
   return (
-    <div className=" h-100 w-100 m-0 p-1 postion-relative">
+    <div className=" h-100 w-100 m-0 p-1 postion-relative videolandingpage">
       <div
-        className="position-absolute d-flex align-items-center justify-content-center cancelDraggable"
+        className="videolandingpage__floating position-absolute d-flex align-items-center justify-content-center cancelDraggable"
         style={{ right: "10px", zIndex: 1 }}
       >
+        <div style={{ marginRight: "10px" }} onClick={checkChanges}>
+          <i className="fas fa-broom"></i>
+        </div>
         <div onClick={resetLayout}>
           <img
             src="https://iconsplace.com/wp-content/uploads/_icons/ffffff/256/png/restart-icon-18-256.png"

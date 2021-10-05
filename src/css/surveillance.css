@@ -12,18 +12,22 @@
   background: inherit;
 }
 
-.surveillance__column__right {
-  border: 1px solid red;
-  height: auto;
-  max-height: 100%;
-  background: inherit;
-}
-
 /* medium screen */
 
 /* gets all div inside of that classname */
 .surveillance__column__left > div {
   height: 33%;
+}
+
+.videolandingpage__floating div:hover {
+  cursor: pointer;
+}
+
+.surveillance__column__right {
+  border: 1px solid red;
+  height: auto;
+  max-height: 100%;
+  background: inherit;
 }
 
 /* gets the first div inside of that classname */
