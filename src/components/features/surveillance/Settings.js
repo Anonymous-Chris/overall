@@ -17,31 +17,31 @@ const Settings = () => {
       name: "two",
       state: true,
       videoSource:
-        "https://www.imgacademy.com/themes/custom/imgacademy/images/helpbox-contact.jpg",
+      "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
     },
     {
       name: "three",
       state: true,
       videoSource:
-        "https://www.imgacademy.com/themes/custom/imgacademy/images/helpbox-contact.jpg",
+        "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
     },
     {
       name: "four",
       state: true,
       videoSource:
-        "https://www.imgacademy.com/themes/custom/imgacademy/images/helpbox-contact.jpg",
+      "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
     },
     {
       name: "five",
       state: true,
       videoSource:
-        "https://www.imgacademy.com/themes/custom/imgacademy/images/helpbox-contact.jpg",
+      "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
     },
     {
       name: "six",
       state: true,
       videoSource:
-        "https://media.istockphoto.com/photos/leadership-concept-with-paper-airplanes-picture-id1132928752?k=20&m=1132928752&s=612x612&w=0&h=IqjKqSz7aGigsP0mi3_T3Bh2ra2RTBBSyXmAi50OU5A=",
+      "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
     },
   ]);
 
@@ -73,7 +73,7 @@ const Settings = () => {
       type: "UPDATE_CAMERA_STATUS",
       cameraStatus: camera_list,
     });
-  }, [camera_list,dispatch]);
+  }, [camera_list, dispatch]);
 
   // status of settings button
   const toggleState = () => {

@@ -26,14 +26,27 @@ const SingleVideo = (props) => {
       </LazyLoad>
     ) : (
       <LazyLoad>
-        <iframe
+        {/* <iframe
           className="w-100 h-auto "
           src={videoSource}
           title="YouTube video player"
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
-        ></iframe>
+        ></iframe> */}
+        <div style={{ paddingTop: "56.25%" }}>
+          <iframe
+            className="w-100 h-100"
+            src={videoSource}
+            frameBorder={0}
+            allowFullScreen
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+            }}
+          />
+        </div>
       </LazyLoad>
     );
   const getComponent = (cameraName, videoSource) => (
