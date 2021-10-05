@@ -52,7 +52,7 @@ const VideoLandingPage = () => {
     window.location.reload(false);
   };
   return (
-    <div className=" h-100 w-100 m-0 p-1 postion-relative videolandingpage">
+    <div className="commonpointer h-100 w-100 m-0 p-1 postion-relative videolandingpage">
       <div
         className="videolandingpage__floating position-absolute d-flex align-items-center justify-content-center cancelDraggable"
         style={{ right: "10px", zIndex: 1 }}

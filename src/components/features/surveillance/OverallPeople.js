@@ -16,7 +16,7 @@ const OverallPeople = () => {
 
   return (
     <div
-      className="overallpeople pt-2 h-100"
+      className="commonpointer overallpeople pt-2 h-100"
       style={{ background: "rgb(22, 22, 25)" }}
     >
       {/* <h4>{peopleDetected[0]?.metadata.name}</h4> */}

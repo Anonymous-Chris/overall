@@ -17,7 +17,7 @@ const Logs = () => {
   }, [updateCameraStatus,cameraStatus]);
 
   return (
-    <div className="logs  w-100 h-100 " style={{ background: "#161619" }}>
+    <div className="logs  w-100 h-100 commonpointer" style={{ background: "#161619" }}>
       <div
         style={{ height: "10%" }}
         className="d-flex align-items-center justify-content-between"

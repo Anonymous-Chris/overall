@@ -12,7 +12,7 @@ const OverallDetection = () => {
     setDetections(fakedata[0].overallstationdetections)
   }, []);
   return (
-    <div className="overallstationdetection w-100 h-100 row m-0 p-0 text-center">
+    <div className="commonpointer overallstationdetection w-100 h-100 row m-0 p-0 text-center">
       {/* {console.log(circledata)} */}
       <div className="col-12 col-sm-6 col-md-6 col-lg-8">
         {" "}

@@ -18,7 +18,7 @@ const Detection = () => {
       }, [updateCameraStatus,cameraStatus]);
       return (
     <div
-      className="detection w-100"
+      className="commonpointer detection w-100"
       style={{ height: "100%", background: "#161619" }}
     >
       <Bar title={barData[0]?.metadata.name} data={barData[0]?.data} labels={barData[0]?.labels}/>
