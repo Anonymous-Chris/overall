@@ -1,5 +1,54 @@
 const fakedata = [
   {
+    overallpositions: [
+      {
+        floor_operator: [
+          {
+            position: [
+              { x: 70, y: 67 },
+              { x: 60, y: 30 },
+              { x: 50, y: 59 },
+              { x: 70, y: 15 },
+              { x: 255, y: 65 },
+              { x: 165, y: 75 },
+              { x: 195, y: 71 },
+              { x: 95, y: 95 },
+              { x: 150, y: 27 },
+              { x: 220, y: 32 },
+              { x: 99, y: 59 },
+              { x: 79, y: 15 },
+              { x: 159, y: 69 },
+              { x: 179, y: 75 },
+          
+            ],
+            color: "blue",
+          },
+        ],
+      },
+      {
+        floor_manager: [
+          {
+            position: [
+              { x: 100, y: 50 },
+              { x: 170, y: 47 },
+              { x: 185, y: 71 },
+            ],
+            color: "green",
+          },
+        ],
+      },
+      {
+        anonymous: [
+          {
+            position: [
+              { x: 50, y: 50 },
+              { x: 56, y: 50 },
+            ],
+            color: "red",
+          },
+        ],
+      },
+    ],
     overallstationtotal: [
       {
         metadata: {
@@ -7,9 +56,8 @@ const fakedata = [
         },
         data: [
           {
-            name: "floor_operator",
-            detected: "8",
-            backgroundColor: "blue",
+            total: "People on floor",
+            detected: "19",
           },
         ],
         alignHorizontal: true,
@@ -23,12 +71,12 @@ const fakedata = [
         },
         data: [
           {
-            camera_area: "FT",
-            detected: 13,
+            camera_area: "FRONT",
+            detected: 1,
             camera_id: "one",
           },
           {
-            camera_area: "Re-work",
+            camera_area: "Back",
 
             detected: 3,
             camera_id: "two",
@@ -39,17 +87,17 @@ const fakedata = [
             camera_id: "three",
           },
           {
-            camera_area: "PTH",
-            detected: 6,
+            camera_area: "TOP",
+            detected: 3,
             camera_id: "four",
           },
           {
-            camera_area: "Press-Fit",
+            camera_area: "Bottom",
             detected: 2,
             camera_id: "five",
           },
           {
-            camera_area: "Wave-Machine",
+            camera_area: "Inside",
             detected: 5,
             camera_id: "six",
           },
@@ -65,18 +113,18 @@ const fakedata = [
         data: [
           {
             name: "floor_operator",
-            detected: 8,
+            detected: 14,
             backgroundColor: "blue",
           },
           {
             name: "floor_manager",
-            detected: 6,
-            backgroundColor: "black",
+            detected: 3,
+            backgroundColor: "green",
           },
           {
             name: "anonymous",
-            detected: 9,
-            backgroundColor: "gray",
+            detected: 2,
+            backgroundColor: "red",
           },
         ],
         displayLegend: false,
@@ -91,37 +139,37 @@ const fakedata = [
           {
             camera_id: "one",
             label: "camera1",
-            backgroundColor: "green",
+            backgroundColor: "red",
             data: [10, 5, 7, 9, 4, 9, 10, 5, 7, 9, 4, 9],
           },
           {
             camera_id: "two",
             label: "camera2",
-            backgroundColor: "blue",
+            backgroundColor: "green",
             data: [7, 1, 3, 5, 5, 4, 10, 5, 6, 9, 4, 0],
           },
           {
             camera_id: "three",
             label: "camera3",
-            backgroundColor: "rgb(0, 197, 106)",
+            backgroundColor: "blue",
             data: [10, 5, 7, 9, 4, 9, 0, 2, 5, 5, 2, 0],
           },
           {
             camera_id: "four",
             label: "camera4",
-            backgroundColor: "rgb(255, 114, 107)",
+            backgroundColor: "white",
             data: [7, 1, 3, 2, 5, 4, 3, 1, 7, 9, 4, 9],
           },
           {
             camera_id: "five",
             label: "camera5",
-            backgroundColor: "red",
+            backgroundColor: "pink",
             data: [0, 1, 0, 5, 5, 4, 2, 3, 8, 7, 1, 8],
           },
           {
             camera_id: "six",
             label: "camera6",
-            backgroundColor: "white",
+            backgroundColor: "yellow",
             data: [1, 5, 0, 9, 0, 9, 5, 4, 7, 0, 0, 9],
           },
         ],
@@ -161,25 +209,25 @@ const fakedata = [
             backgroundColor: "green",
           },
           {
-            name: "PTH",
+            name: "TOP",
             detected: 9,
             camera_id: "three",
             backgroundColor: "blue",
           },
           {
-            name: "Press-Fit",
+            name: "Bottom",
             detected: 1,
             camera_id: "four",
             backgroundColor: "white",
           },
           {
-            name: "Wave-Machine",
+            name: "Inside",
             detected: 5,
             camera_id: "five",
             backgroundColor: "pink",
           },
           {
-            name: "Re-work",
+            name: "Back",
             detected: 1,
             camera_id: "six",
             backgroundColor: "yellow",
@@ -195,12 +243,12 @@ const fakedata = [
         },
         data: [
           {
-            camera_area: "FT",
-            detected: 13,
+            camera_area: "FRONT",
+            detected: 1,
             camera_id: "one",
           },
           {
-            camera_area: "Re-work",
+            camera_area: "Back",
 
             detected: 3,
             camera_id: "two",
@@ -211,17 +259,17 @@ const fakedata = [
             camera_id: "three",
           },
           {
-            camera_area: "PTH",
-            detected: 6,
+            camera_area: "TOP",
+            detected: 3,
             camera_id: "four",
           },
           {
-            camera_area: "Press-Fit",
+            camera_area: "Bottom",
             detected: 2,
             camera_id: "five",
           },
           {
-            camera_area: "Wave-Machine",
+            camera_area: "Inside",
             detected: 5,
             camera_id: "six",
           },

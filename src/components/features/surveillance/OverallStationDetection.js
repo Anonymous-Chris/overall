@@ -19,7 +19,7 @@ const OverallDetection = () => {
         <div className="w-100 h-100"><Card data={detections}/></div>
       </div>
       <div className="col-12 col-sm-6 col-md-6 col-lg-2">
-        <div className="w-100 h-100">
+        <div className="w-100">
           <Donut
             title={circledata[0]?.metadata.name}
             data={circledata[0]?.data}
