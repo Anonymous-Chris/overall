@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Slider from "../functions/Slider";
 const Card = (props) => {
   // get orientation too eihter vertical or horizontal
-  console.log(props?.data[0]?.data);
+  // console.log(props?.data[0]?.data);
   const [data, setData] = useState({});
   useEffect(() => {
     setData(props?.data);
@@ -22,6 +22,7 @@ const Card = (props) => {
                 style={{
                   background: "#212224",
                   marginRight: "10px",
+                  marginBottom: '10px'
                 }}
               >
                 {Object.entries(singleLog).map(([key, val]) => (
