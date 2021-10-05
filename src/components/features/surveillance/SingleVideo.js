@@ -1,6 +1,8 @@
 import React from "react";
 import { FullScreen, useFullScreenHandle } from "react-full-screen";
-import '../../../css/responsive2x2.css'
+import "../../../css/responsive2x2.css";
+import LazyLoad from "react-lazyload";
+
 const SingleVideo = (props) => {
   // console.log(props);
   const handle = useFullScreenHandle();
@@ -14,16 +16,25 @@ const SingleVideo = (props) => {
 
   const addVideoorImage = (videoSource) =>
     videoSource?.match(/\.(jpeg|jpg|gif|png)$/) != null ? (
-      <img className="w-100 h-auto " src={videoSource} alt="image1" style={{objectFit: 'contain', maxHeight: '100%', maxWidth: '100%'}}/>
+      <LazyLoad>
+        <img
+          className="w-100 h-auto "
+          src={videoSource}
+          alt="image1"
+          style={{ objectFit: "contain", maxHeight: "100%", maxWidth: "100%" }}
+        />
+      </LazyLoad>
     ) : (
-      <iframe
-        className="w-100 h-auto "
-        src={videoSource}
-        title="YouTube video player"
-        frameBorder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-      ></iframe>
+      <LazyLoad>
+        <iframe
+          className="w-100 h-auto "
+          src={videoSource}
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
+      </LazyLoad>
     );
   const getComponent = (cameraName, videoSource) => (
     <FullScreen
