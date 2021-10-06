@@ -19,7 +19,6 @@ const fakedata = [
               { x: 79, y: 15 },
               { x: 159, y: 69 },
               { x: 179, y: 75 },
-          
             ],
             color: "blue",
           },
@@ -197,7 +196,7 @@ const fakedata = [
         },
         data: [
           {
-            name: "IC flashing",
+            name: "Front",
             detected: 8,
             camera_id: "one",
             backgroundColor: "red",
