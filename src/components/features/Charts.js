@@ -1,5 +1,11 @@
 import React from "react";
-
+import Bar1 from "../graphs/recharts/line/Rechartsbar";
+import Bar2 from "../graphs/recharts/line/Rechartsbar_customizeddot";
+import CustomPieChart from "../graphs/recharts/piechart/Piechart_custom_label";
+import PieChartPopup from "../graphs/recharts/piechart/Piechart_popup";
+import PieChart from "../graphs/recharts/piechart/Piecharts";
+import Scatterplot from "../graphs/recharts/scatterplot/Scatterplot";
+import RadarChart from '../graphs/recharts/radar/RadarChart'
 const Charts = () => {
   return (
     <div
@@ -12,37 +18,45 @@ const Charts = () => {
           className="col-12 col-sm-12 col-md-6 col-lg-6 p-1 "
           style={{ border: "1px solid orange", background: "#212224" }}
         >
-          rgb(33, 34, 36){" "}
+          {" "}
+          <Bar1 />{" "}
         </div>
         <div
           className="col-12 col-sm-12 col-md-6 col-lg-6 p-1 "
           style={{ border: "1px solid orange", background: "#212224" }}
         >
-          two{" "}
+          {" "}
+          <Bar2 />{" "}
         </div>
         <div
           className="col-12 col-sm-12 col-md-6 col-lg-6 p-1  "
           style={{ border: "1px solid orange", background: "#212224" }}
         >
-          three{" "}
+          <Scatterplot />{" "}
         </div>
         <div
           className="col-12 col-sm-12 col-md-6 col-lg-6 p-1 "
           style={{ border: "1px solid orange", background: "#212224" }}
         >
-          four{" "}
+          <RadarChart />
         </div>
         <div
           className="col-12 col-sm-12 col-md-6 col-lg-6 p-1 "
           style={{ border: "1px solid orange", background: "#212224" }}
         >
-          five{" "}
+          <PieChart />{" "}
         </div>
         <div
           className="col-12 col-sm-12 col-md-6 col-lg-6 p-1 "
           style={{ border: "1px solid orange", background: "#212224" }}
         >
-          six{" "}
+          <PieChartPopup />
+        </div>
+        <div
+          className="col-12 col-sm-12 col-md-6 col-lg-6 p-1 "
+          style={{ border: "1px solid orange", background: "#212224" }}
+        >
+          <CustomPieChart />
         </div>
       </div>
     </div>
