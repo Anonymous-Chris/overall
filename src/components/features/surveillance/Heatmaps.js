@@ -19,13 +19,19 @@ const Heatmaps = () => {
   }, [updateCameraStatus, cameraStatus]);
 
   return (
-    <div className="commonpointer heatmaps h-100 pt-2 " style={{ background: "#161619" }}>
+    <div
+      className="commonpointer heatmaps h-100 pt-2 "
+      style={{ background: "#161619" }}
+    >
       <div className="d-flex w-100">
         <span className="heatmaps__title">
           <h4>{data[0]?.metadata.name}</h4>
         </span>{" "}
-        <Link to="/floorheatmap" className="heatmaps__redirection d-flex align-items-center justify-content-center cancelDraggable">
-            View Heat Map
+        <Link
+          to="/surveillance/floorheatmap"
+          className="heatmaps__redirection d-flex align-items-center justify-content-center cancelDraggable"
+        >
+          View Heat Map
         </Link>
       </div>
       <div

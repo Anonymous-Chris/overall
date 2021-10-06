@@ -41,7 +41,11 @@ function App() {
             <Route exact path="/surveillance" render={() => <Surveillance />} />
             <Route exact path="/surveillance" render={() => <Surveillance />} />
 
-            <Route exact path="/floorheatmap" render={() => <FloorHeatmap />} />
+            <Route
+              exact
+              path="/surveillance/floorheatmap"
+              render={() => <FloorHeatmap />}
+            />
             <Route exact path="/features" render={() => <Features />} />
             <Route
               exact
@@ -93,8 +97,11 @@ function App() {
             />
             <Route exact path="/animations/charts" render={() => <Charts />} />
             <Route exact path="/animations/3d" render={() => <ThreeD />} />
-            <Route exact path="/animations/lazyloading" render={() => <LazyLoading />} />
-
+            <Route
+              exact
+              path="/animations/lazyloading"
+              render={() => <LazyLoading />}
+            />
           </Switch>
         </Router>
       </div>

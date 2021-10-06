@@ -30,9 +30,16 @@ function Navbar() {
     } else if (location.pathname.includes("animations")) {
       document.getElementById(`features`).classList.remove("active");
       checkActiveTab("animations");
+    } else if (
+      location.pathname.includes("floorheatmap") ||
+      location.pathname.includes("surveillance")
+    ) {
+      document.getElementById(`surveillance`).classList.remove("active");
+      checkActiveTab("surveillance");
     } else {
       document.getElementById(`animations`).classList.remove("active");
       document.getElementById(`features`).classList.remove("active");
+      document.getElementById(`surveillance`).classList.remove("active");
     }
     return () => {};
   }, [location]);
