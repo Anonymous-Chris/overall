@@ -11,6 +11,7 @@ import OverallPeople from "../components/features/surveillance/OverallPeople";
 const VideoLandingPage = React.lazy(() =>
   import("../components/features/surveillance/VideoLandingPage")
 );
+import Notification from "../components/features/notifications/Notification";
 import Detection from "../components/features/surveillance/Detection";
 // import Testing from "../components/features/testing/CheckContextApI";
 // import GetData from "../components/features/testing/GetDataTest";
@@ -137,6 +138,7 @@ export default class Surveillance extends React.PureComponent {
             <Detection />
           </div>
         </ResponsiveGridLayout>
+        <Notification />
       </div>
     );
   }
