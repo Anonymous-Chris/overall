@@ -1,4 +1,4 @@
-import React, { useState, Suspense, useEffect } from "react";
+import React, { Suspense } from "react";
 import "react-grid-layout/css/styles.css";
 import "react-resizable/css/styles.css";
 import { Responsive, WidthProvider } from "react-grid-layout";
@@ -15,30 +15,30 @@ import Detection from "../components/features/surveillance/Detection";
 // import Testing from "../components/features/testing/CheckContextApI";
 // import GetData from "../components/features/testing/GetDataTest";
 const originalLayout = getFromLS("layouts") || {};
+const ResponsiveGridLayout = WidthProvider(Responsive);
 
-function Surveillance() {
-  const ResponsiveGridLayout = WidthProvider(Responsive);
-  const [layouts] = useState(JSON.parse(JSON.stringify(originalLayout)));
-  const [draggable, setDraggable] = useState(true);
-
-  // turn of draggable if it is a touch device
-  useEffect(() => {
-    // localStorage.removeItem("rgl-8");
-    const isTouchDevice = () => {
-      return window.matchMedia("(pointer: coarse)").matches;
+export default class Surveillance extends React.PureComponent {
+  constructor(props) {
+    super(props);
+    this.state = {
+      layouts: JSON.parse(JSON.stringify(originalLayout)),
     };
-    if (isTouchDevice() && window.screen.width <= 768) {
-      setDraggable(false);
-    }
-  }, []);
+    this.onLayoutChange = this.onLayoutChange.bind(this);
+  }
 
-  window.addEventListener("resize", () => {
-    if (window.screen.width > 768) {
-      setDraggable(true);
-    }
-  });
+  static get defaultProps() {
+    return {
+      className: "layout",
+      cols: { lg: 12, md: 6, sm: 6, xs: 4, xxs: 4 },
+      rowHeight: 70,
+    };
+  }
 
-  const onLayoutChange = (layout, layouts) => {
+  resetLayout() {
+    this.setState({ layouts: {} });
+  }
+
+  onLayoutChange(layout, layouts) {
     // console.log(layout, layouts);
     // change layouts for xs and xss screens
     if (layouts?.xs?.length > 0) {
@@ -51,94 +51,95 @@ function Surveillance() {
       layouts.xxs[4].h = 3;
     }
     saveToLS("layouts", layouts);
-  };
+    this.setState({ layouts: layouts });
+  }
 
-
-  
-  return (
-    <div className="text-center w-100 h-100" style={{ background: " black" }}>
-      <ResponsiveGridLayout
-        className="layout"
-        rowHeight={70}
-        cols={{ lg: 12, md: 6, sm: 6, xs: 4, xxs: 4 }}
-        layouts={layouts}
-        margin={[5, 5]}
-        isDraggable={draggable}
-        isResizable={true}
-        draggableCancel=".cancelDraggable"
-        resizeHandles={["s", "w", "e", "n", "sw", "nw", "se", "ne"]}
-        onLayoutChange={onLayoutChange}
-      >
-        <div
-          key="0"
-          data-grid={{ h: 4, w: 4, x: 0, y: 0, moved: false, static: false }}
-          style={{
-            border: "2px solid black",
-            backgroundPosition: "center",
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-            color: "white",
-          }}
+  render() {
+    return (
+      <div className="text-center w-100 h-100" style={{ background: " black" }}>
+        <ResponsiveGridLayout
+          className="layout"
+          rowHeight={70}
+          cols={{ lg: 12, md: 6, sm: 6, xs: 4, xxs: 4 }}
+          layouts={this.state.layouts}
+          margin={[5, 5]}
+          isDraggable={true}
+          isResizable={true}
+          draggableCancel=".cancelDraggable"
+          resizeHandles={["s", "w", "e", "n", "sw", "nw", "se", "ne"]}
+          onLayoutChange={this.onLayoutChange}
         >
-          <Logs />
-        </div>
-        <div
-          key="1"
-          data-grid={{ w: 4, h: 4, x: 0, y: 8, moved: false, static: false }}
-          style={{
-            border: "2px solid black",
-            backgroundPosition: "center",
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-            color: "white",
-          }}
-        >
-          <Heatmaps />
-        </div>
-        <div
-          key="2"
-          data-grid={{ w: 4, h: 4, x: 0, y: 4, moved: false, static: false }}
-          style={{
-            border: "2px solid black",
-            backgroundPosition: "center",
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-            color: "white",
-          }}
-        >
-          <OverallPeople />
-        </div>
-        <div
-          key="3"
-          data-grid={{ w: 8, h: 8, x: 4, y: 0, moved: false, static: false }}
-          style={{
-            border: "2px solid black",
-            backgroundPosition: "center",
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-            color: "white",
-          }}
-        >
-          <Suspense fallback={<div>Loading...</div>}>
-            <VideoLandingPage />
-          </Suspense>{" "}
-        </div>
-        <div
-          key="4"
-          data-grid={{ w: 8, h: 4, x: 4, y: 8, moved: false, static: false }}
-          style={{
-            border: "2px solid black",
-            backgroundPosition: "center",
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-            color: "white",
-          }}
-        >
-          <Detection />
-        </div>
-      </ResponsiveGridLayout>
-    </div>
-  );
+          <div
+            key="0"
+            data-grid={{ h: 4, w: 4, x: 0, y: 0, moved: false, static: false }}
+            style={{
+              border: "2px solid black",
+              backgroundPosition: "center",
+              backgroundSize: "cover",
+              backgroundRepeat: "no-repeat",
+              color: "white",
+            }}
+          >
+            <Logs />
+          </div>
+          <div
+            key="1"
+            data-grid={{ w: 4, h: 4, x: 0, y: 8, moved: false, static: false }}
+            style={{
+              border: "2px solid black",
+              backgroundPosition: "center",
+              backgroundSize: "cover",
+              backgroundRepeat: "no-repeat",
+              color: "white",
+            }}
+          >
+            <Heatmaps />
+          </div>
+          <div
+            key="2"
+            data-grid={{ w: 4, h: 4, x: 0, y: 4, moved: false, static: false }}
+            style={{
+              border: "2px solid black",
+              backgroundPosition: "center",
+              backgroundSize: "cover",
+              backgroundRepeat: "no-repeat",
+              color: "white",
+            }}
+          >
+            <OverallPeople />
+          </div>
+          <div
+            key="3"
+            data-grid={{ w: 8, h: 8, x: 4, y: 0, moved: false, static: false }}
+            style={{
+              border: "2px solid black",
+              backgroundPosition: "center",
+              backgroundSize: "cover",
+              backgroundRepeat: "no-repeat",
+              color: "white",
+            }}
+          >
+            <Suspense fallback={<div>Loading...</div>}>
+              <VideoLandingPage />
+            </Suspense>{" "}
+          </div>
+          <div
+            key="4"
+            data-grid={{ w: 8, h: 4, x: 4, y: 8, moved: false, static: false }}
+            style={{
+              border: "2px solid black",
+              backgroundPosition: "center",
+              backgroundSize: "cover",
+              backgroundRepeat: "no-repeat",
+              color: "white",
+            }}
+          >
+            <Detection />
+          </div>
+        </ResponsiveGridLayout>
+      </div>
+    );
+  }
 }
 
 function getFromLS(key) {
@@ -163,12 +164,3 @@ function saveToLS(key, value) {
     );
   }
 }
-
-  // pass default props for the layout when nothing is present
-  Surveillance.defaultProps = {
-    className: "layout",
-    cols:{ lg: 12, md: 6, sm: 6, xs: 4, xxs: 4 },
-    rowHeight: 70,
-  };
-
-export default Surveillance;

@@ -64,21 +64,21 @@ const SingleVideo = (props) => {
   return props.activeCameraCount === 1 ? (
     <div
       className="singlevideo col-12 col-sm-12 col-md-12 col-lg-12 d-flex align-items-center justify-content-center position-relative "
-      style={{ border: "1px solid orange" }}
+      style={{ border: "1px solid orange", minHeight: "200px" }}
     >
       {getComponent(props.name, props.videoSource)}
     </div>
   ) : props.activeCameraCount === 2 ? (
     <div
       className="singlevideo col-12 col-sm-6 col-md-6 col-lg-6 d-flex align-items-center justify-content-center position-relative "
-      style={{ border: "1px solid orange" }}
+      style={{ border: "1px solid orange", minHeight: "200px" }}
     >
       {getComponent(props.name, props.videoSource)}
     </div>
   ) : (
     <div
       className="singlevideo col-12 col-sm-6 col-md-6 col-lg-4 d-flex align-items-center justify-content-center position-relative "
-      style={{ border: "1px solid orange" }}
+      style={{ border: "1px solid orange", minHeight: "200px" }}
     >
       {getComponent(props.name, props.videoSource)}
     </div>
