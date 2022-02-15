@@ -77,7 +77,7 @@ function Navbar() {
                 {t("navbar.home")}
               </NavLink>
             </li>
-            <li className="navbar__item">
+            <li className="navbar__item" style={{ display: "none" }}>
               <NavLink
                 exact
                 to="/features"
@@ -109,7 +109,7 @@ function Navbar() {
                 <NavLink exact to="/animations/charts">
                   {t("navbar.animations2")}
                 </NavLink>
-                <NavLink exact to="/animations/3d">
+                <NavLink exact to="/animations/3d" style={{ display: "none" }}>
                   {t("navbar.animations3")}
                 </NavLink>
                 <NavLink exact to="/animations/lazyloading">
@@ -117,7 +117,7 @@ function Navbar() {
                 </NavLink>
               </div>
             </li>
-            <li className="navbar__item">
+            <li className="navbar__item" style={{ display: "none" }}>
               <NavLink
                 exact
                 to="/responsive2x2"
